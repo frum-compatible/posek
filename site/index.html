@@ -64,12 +64,21 @@
         <div class="field">
           <label id="question-label" for="question">Your halacha question</label>
           <textarea id="question" rows="3" maxlength="2400" placeholder="For example: I forgot Yaaleh Veyavo in bentching on Rosh Chodesh. Do I repeat it?"></textarea>
+          <details id="sample-questions" class="sample-questions">
+            <summary>No question? Try a shailah.</summary>
+            <p class="field-note">Choose one to fill the question box. You can edit it.</p>
+            <div id="sample-list" class="sample-list"></div>
+          </details>
         </div>
         <div class="copy-row">
-          <button id="copy-prompt" class="button primary" type="button">Copy prompt</button>
+          <div class="app-actions">
+            <button class="button primary" type="button" data-open-app="https://chatgpt.com/" data-app-name="ChatGPT">Copy &amp; open ChatGPT</button>
+            <button class="button outline" type="button" data-open-app="https://claude.ai/new" data-app-name="Claude">Copy &amp; open Claude</button>
+          </div>
+          <button id="copy-prompt" class="text-button" type="button">Copy only</button>
           <span id="copy-status" role="status" aria-live="polite"></span>
         </div>
-        <p class="next-step">Then open <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> or <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a> and paste it into a new chat.</p>
+        <p class="next-step">Paste the copied prompt into the new chat. Sign in if asked.</p>
         <details class="advanced">
           <summary>Advanced settings</summary>
           <div class="field-row">
@@ -94,7 +103,7 @@
         <p class="field-note">The phone starter is shorter than the full installed skill. Source verification depends on the AI app and tools you use.</p>
         </details>
         <details class="prompt-details"><summary>Read the prompt before copying</summary><textarea id="prompt" readonly rows="13" aria-label="Generated starter prompt"></textarea></details>
-        <div id="manual-copy" hidden><label for="manual-text">Copy this text manually</label><textarea id="manual-text" readonly rows="5"></textarea></div>
+        <div id="manual-copy" hidden><label for="manual-text">Copy this text manually</label><textarea id="manual-text" readonly rows="5"></textarea><p id="manual-app-links" class="next-step">After copying, open <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> or <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer">Claude</a> and paste it into a new chat.</p></div>
         <p class="field-note">Your text stays in this page. Sharing the site does not share your question.</p>
         <p id="rav-note" class="rav-note">For a practical shailah, confirmation with your local rav is recommended. Bring the mareh mekomos.</p>
         <noscript><p>Enable JavaScript to prepare a prompt. You can still read the dvar Torah below or download the full skill.</p></noscript>

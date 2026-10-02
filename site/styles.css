@@ -316,6 +316,40 @@ textarea {
   gap:14px;
   flex-wrap:wrap;
 }
+.app-actions {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  width:100%;
+}
+.app-actions .button {
+  padding:12px 10px;
+}
+.sample-questions {
+  margin-top:8px;
+  font-size:13px;
+}
+.sample-questions summary {
+  cursor:pointer;
+  color:var(--green);
+}
+.sample-list {
+  display:grid;
+  margin-top:10px;
+}
+.sample-question {
+  background:transparent;
+  border:0;
+  border-bottom:1px solid var(--line);
+  color:var(--green);
+  text-align:left;
+  min-height:44px;
+  padding:10px 4px;
+  font-size:14px;
+}
+.sample-question:hover {
+  background:var(--paper);
+}
 .copy-row [role=status],#share-status {
   font-size:14px;
   color:var(--green);

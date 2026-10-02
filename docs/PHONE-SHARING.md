@@ -1,6 +1,14 @@
 # Phone and WhatsApp distribution
 
-The landing page in `site/` explains Posek, shows an excerpt from an actual dvar Torah, and prepares a phone starter prompt. A recipient can read it without installing a terminal skill or creating an account on this site.
+The landing page in `site/` explains Posek, shows a dvar Torah, and prepares a phone starter prompt. A recipient can read it without installing a terminal skill or creating an account on this site. Halacha opens by default; “No question? Try a shailah” offers five [source-based examples](../examples/SHAILOS.md) that fill the editable question box.
+
+## Open an AI app
+
+Copy & open ChatGPT and Copy & open Claude copy the complete generated prompt, then navigate to the chosen service in the same tab. The visitor pastes into a new chat and sends it. The destination URL contains no question text. If clipboard access fails, the page stays open with selectable text and ordinary links to both services. Copy only is also available.
+
+The app buttons use HTTPS links. They do not promise a native-app launch or automatic prompt submission. Sign-in and the phone's link handling remain outside this page's control.
+
+Official documentation checked on 2 October 2026 covers [ChatGPT desktop deep links](https://learn.chatgpt.com/docs/reference/commands), [Claude desktop links](https://support.claude.com/en/articles/14729294-open-claude-desktop-with-a-link), and [Claude mobile Code links](https://support.claude.com/en/articles/14898120-open-the-claude-mobile-app-with-a-link). Those documented routes do not establish a general-chat prefill method across mobile browsers and both services, so the phone flow uses clipboard handoff.
 
 The starter prompt is self-contained but shorter than the installed skill. Users paste it into their own AI app. Source verification depends on that app's tools. The page itself does not answer shailos or send questions to an AI service.
 

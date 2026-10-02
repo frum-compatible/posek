@@ -23,6 +23,28 @@
     psak: { question: '', register: 'preset', depth: 'preset' },
     torah: { question: '', register: 'preset', depth: 'preset' }
   };
+  const sampleQuestions = [
+    {
+      title: 'The Airbnb knife',
+      question: 'We’re at an Airbnb with a regular nonkosher kitchen. I used a knife from its drawer to dice a raw onion on our own plastic cutting board, then mixed it through a tomato-and-cucumber salad. The knife was spotless, and nobody has used it during the two days we’ve been here. I don’t know what it cut before we arrived. Everything else was prepared with our own utensils, and the salad is in a disposable bowl. Can we eat it? Would picking out the onion help? Does our cutting board need kashering?'
+    },
+    {
+      title: 'Coffee after tasting the cholent',
+      question: 'Friday afternoon I tasted a teaspoon of gravy from our meat cholent to check the salt. It was liquid from the top, with no beans or meat in it, and I spat it into the sink without swallowing or chewing anything. I rinsed my mouth with water. I normally wait six hours after fleishigs, and I already made myself a coffee with milk. Did tasting the gravy start the six hours? Is rinsing enough before I drink the coffee? Would chewing a bean from the same pot and spitting it out be different?'
+    },
+    {
+      title: 'Driving to the hospital on Shabbos',
+      question: 'My wife is in labor on Shabbos, and the maternity team has told us to leave for the hospital immediately. Our car is outside. Someone told me that things for a yoledes should be done b’shinui when possible. Does that apply to unlocking my phone, starting the car, or the driving itself? I know pikuach nefesh overrides Shabbos; I’m asking where shinui still belongs and where attempting it would be wrong. Start with what we should do now, then explain the sources and the distinction between the actions.'
+    },
+    {
+      title: 'Paying the Shabbos babysitter',
+      question: 'We’re hiring a Jewish babysitter for Shabbos afternoon and paying on Sunday. To arrange havla’ah, we want to include ten paid minutes on Friday for her to meet the children and learn their routine, with one fee for both visits. Is that genuine weekday work or just a token addition? What if we agree that cancelling Friday would reduce her fee, but the Shabbos booking would still stand? Does one payment make this one job when either visit can be cancelled separately?'
+    },
+    {
+      title: 'The airline “mezonos” roll',
+      question: 'My kosher airline meal has a slightly sweet roll marked “mezonos.” I made mezonos and ate half with the chicken and potatoes before the person next to me said that using it for lunch makes it hamotzi. Do I stop now to wash and make a new bracha? Does the mezonos I already said cover anything, and what do I say afterward? Would eating the same roll by itself later change its status? Please separate the recipe question from being kovea seudah on it.'
+    }
+  ];
 
   function resolvePlan() {
     const profile = byId('profile').value;
@@ -69,6 +91,7 @@
     byId('question-label').textContent = questions[plan.format][0];
     byId('question').placeholder = questions[plan.format][1];
     byId('torah-settings').hidden = plan.format === 'psak';
+    byId('sample-questions').hidden = plan.format !== 'psak';
     byId('rav-note').hidden = plan.format !== 'psak';
     byId('profile-description').textContent = profiles[plan.profile][0];
     byId('sources').disabled = plan.format === 'psak';
@@ -90,20 +113,45 @@
     byId('manual-copy').hidden = true;
   }
 
+  let copying = false;
+  const copyControls = document.querySelectorAll('[data-open-app], #copy-prompt, #copy-link');
   async function copyText(text, statusId, success) {
+    if (copying) return false;
+    copying = true;
+    copyControls.forEach(control => { control.disabled = true; });
     try {
       if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(text);
       byId(statusId).textContent = success;
       byId('manual-copy').hidden = true;
+      return true;
     } catch {
       byId('manual-text').value = text;
       byId('manual-copy').hidden = false;
+      byId('manual-app-links').hidden = statusId !== 'copy-status';
       byId('manual-text').focus();
       byId('manual-text').select();
       byId(statusId).textContent = 'Automatic copy is unavailable. Select and copy the text shown.';
+      return false;
+    } finally {
+      copying = false;
+      copyControls.forEach(control => { control.disabled = false; });
     }
   }
+
+  sampleQuestions.forEach(sample => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'sample-question';
+    button.textContent = sample.title;
+    button.addEventListener('click', () => {
+      byId('question').value = sample.question;
+      byId('sample-questions').open = false;
+      updatePrompt();
+      byId('sample-questions').querySelector('summary').focus();
+    });
+    byId('sample-list').append(button);
+  });
 
   controls.forEach(id => byId(id).addEventListener(id === 'question' ? 'input' : 'change', updatePrompt));
   document.querySelectorAll('input[name="mode"]').forEach(input => input.addEventListener('change', () => {
@@ -111,6 +159,11 @@
     activeMode = input.value;
     modeFields.forEach(id => { byId(id).value = drafts[activeMode][id]; });
     updatePrompt();
+  }));
+  const handoffButtons = document.querySelectorAll('[data-open-app]');
+  handoffButtons.forEach(button => button.addEventListener('click', async () => {
+    const copied = await copyText(byId('prompt').value, 'copy-status', `Copied. Opening ${button.dataset.appName}…`);
+    if (copied) window.location.assign(button.dataset.openApp);
   }));
   byId('copy-prompt').addEventListener('click', () => copyText(byId('prompt').value, 'copy-status', 'Copied. Paste it into your AI app.'));
   byId('copy-link').addEventListener('click', () => copyText(publicUrl, 'share-status', 'Public link copied.'));

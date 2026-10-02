@@ -24,6 +24,8 @@ The following interactions were exercised:
 - An explicit source preference takes precedence for a dvar Torah. Practical psak disables that presentation preference and requests all controlling sources.
 - A typed question appears in the generated prompt and stays out of the public share URL.
 - Copying the starter reports success. When clipboard access is unavailable, a manual-copy field contains the same text.
+- Each sample fills the question box and generated prompt without changing the selected hashkafah. The picker is hidden in Dvar Torah mode, and the Halacha sample returns when switching back.
+- Copy & open reached the ChatGPT page and Claude's new-chat/sign-in flow in the browser. A clipboard write was read back immediately and matched the generated prompt. With clipboard access unavailable, the handoff stayed on Posek and exposed matching manual-copy text and destination links. Native-phone launching and clipboard retention through an actual phone's app switch remain unverified.
 - The built page, social image, and complete skill ZIP were served successfully. The 1200 × 630 social card was rendered and inspected.
 
 These checks verify page behavior, not the quality of an AI answer generated from every setting. The page was inspected through browser viewport emulation; an actual phone and the live WhatsApp preview remain to be checked after publication. No WhatsApp message was sent. Temporary preview servers were stopped.
