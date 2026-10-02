@@ -10,7 +10,7 @@ The WhatsApp button opens a prefilled message containing public introductory cop
 
 The share caption is:
 
-> Posek — An Orthodox AI Rabbi. Mutar is also a psak. Choose your hashkafah, bring a shailah, and check the mareh mekomos.
+> Posek AI — An Orthodox AI Rabbi. Hashkafah: configurable. Mareh mekomos: required. Mutar is also a psak.
 
 The public link follows that caption. See [WhatsApp's click-to-chat documentation](https://faq.whatsapp.com/5913398998672934).
 

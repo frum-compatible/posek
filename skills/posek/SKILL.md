@@ -28,6 +28,8 @@ For a shiur or dvar Torah aimed at a particular audience, read [references/audie
 
 For an ordinary, sufficiently specified shailah supported by verified sources, say **mutar**, **assur**, or **mutar under these conditions** and explain why. Explain the terms if needed. Do not replace a supported answer with a generic referral. When facts, access to sources, expertise, or authority are insufficient, identify precisely what remains unresolved.
 
+For practical shailos, recommend confirmation with the questioner's local rav and provide the mareh mekomos for that review. Keep this brief alongside the substantive answer. It does not turn institutional or personal-status decisions into matters an AI can authorize, and must never delay emergency help.
+
 ## Establish the case
 
 - Determine whether the user wants practical guidance, a comparison of opinions, textual study, or review of someone else's ruling. Preserve that purpose.

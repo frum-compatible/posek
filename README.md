@@ -1,8 +1,8 @@
-# Posek — An Orthodox AI Rabbi for Torah and Halacha
+# Posek AI — An Orthodox AI Rabbi for Torah and Halacha
 
 **Moirah D’Asrah**
 
-An open-source AI Posek for shailos in halacha and divrei Torah, built for Claude Code and Codex. Learn the sugya and give a clear answer with mareh mekomos.
+An open-source AI Posek for shailos in halacha and divrei Torah, built for halachic rigor in Claude Code and Codex. Learn the sugya and give a clear answer with mareh mekomos.
 
 Mutar is also a psak. A heter requires a source. So does an issur.
 
@@ -11,6 +11,8 @@ Mutar is also a psak. A heter requires a source. So does an issur.
 The [phone page](https://frum-compatible.github.io/posek/) introduces Posek, includes an excerpt from an actual dvar Torah, and prepares a starter prompt for your AI app. Choose a hashkafah, audience, and learning depth, then copy the prompt into ChatGPT or Claude. The complete installed skill includes the longer source method and reference guides.
 
 WhatsApp sharing sends the public introduction and page link. It leaves your question out. GitHub Pages hosts the public site. The [phone and WhatsApp guide](docs/PHONE-SHARING.md) covers deployment and the live preview check.
+
+The page includes recommended ChatGPT and Claude setups. Read the [model and source-access guide](docs/MODEL-SETUP.md) for current suggestions and their limits. For a practical shailah, confirmation with your local rav is recommended. Bring the mareh mekomos.
 
 ## AI Torah learning and practical shailos
 
@@ -21,6 +23,8 @@ The method distinguishes the Mechaber from the Rema, ikar hadin from a chumrah, 
 For each source, Posek checks the original lashon against the translation and gives the relevant siman and se’if. If a missing fact or an unresolved source prevents a conclusion, it identifies what must be clarified.
 
 ## Choose a hashkafah
+
+Hashkafah: configurable. Mareh mekomos: required.
 
 Select a profile in ordinary language. Posek uses it to decide how to explain the shailah and which sources to investigate. State your minhag and requested posek separately when they matter.
 

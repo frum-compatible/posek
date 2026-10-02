@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Posek | Orthodox AI Rabbi, Torah &amp; Halacha</title>
-  <meta name="description" content="An Orthodox AI Rabbi for Torah, halacha and divrei Torah. Choose a hashkafah, prepare a shailah or shiur, and ask for exact mareh mekomos.">
+  <title>Posek AI | Orthodox AI Rabbi, Torah &amp; Halacha</title>
+  <meta name="description" content="An Orthodox AI Rabbi built for halachic rigor. Eight hashkafah profiles, source-based psak and divrei Torah, and public development benchmarks.">
   <meta name="theme-color" content="#183d32">
   <link rel="canonical" href="https://frum-compatible.github.io/posek/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Posek — An Orthodox AI Rabbi">
-  <meta property="og:description" content="Moirah D’Asrah. Torah, halacha and divrei Torah. Choose a hashkafah and ask for exact mareh mekomos.">
+  <meta property="og:title" content="Posek AI — An Orthodox AI Rabbi">
+  <meta property="og:description" content="Hashkafah: configurable. Mareh mekomos: required. Source-based psak, divrei Torah, and public bechinah records.">
   <meta property="og:url" content="https://frum-compatible.github.io/posek/">
   <meta property="og:image" content="https://frum-compatible.github.io/posek/social-card.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Posek. Moirah D’Asrah. An Orthodox AI Rabbi for Torah and Halacha.">
+  <meta property="og:image:alt" content="Posek AI. Moirah D’Asrah. An Orthodox AI Rabbi for Torah and Halacha. Mutar is also a psak.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -30,21 +30,22 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <p class="eyebrow">Moirah D’Asrah</p>
-      <h1 id="hero-title">Posek</h1>
+      <h1 id="hero-title">Posek <span class="ai-label">AI</span></h1>
       <p class="hero-subtitle">An Orthodox AI Rabbi<br>for Torah and Halacha.</p>
-      <p class="hero-copy">A heter requires a source. So does an issur. Bring the shailah; work through the metzius and the mareh mekomos.</p>
+      <p class="hero-copy">Built for halachic rigor. A heter requires a source. So does an issur.</p>
       <div class="actions">
         <a class="button primary" href="#prepare">Prepare a shailah or vort <span aria-hidden="true">↓</span></a>
         <a class="button outline whatsapp-share" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=Posek%20%E2%80%94%20An%20Orthodox%20AI%20Rabbi.%20https%3A%2F%2Ffrum-compatible.github.io%2Fposek%2F">Share on WhatsApp</a>
       </div>
-      <p class="hero-note">Mutar is also a psak. Use the phone starter with your AI app, or install the full skill in Claude Code or Codex.</p>
+      <p class="hero-note">Mutar is also a psak. <a href="#bechinah">Read the bechinah records.</a></p>
       <p id="preview-note" class="preview-note" hidden>Local preview. The public link will work after publication.</p>
     </section>
 
     <section id="prepare" class="prepare wrap" aria-labelledby="prepare-title">
       <div class="section-intro">
         <p class="eyebrow">The beis medrash</p>
-        <h2 id="prepare-title">Choose your derech.</h2>
+        <h2 id="prepare-title">Set your hashkafah.</h2>
+        <p class="method-line">Hashkafah: configurable.<br>Mareh mekomos: required.</p>
         <p>Prepare a starter prompt here, then paste it into ChatGPT, Claude, or another AI app with source access. This page does not generate a ruling.</p>
       </div>
       <div class="builder">
@@ -97,7 +98,15 @@
         <details class="prompt-details"><summary>Read the prompt before copying</summary><textarea id="prompt" readonly rows="13" aria-label="Generated starter prompt"></textarea></details>
         <div id="manual-copy" hidden><label for="manual-text">Copy this text manually</label><textarea id="manual-text" readonly rows="5"></textarea></div>
         <p class="next-step">Then open <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> or <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a> and paste it into a new chat.</p>
+        <details id="model-setup" class="model-setup">
+          <summary>Recommended models and setup</summary>
+          <p><strong>ChatGPT:</strong> choose Astra if available. Increase reasoning effort for a complex shailah. Otherwise use an available reasoning model with source access. <a href="https://learn.chatgpt.com/docs/model-selection" target="_blank" rel="noopener noreferrer">Model guide ↗</a></p>
+          <p><strong>Claude:</strong> Opus 5.5 with High effort for difficult shailos; Sonnet 5.5 for shorter drafts. <a href="https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings" target="_blank" rel="noopener noreferrer">Model settings ↗</a></p>
+          <p>Ask the model to open the primary sources. Enable web search where your app offers a switch; some versions search automatically. If a sefer cannot be opened, supply the passage and keep the gap explicit.</p>
+          <p class="small">Checked 2 October 2026. Suggested setups, not Posek model rankings or required subscriptions. Availability varies. <a href="https://github.com/frum-compatible/posek/blob/main/docs/MODEL-SETUP.md">Setup and evidence limits ↗</a></p>
+        </details>
         <p class="field-note">The phone starter is shorter than the full installed skill. Source verification depends on the AI app and tools you use.</p>
+        <p class="rav-note">For a practical shailah, confirmation with your local rav is recommended. Bring the mareh mekomos.</p>
         <noscript><p>Enable JavaScript to prepare a prompt. You can still read the dvar Torah below or download the full skill.</p></noscript>
       </div>
     </section>
@@ -115,7 +124,7 @@
     </section>
 
     <section id="bechinah" class="reading wrap" aria-labelledby="bechinah-title">
-      <div class="section-intro"><p class="eyebrow">Bechinah records</p><h2 id="bechinah-title">The answers are on record.</h2><p>An unnecessary issur counts as an error, too. We check the conclusion, its sources, and the conditions that would change it.</p></div>
+      <div class="section-intro"><p class="eyebrow">Bechinah records</p><h2 id="bechinah-title">The answers are on record.</h2><p>A stricter answer does not receive extra credit. We check the conclusion, its sources, and the conditions that would change it.</p></div>
       <table class="results-table">
         <caption>Four selected semicha-related questions · AI review · threshold: ≥10/12, no zero dimension or critical failure</caption>
         <thead><tr><th scope="col">Condition</th><th scope="col">Rubric points</th><th scope="col">Met development threshold</th></tr></thead>
@@ -123,6 +132,7 @@
       </table>
       <p class="evidence-note">Three questions came from a Chief Rabbinate paper; one was announced for a WebYeshiva semicha-course midterm. Posek omitted a requested explanation on one item. The baseline included it. These scores do not establish an advantage from the skill, an official exam pass, or superiority to a rabbi. No human candidates or examiners participated.</p>
       <a class="text-link" href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/RESULTS.md">Read every answer, source review, and limitation <span aria-hidden="true">↗</span></a>
+      <p class="evidence-note"><a href="https://github.com/frum-compatible/posek/issues">Objections with mareh mekomos are welcome.</a></p>
     </section>
 
     <section class="sharing wrap" aria-labelledby="share-title"><div><p class="eyebrow">Pass it on</p><h2 id="share-title">Send it to a chavrusa.</h2><p>The shared link opens this page. No installation is needed to read an example or prepare a phone prompt.</p></div><div class="actions"><a class="button primary whatsapp-share" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=Posek%20%E2%80%94%20An%20Orthodox%20AI%20Rabbi.%20https%3A%2F%2Ffrum-compatible.github.io%2Fposek%2F">Share on WhatsApp</a><button id="native-share" class="button outline" type="button" hidden>More sharing options</button><button id="copy-link" class="text-button" type="button">Copy link</button></div><p id="share-status" role="status" aria-live="polite"></p></section>

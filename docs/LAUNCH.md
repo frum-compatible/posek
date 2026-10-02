@@ -1,8 +1,10 @@
-# Posek — An Orthodox AI Rabbi for Torah and Halacha
+# Posek AI — An Orthodox AI Rabbi for Torah and Halacha
 
 **Moirah D’Asrah**
 
 Mutar is also a psak. A heter requires a source. So does an issur.
+
+Hashkafah: configurable. Mareh mekomos: required. For a practical shailah, confirmation with your local rav is recommended. Bring the mareh mekomos.
 
 Posek is an open-source AI Posek for Claude Code and Codex, built for halachic rigor. Bring a shailah with the relevant metzius. Posek opens the sources and works through the halacha to a practical conclusion with mareh mekomos.
 
@@ -38,6 +40,6 @@ npx skills add frum-compatible/posek --skill posek --agent claude-code --agent c
 
 Use the deployed phone-page URL after checking its live preview. The page supplies this caption automatically:
 
-> Posek — An Orthodox AI Rabbi. Mutar is also a psak. Choose your hashkafah, bring a shailah, and check the mareh mekomos.
+> Posek AI — An Orthodox AI Rabbi. Hashkafah: configurable. Mareh mekomos: required. Mutar is also a psak.
 
 The [phone and WhatsApp guide](PHONE-SHARING.md) covers publication. A recipient can read a sample vort and prepare a starter prompt on their phone before deciding whether to install the complete skill.
