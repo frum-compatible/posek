@@ -18,6 +18,8 @@ Manual browser inspection covered the built page at 320, 390, and 1440 pixels wi
 
 The following interactions were exercised:
 
+- The simplified entry flow starts on Halacha with Advanced settings closed. Only the hashkafah selector and question box precede the copy action. The mode switch works with both clicks and arrow keys.
+- Halacha and Dvar Torah retain separate question text, register, and depth during mode switches. Hashkafah remains shared. Hidden Torah format, audience, and source choices do not enter the Halacha prompt; returning to Dvar Torah restores them.
 - Ladies' Parsha Shiur uses the traditional source plan under Modern Yeshivish and permits Gemara under Open Orthodox. Women's Beis Medrash permits Gemara under Lakewood Yeshivish.
 - An explicit source preference takes precedence for a dvar Torah. Practical psak disables that presentation preference and requests all controlling sources.
 - A typed question appears in the generated prompt and stays out of the public share URL.

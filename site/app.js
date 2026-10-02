@@ -17,14 +17,20 @@
   const traditional = new Set(['modern-yeshivish', 'lakewood-yeshivish', 'out-of-town-yeshivish', 'torah-im-derech-eretz', 'chassidish']);
   const controls = ['profile', 'format', 'register', 'audience', 'sources', 'depth', 'question'];
   const selectedText = id => byId(id).selectedOptions[0].text;
+  let activeMode = document.querySelector('input[name="mode"]:checked').value;
+  const modeFields = ['question', 'register', 'depth'];
+  const drafts = {
+    psak: { question: '', register: 'preset', depth: 'preset' },
+    torah: { question: '', register: 'preset', depth: 'preset' }
+  };
 
   function resolvePlan() {
     const profile = byId('profile').value;
-    const audience = byId('audience').value;
-    const format = byId('format').value;
+    const format = document.querySelector('input[name="mode"]:checked').value === 'psak' ? 'psak' : byId('format').value;
+    const audience = format === 'psak' ? 'general' : byId('audience').value;
     let sourcePlan = 'Use the sources needed for the chosen topic.';
     if (format === 'psak') {
-      sourcePlan = 'Research every controlling halachic source. Shiur source preferences do not limit practical psak.';
+      sourcePlan = 'Research every controlling halachic source needed for the question.';
     } else if (byId('sources').value === 'tanach') {
       sourcePlan = 'Tanach and mefarshim in the delivered shiur; omit Gemara analysis unless I request it. Verify underlying sources as needed.';
     } else if (byId('sources').value === 'gemara') {
@@ -37,7 +43,7 @@
         : 'Pesukim and mefarshim, including Gemara where it develops the argument. Explain the relevant sugya.';
     }
     const depth = byId('depth').value === 'preset'
-      ? (audience === 'iyun' ? 'Iyun' : audience === 'teenagers' ? 'Accessible' : 'Developed')
+      ? (format === 'psak' ? 'Concise' : audience === 'iyun' ? 'Iyun' : audience === 'teenagers' ? 'Accessible' : 'Developed')
       : selectedText('depth');
     const register = byId('register').value === 'preset' ? profiles[profile][1] : selectedText('register');
     return { profile, audience, format, sourcePlan, depth, register };
@@ -53,6 +59,17 @@
       shiur: 'Ask which parsha or sugya I want to teach and how long the shiur should be. Then build the outline around one source-based question.',
       revision: 'Ask me to paste my draft. Check its sources and argument before polishing the language.'
     };
+    const questions = {
+      psak: ['Your halacha question', 'For example: I forgot Yaaleh Veyavo in bentching on Rosh Chodesh. Do I repeat it?'],
+      dvar: ['What should the dvar Torah be about?', 'For example: a three-minute vort on Yaakov’s pachim ketanim for the Shabbos table.'],
+      shiur: ['What are you teaching?', 'For example: a 20-minute shiur on hachnasas orchim, with a source sheet.'],
+      revision: ['Paste your draft', 'Paste your dvar Torah and say what you would like to improve.']
+    };
+    byId('prepare-title').textContent = plan.format === 'psak' ? 'Ask a shailah.' : 'Prepare a dvar Torah.';
+    byId('question-label').textContent = questions[plan.format][0];
+    byId('question').placeholder = questions[plan.format][1];
+    byId('torah-settings').hidden = plan.format === 'psak';
+    byId('rav-note').hidden = plan.format !== 'psak';
     byId('profile-description').textContent = profiles[plan.profile][0];
     byId('sources').disabled = plan.format === 'psak';
     byId('resolved-plan').textContent = `${plan.register}. ${plan.depth} treatment. ${plan.sourcePlan}`;
@@ -60,12 +77,13 @@
       'Use Posek, an AI Rabbi for Torah and halacha. Speak in the serious register of a Moirah D’Asrah. The Rosh Yeshiva of Yeshivas Birur HaDavar, Lakewood, is a fictional persona; claim no real appointment or endorsement.',
       `Task: ${taskNames[plan.format]}.`,
       `Hashkafah: ${selectedText('profile')}. ${profiles[plan.profile][0]}`,
-      `Audience: ${selectedText('audience')}. Register: ${plan.register}. Depth: ${plan.depth}.`,
+      `Audience: ${plan.format === 'psak' ? 'General' : selectedText('audience')}. Register: ${plan.register}. Depth: ${plan.depth}.`,
       `Source plan: ${plan.sourcePlan}`,
-      'These are editable teaching preferences, not assumptions about anyone’s ability or a ruling about who may learn a text. My explicit requests override preset defaults. Keep hashkafah separate from my minhag and chosen posek. Never change a practical ruling only to match a profile.',
+      'My explicit requests override preset defaults. Keep hashkafah separate from my minhag and chosen posek. Never change a practical ruling only to match a profile.',
       'Read the relevant primary texts with available source tools. Give exact mareh mekomos and distinguish the source’s words from your interpretation or application. Never invent a quotation, sefer, page, attribution, or successful retrieval. If source access is unavailable, say what remains unverified.',
-      'For divrei Torah, follow my chosen language. In yeshivish English, use verified Hebrew script for short pesukim and source quotations, with the explanation in natural English. Keep everyday terms such as vort and pshat natural; avoid spelling whole Hebrew quotations in Latin letters unless I ask. Develop one real textual point. Check the context before creating a kushya. Use each source to support a necessary step. Apply an Anti-Slop edit: cut generic openings, repeated explanations, decorative terminology, and forced conclusions. Use no em dashes in newly written short-vort prose; vary sentences for spoken delivery. Mark an interpretive suggestion once where it begins. Omit generic warning footers from an ordinary vort while retaining any qualification that changes the source meaning or practical implications. Preserve accurate content when revising. Put brief source notes outside the spoken text.',
-      'For practical psak, establish the facts and relevant minhag; distinguish Mechaber, Rema, and later authorities. Quote the controlling Shulchan Aruch wording briefly and exactly where applicable, explain its scope, and recheck decisive quotations against the retrieved text. If no directly applicable se’if is verified, say so. Give a supported conclusion with its conditions, or identify exactly what remains unresolved. For practical shailos, recommend confirmation with my local rav and provide the mareh mekomos for that review. A homiletic idea does not establish a heter. Do not delay emergency help for research or claim to enact a get, conversion, or binding personal-status decision through chat.',
+      plan.format === 'psak'
+        ? 'For practical psak, establish the facts and relevant minhag; distinguish Mechaber, Rema, and later authorities. If the supplied facts are sufficient, lead with a concise answer and its conditions, then explain the sources. Ask only for missing facts that could change the ruling, and group essential follow-up questions together. Quote the controlling Shulchan Aruch wording briefly and exactly where applicable, explain its scope, and recheck decisive quotations against the retrieved text. If no directly applicable se’if is verified, say so. Give a supported conclusion with its conditions, or identify exactly what remains unresolved. Recommend confirmation with my local rav and provide the mareh mekomos for that review. A homiletic idea does not establish a heter. Do not delay emergency help for research or claim to enact a get, conversion, or binding personal-status decision through chat.'
+        : 'For divrei Torah, audience and source preferences are editable teaching choices, not assumptions about anyone’s ability or a ruling about who may learn a text. Follow my chosen language. In yeshivish English, use verified Hebrew script for short pesukim and source quotations, with the explanation in natural English. Keep everyday terms such as vort and pshat natural; avoid spelling whole Hebrew quotations in Latin letters unless I ask. Develop one real textual point. Check the context before creating a kushya. Use each source to support a necessary step. Apply an Anti-Slop edit: cut generic openings, repeated explanations, decorative terminology, and forced conclusions. Use no em dashes in newly written short-vort prose; vary sentences for spoken delivery. Mark an interpretive suggestion once where it begins. Omit generic warning footers from an ordinary vort while retaining any qualification that changes the source meaning or practical implications. Preserve accurate content when revising. Put brief source notes outside the spoken text. A homiletic idea does not establish a heter. If my draft makes a practical halachic claim, verify its sources and scope separately; identify an unresolved ruling explicitly.',
       `My request: ${question || defaults[plan.format]}`
     ].join('\n\n');
     byId('copy-status').textContent = '';
@@ -88,6 +106,12 @@
   }
 
   controls.forEach(id => byId(id).addEventListener(id === 'question' ? 'input' : 'change', updatePrompt));
+  document.querySelectorAll('input[name="mode"]').forEach(input => input.addEventListener('change', () => {
+    modeFields.forEach(id => { drafts[activeMode][id] = byId(id).value; });
+    activeMode = input.value;
+    modeFields.forEach(id => { byId(id).value = drafts[activeMode][id]; });
+    updatePrompt();
+  }));
   byId('copy-prompt').addEventListener('click', () => copyText(byId('prompt').value, 'copy-status', 'Copied. Paste it into your AI app.'));
   byId('copy-link').addEventListener('click', () => copyText(publicUrl, 'share-status', 'Public link copied.'));
   document.querySelectorAll('.whatsapp-share').forEach(link => {

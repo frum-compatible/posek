@@ -25,30 +25,29 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="topbar wrap">
     <a class="wordmark" href="#" aria-label="Posek home">פוסק <span>POSEK</span></a>
-    <a class="quiet-link" href="#read">Read a dvar Torah <span aria-hidden="true">↓</span></a>
+    <a class="quiet-link whatsapp-share" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=Posek%20%E2%80%94%20An%20Orthodox%20AI%20Rabbi.%20https%3A%2F%2Ffrum-compatible.github.io%2Fposek%2F">Share on WhatsApp</a>
   </header>
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="start wrap">
+    <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow">Moirah D’Asrah</p>
       <h1 id="hero-title">Posek <span class="ai-label">AI</span></h1>
-      <p class="hero-subtitle">An Orthodox AI Rabbi<br>for Torah and Halacha.</p>
-      <p class="hero-copy">Built for halachic rigor. A heter requires a source. So does an issur.</p>
-      <div class="actions">
-        <a class="button primary" href="#prepare">Prepare a shailah or vort <span aria-hidden="true">↓</span></a>
-        <a class="button outline whatsapp-share" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=Posek%20%E2%80%94%20An%20Orthodox%20AI%20Rabbi.%20https%3A%2F%2Ffrum-compatible.github.io%2Fposek%2F">Share on WhatsApp</a>
-      </div>
-      <p class="hero-note">Mutar is also a psak. <a href="#bechinah">Read the bechinah records.</a></p>
+      <p class="hero-subtitle">An Orthodox AI Rabbi.</p>
+      <p class="hero-copy">A heter requires a source. So does an issur.</p>
       <p id="preview-note" class="preview-note" hidden>Local preview. The public link will work after publication.</p>
     </section>
 
-    <section id="prepare" class="prepare wrap" aria-labelledby="prepare-title">
+    <section id="prepare" class="prepare" aria-labelledby="prepare-title">
       <div class="section-intro">
-        <p class="eyebrow">The beis medrash</p>
-        <h2 id="prepare-title">Set your hashkafah.</h2>
-        <p class="method-line">Hashkafah: configurable.<br>Mareh mekomos: required.</p>
-        <p>Prepare a starter prompt here, then paste it into ChatGPT, Claude, or another AI app with source access. This page does not generate a ruling.</p>
+        <h2 id="prepare-title">Ask a shailah.</h2>
+        <p>Copy your prompt into ChatGPT or Claude to get an answer.</p>
       </div>
       <div class="builder">
+        <fieldset class="mode-switch">
+          <legend class="sr-only">What would you like help with?</legend>
+          <label><input class="sr-only" type="radio" name="mode" value="psak" checked><span>Halacha</span></label>
+          <label><input class="sr-only" type="radio" name="mode" value="torah"><span>Dvar Torah</span></label>
+        </fieldset>
         <div class="field">
           <label for="profile">Hashkafah</label>
           <select id="profile">
@@ -61,43 +60,30 @@
             <option value="dati-leumi">Dati Leumi · Toras Eretz Yisrael</option>
             <option value="chassidish">Chassidish · Derech HaChassidus</option>
           </select>
-          <p id="profile-description" class="field-note">A clear answer l'maaseh, followed by enough of the sugya to explain it.</p>
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="format">What are you preparing?</label>
-            <select id="format"><option value="dvar">A dvar Torah</option><option value="psak">A practical shailah</option><option value="shiur">A shiur outline</option><option value="revision">A revision of my draft</option></select>
-          </div>
-          <div class="field">
-            <label for="register">Language and register</label>
-            <select id="register"><option value="preset">Use the profile</option><option value="yeshivish">Yeshivish English</option><option value="accessible">Accessible English</option><option value="hebrew">Hebrew</option></select>
-          </div>
-        </div>
-        <details class="advanced">
-          <summary>Audience and shiur settings</summary>
-          <div class="field">
-            <label for="audience">Audience</label>
-            <select id="audience"><option value="general">General</option><option value="ladies">Ladies' Parsha Shiur</option><option value="women-beis">Women's Beis Medrash</option><option value="iyun">Yeshiva Seder Iyun</option><option value="baalei-batim">Baalei Batim Shiur</option><option value="teenagers">Teenagers</option></select>
-          </div>
-          <div class="field-row">
-            <div class="field"><label for="sources">Sources in the delivered shiur</label><select id="sources"><option value="preset">Use the preset</option><option value="tanach">Tanach and mefarshim</option><option value="gemara">Gemara and mefarshim</option></select></div>
-            <div class="field"><label for="depth">Depth</label><select id="depth"><option value="preset">Use the preset</option><option value="accessible">Accessible</option><option value="developed">Developed</option><option value="iyun">Iyun</option></select></div>
-          </div>
-          <p class="field-note">These are editable teaching choices. For practical psak, every controlling source still needs to be considered.</p>
-        </details>
-        <p id="resolved-plan" class="resolved-plan" aria-live="polite"></p>
         <div class="field">
-          <label for="question">Your shailah, topic, or draft <span class="optional">(optional)</span></label>
-          <textarea id="question" rows="4" maxlength="2400" placeholder="For example: a three-minute vort on Yaakov's pachim ketanim, with one clear point and exact sources."></textarea>
-          <p class="field-note">Your text stays in this page. Sharing the site does not share your question.</p>
+          <label id="question-label" for="question">Your halacha question</label>
+          <textarea id="question" rows="3" maxlength="2400" placeholder="For example: I forgot Yaaleh Veyavo in bentching on Rosh Chodesh. Do I repeat it?"></textarea>
         </div>
         <div class="copy-row">
-          <button id="copy-prompt" class="button primary" type="button">Copy starter prompt</button>
+          <button id="copy-prompt" class="button primary" type="button">Copy prompt</button>
           <span id="copy-status" role="status" aria-live="polite"></span>
         </div>
-        <details class="prompt-details"><summary>Read the prompt before copying</summary><textarea id="prompt" readonly rows="13" aria-label="Generated starter prompt"></textarea></details>
-        <div id="manual-copy" hidden><label for="manual-text">Copy this text manually</label><textarea id="manual-text" readonly rows="5"></textarea></div>
         <p class="next-step">Then open <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> or <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a> and paste it into a new chat.</p>
+        <details class="advanced">
+          <summary>Advanced settings</summary>
+          <div class="field-row">
+            <div class="field"><label for="register">Language and register</label><select id="register"><option value="preset">Use the profile</option><option value="yeshivish">Yeshivish English</option><option value="accessible">Accessible English</option><option value="hebrew">Hebrew</option></select></div>
+            <div class="field"><label for="depth">Depth</label><select id="depth"><option value="preset">Use the preset</option><option value="accessible">Accessible</option><option value="developed">Developed</option><option value="iyun">Iyun</option></select></div>
+          </div>
+          <div id="torah-settings" hidden>
+            <div class="field"><label for="format">Format</label><select id="format"><option value="dvar">A dvar Torah</option><option value="shiur">A shiur outline</option><option value="revision">A revision of my draft</option></select></div>
+            <div class="field"><label for="audience">Audience</label><select id="audience"><option value="general">General</option><option value="ladies">Ladies' Parsha Shiur</option><option value="women-beis">Women's Beis Medrash</option><option value="iyun">Yeshiva Seder Iyun</option><option value="baalei-batim">Baalei Batim Shiur</option><option value="teenagers">Teenagers</option></select></div>
+            <div class="field"><label for="sources">Sources in the delivered shiur</label><select id="sources"><option value="preset">Use the preset</option><option value="tanach">Tanach and mefarshim</option><option value="gemara">Gemara and mefarshim</option></select></div>
+            <p class="field-note">These are editable teaching choices. For practical psak, every controlling source still needs to be considered.</p>
+          </div>
+          <p id="profile-description" class="field-note">A clear answer l'maaseh, followed by enough of the sugya to explain it.</p>
+          <p id="resolved-plan" class="resolved-plan" aria-live="polite"></p>
         <details id="model-setup" class="model-setup">
           <summary>Recommended models and setup</summary>
           <p><strong>ChatGPT:</strong> choose Astra if available. Increase reasoning effort for a complex shailah. Otherwise use an available reasoning model with source access. <a href="https://learn.chatgpt.com/docs/model-selection" target="_blank" rel="noopener noreferrer">Model guide ↗</a></p>
@@ -106,10 +92,15 @@
           <p class="small">Checked 2 October 2026. Suggested setups, not Posek model rankings or required subscriptions. Availability varies. <a href="https://github.com/frum-compatible/posek/blob/main/docs/MODEL-SETUP.md">Setup and evidence limits ↗</a></p>
         </details>
         <p class="field-note">The phone starter is shorter than the full installed skill. Source verification depends on the AI app and tools you use.</p>
-        <p class="rav-note">For a practical shailah, confirmation with your local rav is recommended. Bring the mareh mekomos.</p>
+        </details>
+        <details class="prompt-details"><summary>Read the prompt before copying</summary><textarea id="prompt" readonly rows="13" aria-label="Generated starter prompt"></textarea></details>
+        <div id="manual-copy" hidden><label for="manual-text">Copy this text manually</label><textarea id="manual-text" readonly rows="5"></textarea></div>
+        <p class="field-note">Your text stays in this page. Sharing the site does not share your question.</p>
+        <p id="rav-note" class="rav-note">For a practical shailah, confirmation with your local rav is recommended. Bring the mareh mekomos.</p>
         <noscript><p>Enable JavaScript to prepare a prompt. You can still read the dvar Torah below or download the full skill.</p></noscript>
       </div>
     </section>
+    </div>
 
     <section id="read" class="reading wrap" aria-labelledby="reading-title">
       <div class="section-intro"><p class="eyebrow">Divrei Torah, written to be said aloud</p><h2 id="reading-title">What makes the small vessels precious?</h2><p>Hebrew from the source, woven into the English of a Shabbos-table vort.</p></div>
@@ -126,7 +117,7 @@
     </section>
 
     <section id="bechinah" class="reading wrap" aria-labelledby="bechinah-title">
-      <div class="section-intro"><p class="eyebrow">Bechinah records</p><h2 id="bechinah-title">Rabbinic questions. Public answers.</h2><p>All four selected semicha questions met our published development threshold. A stricter answer does not receive extra credit.</p></div>
+      <div class="section-intro"><p class="eyebrow">Bechinah records</p><h2 id="bechinah-title">Rabbinic questions. Public answers.</h2><p>All four selected semicha questions met our published development threshold. A stricter answer does not receive extra credit. Mutar is also a psak.</p></div>
       <table class="results-table">
         <caption>Four selected semicha-related questions · AI review · threshold: ≥10/12, no zero dimension or critical failure</caption>
         <thead><tr><th scope="col">Condition</th><th scope="col">Rubric points</th><th scope="col">Met development threshold</th></tr></thead>
@@ -141,6 +132,6 @@
 
     <section id="install" class="install wrap" aria-labelledby="install-title"><p class="eyebrow">The full skill</p><h2 id="install-title">For your beis medrash<br>and your terminal.</h2><p>Install the complete source method, divrei Torah workflow, and profile guides in Claude Code or Codex.</p><div class="command"><code>npx skills add frum-compatible/posek --skill posek --agent claude-code --agent codex</code></div><div class="actions"><a class="button outline" href="posek-skill.zip" download>Download the skill</a><a class="text-link" href="https://github.com/frum-compatible/posek" target="_blank" rel="noopener noreferrer">View the repository ↗</a></div></section>
   </main>
-  <footer class="wrap footer"><div class="footer-brand">Posek <span>Moirah D’Asrah</span></div><p>An AI persona in the role of Rosh Yeshiva of Yeshivas Birur HaDavar, Lakewood. The institution and appointment are fictional; no real rabbinic endorsement is claimed.</p><p>For education and entertainment. AI-generated answers and citations can be wrong. Posek is not a rabbi and does not provide binding psak. Confirm practical halachic decisions with a qualified rav who knows the relevant facts. <a href="https://github.com/frum-compatible/posek/blob/main/NOTICE">Use notice</a>.</p><p class="small">No account, analytics, or question submission in this app. GitHub Pages keeps hosting logs. MIT-licensed project; source texts retain their own licenses.</p></footer>
+  <footer class="wrap footer"><div class="footer-brand">Posek <span>Moirah D’Asrah</span></div><p>An AI persona in the role of Rosh Yeshiva of Yeshivas Birur HaDavar, Lakewood. The institution and appointment are fictional; no real rabbinic endorsement is claimed.</p><p class="small">No account, analytics, or question submission in this app. GitHub Pages keeps hosting logs. MIT-licensed project; source texts retain their own licenses. <a href="https://github.com/frum-compatible/posek">GitHub</a> · <a href="https://github.com/frum-compatible/posek/blob/main/NOTICE">Project notice</a>.</p></footer>
 </body>
 </html>

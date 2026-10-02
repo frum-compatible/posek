@@ -8,7 +8,7 @@ Mutar is also a psak. A heter requires a source. So does an issur.
 
 ## Start on your phone
 
-The [phone page](https://frum-compatible.github.io/posek/) introduces Posek, includes an excerpt from an actual dvar Torah, and prepares a starter prompt for your AI app. Choose a hashkafah, audience, and learning depth, then copy the prompt into ChatGPT or Claude. The complete installed skill includes the longer source method and reference guides.
+The [phone page](https://frum-compatible.github.io/posek/) opens on Halacha. Choose your hashkafah, write your question, and copy the prompt into ChatGPT or Claude. Switch to Dvar Torah for a vort, shiur, or draft revision. Language, depth, and teaching preferences are under Advanced settings. The complete installed skill includes the longer source method and reference guides.
 
 WhatsApp sharing sends the public introduction and page link. It leaves your question out. GitHub Pages hosts the public site. The [phone and WhatsApp guide](docs/PHONE-SHARING.md) covers deployment and the live preview check.
 
