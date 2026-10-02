@@ -1,0 +1,47 @@
+{
+  "adaptation": "Condensed English paraphrases; not authorized translations. WebYeshiva final sentence adds the shared citation requirement.",
+  "questions": [
+    {
+      "id": "CR-01",
+      "institution": "Chief Rabbinate of Israel",
+      "document": "Issur veHeter, Iyar 5786, 100.05.26",
+      "question_number": 1,
+      "pdf_pages": [
+        2
+      ],
+      "prompt": "(a) Compare Rishonim on cooking poultry with milk and benefiting, citing Gemara. (b) Explain Agra’s poultry/cheese teaching in Tosafot and Rambam, their conclusions, and Beit Yosef YD89. (c) May a Jew cook meat for a non-Jew in a dairy pot that is not ben-yomo?",
+      "url": "https://www.gov.il/BlobFolder/generalpage/exams_rabanut_iyar_2026/he/100.05.26%20-%20%D7%90%D7%99%D7%A1%D7%95%D7%A8%20%D7%95%D7%94%D7%99%D7%AA%D7%A8.pdf"
+    },
+    {
+      "id": "CR-02",
+      "institution": "Chief Rabbinate of Israel",
+      "document": "Issur veHeter, Iyar 5786, 100.05.26",
+      "question_number": 2,
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "prompt": "(a) Compare three Rishonim positions on ingested milk recovered from a slaughtered animal’s stomach, and Shulchan Arukh/Rema. (b) Shulchan Arukh forbids setting cheese with such milk salted in stomach skin or soaked there for a day: explain the difficulty and resolution. (c) Explain Shach’s challenge, two resolutions, and Rema’s rationale for the sixtyfold condition when clear stomach milk sets cheese.",
+      "url": "https://www.gov.il/BlobFolder/generalpage/exams_rabanut_iyar_2026/he/100.05.26%20-%20%D7%90%D7%99%D7%A1%D7%95%D7%A8%20%D7%95%D7%94%D7%99%D7%AA%D7%A8.pdf"
+    },
+    {
+      "id": "CR-03",
+      "institution": "Chief Rabbinate of Israel",
+      "document": "Issur veHeter, Iyar 5786, 100.05.26",
+      "question_number": 3,
+      "pdf_pages": [
+        3
+      ],
+      "prompt": "(a) Give three Rishonim explanations permitting stacked pieces during salting, with practical differences. (b–c) Analyze external cold blood dripping onto meat during its salting period or roasting, explaining Shulchan Arukh/Rema and reasons.",
+      "url": "https://www.gov.il/BlobFolder/generalpage/exams_rabanut_iyar_2026/he/100.05.26%20-%20%D7%90%D7%99%D7%A1%D7%95%D7%A8%20%D7%95%D7%94%D7%99%D7%AA%D7%A8.pdf"
+    },
+    {
+      "id": "WY-01",
+      "institution": "WebYeshiva",
+      "document": "Semicha: Halachic Methodology, 2016–17, Lesson 5, October 9, 2016",
+      "status": "Instructor publicly announced this as a planned midterm question; final administration unverified.",
+      "prompt": "An aravos seller claims that only willows grown along a riverbank should be bought for Sukkos, and that artificially irrigated willows are acceptable only after the fact. Evaluate that claim and explain whether it should determine which aravos a person purchases. Identify the relevant sources and distinguish validity from preferred practice.",
+      "url": "https://webyeshiva.org/course/halacha-methodology/"
+    }
+  ]
+}
