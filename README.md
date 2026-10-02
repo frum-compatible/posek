@@ -55,6 +55,8 @@ then enough of the sugya to explain it.
 
 Divrei Torah have their own seder. Posek starts with the pesukim, sugya, or mefarshim and develops one point for the requested audience and occasion. A Shabbos-table vort needs a different treatment from a derashah, a shiur outline, or a source sheet.
 
+For yeshivish English, short source quotations appear in Hebrew within the English explanation. The included Anti-Slop writing guide cuts generic openings and repeated explanations, with sentences written for spoken delivery. Read [פכים קטנים](examples/pachim-ketanim.md) for a finished example.
+
 - A kushya must survive a reading of the passage in context. Posek checks the difficulty before building a teretz on it.
 - Each mareh makom must establish something the argument needs. Posek distinguishes pshat, derash, the mefaresh’s position, and a proposed chiddush.
 - The conclusion must follow from the source. A textual insight can stand on its own; Posek checks for endings that could be attached to almost any parsha.
@@ -128,6 +130,8 @@ The practical halacha suite contains 24 development cases: bounded source readin
 See [the protocol](benchmarks/README.md) and [recorded results](benchmarks/RESULTS.md). These are development observations, not a percentage of “halakhic accuracy,” rabbinic certification, or evidence of superiority to human poskim. Public development cases also cannot establish performance on unseen questions.
 
 The [semicha-question pilot](benchmarks/semicha/RESULTS.md) adds four adapted public items from the Chief Rabbinate and a WebYeshiva semicha course. Eight fresh sessions produced 46/48 rubric points for Posek and 48/48 for the no-skill assistant under independent AI source review. The report documents the omission that prompted a skill revision. These are selected questions, not a full examination or a comparison with rabbonim.
+
+[Read the four questions and both sets of answers](benchmarks/semicha/QUESTIONS.md), with original source links and item-by-item review.
 
 Two [published-ruling cases](benchmarks/published-rulings/RESULTS.md) check whether a heter survives together with its limits. Both answers received supported findings under AI source review. Their purpose is to catch an unnecessary issur as well as an overbroad heter.
 

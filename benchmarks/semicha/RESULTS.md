@@ -4,6 +4,8 @@
 
 Eight fresh candidate sessions answered four adapted public items on 2026-10-02. The [protocol](PROTOCOL.md) and [input manifest](input-manifest.json) record the selection, frozen skill, tools, and review method. These are AI-reviewed development scores, not an official semicha grade or a percentage of halachic accuracy.
 
+[Read the questions and answers](QUESTIONS.md) alongside the original sources and individual reviews.
+
 ## What was tested
 
 | Item | Posek | No-skill assistant | Independent source-review finding |

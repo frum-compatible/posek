@@ -49,6 +49,8 @@ Read [torah-writing.md](torah-writing.md) before delivering or revising the piec
 
 Keep spoken content separate from source notes when length matters. Use a title only if it helps; make it specific to the thought. Honor the requested language, structure, and level. Use yeshivish terms naturally with a yeshivish audience; explain them when the audience needs it.
 
+In yeshivish English, use Hebrew script for short source quotations and English for the explanation, following the mixed-language guidance in [torah-writing.md](torah-writing.md). Apply its Anti-Slop editing pass before delivery, including the no-em-dash default for a short vort. The finished piece should sound natural at the table. Keep only source qualifications that matter to the reading or a practical implication.
+
 For an existing draft:
 
 - Identify its actual claim and preserve what works.

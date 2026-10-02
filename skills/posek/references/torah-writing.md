@@ -26,6 +26,26 @@ Use ordinary verbs and concrete referents. Say what Yaakov did, which word the m
 
 Use yeshivish English naturally. Terms such as metzius, avodah, shittah, and l’maaseh should make the thought more precise. Do not translate every ordinary English noun into loshon hakodesh or imitate an accent. Do not claim universal implications for all of Yiddishkeit from a narrow observation.
 
+## Hebrew within English
+
+For a written dvar Torah in yeshivish English, quote short pesukim, maamarei Chazal, and the decisive lashon of a mefaresh in Hebrew script. Explain or develop them in English. A line such as “ויותר יעקב לבדו. Yaakov remained alone” reads differently from spelling out an entire pasuk in Latin letters. The quotation still needs verification; Hebrew lettering adds no authority of its own.
+
+Keep familiar conversational terms such as vort, pshat, gezel, and l’maaseh in the spelling that fits the surrounding English. Use Hebrew for a term when its actual wording carries the argument. Avoid mechanically repeating Hebrew, transliteration, and translation for every phrase. For readers unfamiliar with Hebrew, give the meaning nearby; add pronunciation help when requested or useful. Follow explicit requests for Hebrew-only, English-only, or transliterated text.
+
+Use verified spelling. Plain Hebrew is suitable for the default yeshivish register. Add niqqud only from a checked text when it helps the reader; do not improvise it. Keep URLs and canonical retrieval identifiers unchanged. In HTML, isolate Hebrew quotations with `lang="he"` and `dir="rtl"` on a `bdi` element so punctuation and neighboring English display correctly.
+
+## Remove the generated-prose habits
+
+Apply the Anti-Slop Writing approach to the argument and voice, not just the punctuation. Keep the specific observation, the speaker's register, and any uncertainty the sources require. Cut generic openings, ornamental names, repeated explanations, and conclusions that could be pasted onto another parsha.
+
+For a short vort under 500 words, use no em dashes in newly written prose. Rewrite the sentence with a full stop, comma, or parentheses as the meaning requires; do not swap in a different dash glyph. Preserve punctuation inside exact quotations. In longer pieces, use dashes sparingly rather than as the default bridge between clauses.
+
+Read the piece aloud internally. Break a sentence where a speaker needs breath or a new thought begins. Keep a short sentence short when it carries the point. Avoid regular runs of matching sentence lengths, a rhetorical question in every paragraph, and a closing recap after the conclusion has already landed.
+
+Do not append generic warnings, model disclaimers, or “this is only a suggested reading” footers to an ordinary vort. Mark an interpretive suggestion once where it begins. Retain a qualification if omitting it would change the source's meaning or encourage a harmful practical conclusion; explain that qualification in context. Keep mareh mekomos brief and outside the spoken piece.
+
+Write prose that sounds natural aloud. Do not promise that AI assistance is undetectable, invent a human author, or manufacture a personal story. The editorial principles are included here, so a separate Anti-Slop skill is not required to use Posek.
+
 Let the argument determine its shape. Balanced contrasts and parallel phrasing can help when the concepts genuinely differ; do not build the piece from repeated “not X but Y” slogans. Avoid a forced inspirational conclusion when the textual explanation already provides a satisfying ending.
 
 For spoken delivery, use manageable sentences and make the transitions audible. Count only the spoken section against a supplied word cap, and identify source notes separately. Do not claim an exact delivery time. A Hebrew quotation and its explanation need room; cut a secondary point before rushing the core one.
@@ -33,3 +53,5 @@ For spoken delivery, use manageable sentences and make the transitions audible. 
 ## A useful final pass
 
 Make sure the listener can name the actual insight in one sentence. Check that the source notes identify precise locations, that the key inference is honestly attributed, and that the opening's question has been addressed. Remove the least necessary paragraph if the piece still works without it. Do not add a moral, a story, or another mefaresh solely to make the answer look complete.
+
+Editorial influence: [Anti-Slop Writing](https://github.com/Kaos599/professional-skills/tree/b6686e8acdc9ea1285f67ceb90c60f5298b753a7/skills/anti-slop-writing). These Torah-specific instructions are written for Posek and do not require that package at runtime.
