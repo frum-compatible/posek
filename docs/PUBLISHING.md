@@ -121,6 +121,15 @@ git remote get-url --push origin
 
 **Stop unless the effective push URL is `https://github.com/OWNER/posek` or that URL ending in `.git`, with your chosen owner substituted.** Existing Git URL rewrite rules can change the effective destination or protocol.
 
+If a global rule rewrites GitHub HTTPS addresses to SSH, keep this personal repository on HTTPS with a more specific, repository-local rule, then inspect the effective URL again:
+
+```sh
+git config --local "url.https://github.com/$OWNER/.insteadOf" "https://github.com/$OWNER/"
+git remote get-url --push origin
+```
+
+This does not change the global rewrite used by work repositories. A more specific inherited rule may still take precedence; the effective push URL must match before proceeding.
+
 Assuming the reviewed branch is `main`:
 
 ```sh

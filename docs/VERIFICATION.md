@@ -1,6 +1,6 @@
 # Verification record
 
-Recorded on 2026-10-02. Publication and GitHub CI are pending.
+Recorded on 2026-10-02. The repository and phone page are public.
 
 ## Skill behavior and sources
 
@@ -28,6 +28,8 @@ These checks verify page behavior, not the quality of an AI answer generated fro
 
 ## Software gates
 
-The repository contains 34 offline unit tests covering source retrieval, evaluation scoring, and site packaging, plus a project consistency check. They have not been run locally, in accordance with the author's CI-only machine policy. Both GitHub workflows run the checks before their respective jobs complete; the Pages workflow deploys only after they pass.
+The repository contains 34 offline unit tests covering source retrieval, evaluation scoring, and site packaging, plus a project consistency check. All passed on [GitHub CI at revision a8f605a](https://github.com/frum-compatible/posek/actions/runs/37059777121). They were not run locally, in accordance with the author's CI-only machine policy. Both GitHub workflows run the checks before their respective jobs complete; the Pages workflow deploys only after they pass.
 
-The repository has no public remote or commit at the time of this record. Local inspection and artifact generation do not establish a passing CI run. Use the [publishing guide](PUBLISHING.md) to authenticate with the intended account, commit, push, and inspect the actual results.
+The [Pages deployment](https://github.com/frum-compatible/posek/actions/runs/37059836316) published that revision. The public HTML, social-card image, and skill ZIP returned HTTP 200. A browser inspection of the live page at 390 pixels confirmed the public canonical URL, generated starter, correct WhatsApp URL, hidden local-preview notice, and no horizontal overflow. The live WhatsApp card inside WhatsApp remains unverified; no message was sent.
+
+The publishing identity is `frum-compatible`, with its GitHub noreply address in author and committer metadata. Authentication uses a separate CLI configuration. An inherited HTTPS-to-SSH URL rewrite required a repository-local rule to keep this repository on HTTPS; global work configuration was preserved. Use the [publishing guide](PUBLISHING.md) for subsequent updates and inspect the CI run for the exact revision being released.

@@ -54,6 +54,7 @@ def main():
     require(all(count >= 2 for count in pairs.values()), "A counterfactual group needs at least two cases")
 
     editorial_cases = score.validate_cases(score.read_json(ROOT / "benchmarks/divrei-torah/cases.json"))
+    semicha_cases = score.validate_cases(score.read_json(ROOT / "benchmarks/semicha/questions.json"))
     for case in editorial_cases:
         require(case.get("mode") in ("generation", "revision"), f"{case['id']}: invalid editorial mode")
         for key in ("review_checks", "critical_failures"):
@@ -71,11 +72,13 @@ def main():
             target = target.split("#", 1)[0]
             require((path.parent / target).exists(), f"Broken local link in {path.relative_to(ROOT)}: {target}")
 
-    for judgments_path in sorted((ROOT / "benchmarks/runs").glob("*/judgments.json")):
-        expected = score.score_judgments(score.read_json(judgments_path), cases, judgments_path.parent)
-        saved = score.read_json(judgments_path.with_name("report.json"))
-        require(saved == expected, f"Stale or altered report: {judgments_path.parent.name}")
-    print(f"Project structure and saved reports checked; {len(cases)} psak and {len(editorial_cases)} editorial cases. No accuracy claim.")
+    for runs_dir, run_cases in ((ROOT / "benchmarks/runs", cases),
+                                (ROOT / "benchmarks/semicha/runs", semicha_cases)):
+        for judgments_path in sorted(runs_dir.glob("*/judgments.json")):
+            expected = score.score_judgments(score.read_json(judgments_path), run_cases, judgments_path.parent)
+            saved = score.read_json(judgments_path.with_name("report.json"))
+            require(saved == expected, f"Stale or altered report: {judgments_path.parent.name}")
+    print(f"Project structure and saved reports checked; {len(cases)} psak, {len(editorial_cases)} editorial, and {len(semicha_cases)} semicha-derived cases. No accuracy claim.")
 
 
 if __name__ == "__main__":

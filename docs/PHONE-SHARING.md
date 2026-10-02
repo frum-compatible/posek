@@ -16,7 +16,7 @@ The public link follows that caption. See [WhatsApp's click-to-chat documentatio
 
 ## Publish the page
 
-The intended initial URL is `https://frum-compatible.github.io/posek/`. It is a planned URL until the repository and Pages deployment exist.
+The public page is [frum-compatible.github.io/posek](https://frum-compatible.github.io/posek/). Its first deployment completed on 2026-10-02.
 
 After authenticating as the intended personal GitHub account and publishing the reviewed repository:
 

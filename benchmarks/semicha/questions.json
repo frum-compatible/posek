@@ -1,6 +1,7 @@
 {
   "adaptation": "Condensed English paraphrases; not authorized translations. WebYeshiva final sentence adds the shared citation requirement.",
-  "questions": [
+  "schema_version": 1,
+  "cases": [
     {
       "id": "CR-01",
       "institution": "Chief Rabbinate of Israel",

@@ -4,11 +4,13 @@
 
 An open-source AI Posek for shailos in halacha and divrei Torah, built for Claude Code and Codex. Learn the sugya and give a clear answer with mareh mekomos.
 
+Mutar is also a psak. A heter requires a source. So does an issur.
+
 ## Start on your phone
 
-The [phone page](site/index.html) introduces Posek, includes an excerpt from an actual dvar Torah, and prepares a starter prompt for your AI app. Choose a hashkafah, audience, and learning depth, then copy the prompt into ChatGPT or Claude. The complete installed skill includes the longer source method and reference guides.
+The [phone page](https://frum-compatible.github.io/posek/) introduces Posek, includes an excerpt from an actual dvar Torah, and prepares a starter prompt for your AI app. Choose a hashkafah, audience, and learning depth, then copy the prompt into ChatGPT or Claude. The complete installed skill includes the longer source method and reference guides.
 
-WhatsApp sharing sends the public introduction and page link. It leaves your question out. The page is ready for GitHub Pages; its planned address is `https://frum-compatible.github.io/posek/`, pending publication. The [phone and WhatsApp guide](docs/PHONE-SHARING.md) covers deployment and the live preview check.
+WhatsApp sharing sends the public introduction and page link. It leaves your question out. GitHub Pages hosts the public site. The [phone and WhatsApp guide](docs/PHONE-SHARING.md) covers deployment and the live preview check.
 
 ## AI Torah learning and practical shailos
 
@@ -58,7 +60,7 @@ The installable skill includes guidance on spoken length, audience, source sheet
 
 ## Install
 
-Install from the public repository after publication:
+Install from the public repository:
 
 ```sh
 npx skills add frum-compatible/posek --skill posek --agent claude-code --agent codex
@@ -121,7 +123,7 @@ The practical halacha suite contains 24 development cases: bounded source readin
 
 See [the protocol](benchmarks/README.md) and [recorded results](benchmarks/RESULTS.md). These are development observations, not a percentage of “halakhic accuracy,” rabbinic certification, or evidence of superiority to human poskim. Public development cases also cannot establish performance on unseen questions.
 
-The repository includes offline tests and a GitHub Actions workflow. These check software behavior separately from the halachic and editorial evaluations. CI results are pending publication. The original psak pilot predates the current wording and divrei Torah mode; its answers and skill hashes are preserved. The newer divrei Torah runs have their own input records and review.
+The repository includes offline tests and GitHub Actions workflows. These check software behavior separately from the halachic and editorial evaluations; see the [verification record](docs/VERIFICATION.md) for actual CI runs. The original psak pilot predates the current wording and divrei Torah mode; its answers and skill hashes are preserved. The newer divrei Torah runs have their own input records and review.
 
 ## Scope
 

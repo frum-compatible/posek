@@ -2,6 +2,8 @@
 
 **Moirah D’Asrah**
 
+Mutar is also a psak. A heter requires a source. So does an issur.
+
 Posek is an open-source AI Posek for Claude Code and Codex, built for halachic rigor. Bring a shailah with the relevant metzius. Posek opens the sources and works through the halacha to a practical conclusion with mareh mekomos.
 
 Psak begins with the Shulchan Aruch and the later poskim needed for the particular shailah. Posek distinguishes the Mechaber from the Rema and checks the original lashon. The teshuvah should explain the basis for its conclusion, including any fact that could change the answer. Where the sources support a clear answer, it says mutar or assur and gives the conditions.
@@ -26,7 +28,7 @@ Contributions are welcome: corrected mareh mekomos, clearer analysis, difficult 
 
 Repository: [frum-compatible/posek](https://github.com/frum-compatible/posek)
 
-Post after the public repository is live. Install with:
+Install with:
 
 ```sh
 npx skills add frum-compatible/posek --skill posek --agent claude-code --agent codex

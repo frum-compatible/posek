@@ -1,0 +1,27 @@
+{
+  "frozen_at": "2026-10-02T20:29:19.923991+00:00",
+  "status": "Development cases based on public discussions and published rulings; not semicha exam questions.",
+  "selection": "Purposive cases to detect false prohibitions and overbroad permissions. No claim of representative sampling or measured difficulty.",
+  "conditions": "One fresh Posek session per case, source access allowed, expected notes withheld. No baseline or human candidate. AI source review.",
+  "rubric": "Development review of source match, controlling conditions, unsupported prohibition, overbroad permission, and honest gaps. No population accuracy score.",
+  "cases": [
+    {
+      "id": "PR-01",
+      "prompt": "A plugged-in incandescent lamp is keeping someone awake on Shabbos. According to Rabbi Doniel Neustadt’s published approach, compare moving the whole lamp normally by hand with nudging it using an elbow when needed. Assume the movement will not unplug it, operate a switch, or alter an electrical contact. Would the same permission cover moving it in a way that pulls the plug out? Explain the sources and distinguish the lamp body from a detached cover.",
+      "discovery": "https://judaism.stackexchange.com/questions/121006/why-arent-shabbat-lamps-muktzeh",
+      "target_authority": "https://outorah.org/p/49935/",
+      "expected": "Preserve the article’s ordinary-moving restriction and its needed body-movement permission; prohibit detaching power; distinguish separate cover. Explain underlying muktzeh sources and do not attribute the modern lamp application directly to the Shulchan Aruch. Note documented disagreement without treating this article as universal consensus."
+    },
+    {
+      "id": "PR-02",
+      "prompt": "A Jew forgot to immerse a new metal food utensil bought from a non-Jew and needs it for a Shabbos meal. A friend says there is no solution because both immersing and giving gifts are forbidden on Shabbos. Is a genuine gift to a non-Jew followed by borrowing the utensil an available solution? What changes if ownership is never really transferred, or if the Jew reacquires it after Shabbos? May this be used routinely when a mikveh is available? Give the sources and any material disagreement.",
+      "discovery": "https://judaism.stackexchange.com/questions/9981/is-there-a-source-for-not-requiring-tevilah-for-the-first-use",
+      "target_authority": "https://www.hidabroot.com/question/3190",
+      "primary_refs": [
+        "Shulchan Arukh, Orach Chayim 323:7",
+        "Shulchan Arukh, Yoreh De'ah 120:16"
+      ],
+      "expected": "Identify real gift-and-loan avenue for pressing need, cite and distinguish source views on direct immersion, require genuine ownership transfer, distinguish renewed Jewish ownership and later immersion/blessing questions, and do not turn an exigency into unlimited routine exemption. A different documented view must be accurately scoped."
+    }
+  ]
+}

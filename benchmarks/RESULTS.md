@@ -75,9 +75,9 @@ is needed before making performance claims.
 Live source retrieval and report generation were exercised. Static independent
 review found and corrected packaging and account-isolation issues.
 
-**34 offline unit tests are written but have not been run.** GitHub Actions also
-checks project structure and report consistency. Under the author's CI-only
-machine policy, gates were not run locally; CI is pending publication. Installation
+**34 offline unit tests passed on GitHub CI.** The [recorded run](https://github.com/frum-compatible/posek/actions/runs/37059777121)
+also passed the project structure and report consistency check. Under the author's CI-only
+machine policy, gates were not run locally. Installation
 was checked through local Codex skill discovery and Claude's resolved skill links;
 an end-to-end Claude invocation was not tested. These
 software checks are separate from the religious-reasoning evaluation.
