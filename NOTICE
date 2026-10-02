@@ -1,0 +1,14 @@
+Posek's MIT license applies to its original code, instructions, documentation,
+and benchmark questions/paraphrases. It does not relicense source editions,
+translations, publisher material, or other text retrieved at runtime.
+
+Sefaria provides access to editions with different licenses. Check the metadata
+of the edition actually used and retain required attribution. This repository
+does not bundle the fetched source corpus. Its source manifest records version
+provenance and hashes; see benchmarks/SOURCES.md.
+
+Posek is AI software. No semichah, rabbinic haskamah, or institutional
+endorsement is claimed. No affiliation with a source-text provider or model
+provider is claimed.
+Yeshivas Birur HaDavar, Lakewood, and the Rosh Yeshiva appointment are fictional
+elements of the AI persona and do not represent an actual institution.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Posek — Orthodox AI Rabbi"
+  short_description: "Divrei Torah and psak, with verified mareh mekomos"
+  default_prompt: "Use $posek to develop my dvar Torah or address my shailah, with verified mareh mekomos and a clear, source-based explanation."

@@ -1,0 +1,118 @@
+{
+  "request_id": "DT-002",
+  "exact_model_id": "unknown",
+  "written_at": "2026-10-02T03:40:50.976526Z",
+  "spoken_word_count_whitespace": 384,
+  "deliverable_sha256": "514507ab6b75e58156179ac39c5d49e41fdcba00c7898bfac16f46d0322d235e",
+  "sources": [
+    {
+      "ref": "Pirkei Avot 1:3",
+      "url": "https://www.sefaria.org/Pirkei_Avot.1.3",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Pirkei%20Avot%201%3A3?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "role": "Core: service without reward as its purpose; servant image in both clauses.",
+      "retrieved_at": "2026-10-02T03:38:30.438906Z",
+      "payload_sha256": "7b88e673abd004c09e7459796661705b6a76ebc3aa854ea467e116a97113e80c",
+      "editions": [
+        "Torat Emet 357",
+        "Mishnah Yomit by Dr. Joshua Kulp"
+      ],
+      "tool": "fetch_source.py via exec_command",
+      "tool_result": "success; exit code 0; original and English present",
+      "warnings": [],
+      "private_evidence": "work/posek-dvar-pilot/DT-002/avot-1-3.json"
+    },
+    {
+      "ref": "Mishneh Torah, Repentance 10:2",
+      "url": "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.2",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Mishneh%20Torah%2C%20Repentance%2010%3A2?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "role": "Core: truth as motive, good as consequence; exceptional level of love.",
+      "retrieved_at": "2026-10-02T03:38:30.417927Z",
+      "payload_sha256": "44c5d6f13f84b3c34f2ac4f47543795f25be294561a530998126df4e6c813a17",
+      "editions": [
+        "Torat Emet 363",
+        "Mishneh Torah, trans. by Eliyahu Touger. Jerusalem, Moznaim Pub. c1986-c2007"
+      ],
+      "tool": "fetch_source.py via exec_command",
+      "tool_result": "success; exit code 0; original and English present",
+      "warnings": [],
+      "private_evidence": "work/posek-dvar-pilot/DT-002/teshuvah-10-2.json"
+    },
+    {
+      "ref": "Mishneh Torah, Repentance 10:5",
+      "url": "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.5",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Mishneh%20Torah%2C%20Repentance%2010%3A5?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "role": "Core: love of the Commander defines lishmah; initial reward-based education and gradual habituation.",
+      "retrieved_at": "2026-10-02T03:38:30.417601Z",
+      "payload_sha256": "ef6bb0ea6a66651de18e95fe4ed290c26ba812f8914e22c252b3b5921aaad1ea",
+      "editions": [
+        "Torat Emet 363",
+        "Mishneh Torah, trans. by Eliyahu Touger. Jerusalem, Moznaim Pub. c1986-c2007"
+      ],
+      "tool": "fetch_source.py via exec_command",
+      "tool_result": "success; exit code 0; original and English present",
+      "warnings": [],
+      "private_evidence": "work/posek-dvar-pilot/DT-002/teshuvah-10-5.json"
+    },
+    {
+      "ref": "Mishneh Torah, Repentance 10:4",
+      "url": "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.4",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Mishneh%20Torah%2C%20Repentance%2010%3A4?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "role": "Context: Rambam explicitly interprets the Avos servant as serving because the Master merits service.",
+      "retrieved_at": "2026-10-02T03:38:57.244941Z",
+      "payload_sha256": "9fc651e7326b3a62c25a961e903e82e4c70e19d2c0947743f4f469a910e15589",
+      "editions": [
+        "Torat Emet 363",
+        "Mishneh Torah, trans. by Eliyahu Touger. Jerusalem, Moznaim Pub. c1986-c2007"
+      ],
+      "tool": "fetch_source.py via exec_command",
+      "tool_result": "success; exit code 0; original and English present",
+      "warnings": [],
+      "private_evidence": "work/posek-dvar-pilot/DT-002/teshuvah-10-4.json"
+    }
+  ],
+  "editions": {
+    "Torat Emet 357": {
+      "language": "he",
+      "isSource": true,
+      "license": "Public Domain",
+      "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+      "versionNotes": ""
+    },
+    "Mishnah Yomit by Dr. Joshua Kulp": {
+      "language": "en",
+      "isSource": false,
+      "license": "CC-BY",
+      "versionSource": "http://learn.conservativeyeshiva.org/mishnah/",
+      "versionNotes": ""
+    },
+    "Torat Emet 363": {
+      "language": "he",
+      "isSource": true,
+      "license": "Public Domain",
+      "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+      "versionNotes": ""
+    },
+    "Mishneh Torah, trans. by Eliyahu Touger. Jerusalem, Moznaim Pub. c1986-c2007": {
+      "language": "en",
+      "isSource": false,
+      "license": "CC-BY-NC",
+      "versionSource": "https://www.nli.org.il/he/books/NNL_ALEPH001020101/NLI",
+      "versionNotes": "\n    <i>Dedicated in memory of Irving Montak, z\"l</i><br><br>© Published and Copyright by Moznaim Publications.<br>Must obtain written permission from Moznaim Publications for any commercial use. Any use must cite Copyright by Moznaim Publications. Released into the commons with a CC-BY-NC license.\n    "
+    }
+  },
+  "other_retrieval_attempts": [
+    {
+      "tool": "web__run open",
+      "urls": [
+        "https://www.sefaria.org/Pirkei_Avot.1.3",
+        "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.2",
+        "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.5"
+      ],
+      "result": "Requests succeeded but returned page title and navigation only, without source text; not used as textual evidence.",
+      "timestamp": "not exposed by tool; occurred before successful API retrievals",
+      "payload_sha256": null
+    }
+  ],
+  "text_use": "Original Hebrew inspected against retrieved translations. Spoken English renderings and paraphrases composed independently. Only brief original-language phrases quoted; no complete translation reproduced. English translations recorded as consulted editions, not as public-output text.",
+  "scope": "No evaluation criteria, source research packets, final repository, other agents outputs, or earlier session artifacts read."
+}

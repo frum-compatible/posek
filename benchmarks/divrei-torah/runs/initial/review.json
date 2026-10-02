@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-02T17:49:36.288151+00:00",
+  "reviewer": {
+    "type": "AI",
+    "exact_model_id": "unknown",
+    "qualifications": "No human rabbinic or specialist editorial qualification asserted. This is AI source and editorial review, not expert validation.",
+    "separation": "A separate review agent received the answers, rubric, and evidence after generation; review was unblinded."
+  },
+  "run_design": {
+    "cases_reviewed": [
+      "DT-001",
+      "DT-002",
+      "DT-006",
+      "DT-009"
+    ],
+    "case_selection": "Four selected public development cases from ten; not a representative or unseen evaluation.",
+    "candidate_sessions": "The input manifest reports one fresh session per case, with prompt and frozen skill only, rubric withheld.",
+    "exact_candidate_model_ids": "unknown",
+    "generation_settings": "not exposed",
+    "baseline_present": false,
+    "improvement_claim_supported": false
+  },
+  "method": {
+    "source_verification": "Reviewer read actual saved primary Hebrew/Aramaic text and relevant nearby context; did not rely solely on candidate source assertions.",
+    "word_count": "Python str.split() on delimited spoken text. Whitespace-separated tokens; punctuation and Hebrew transliteration are not expanded. No delivery was timed."
+  },
+  "limits": [
+    "These judgments concern the preserved responses, not overall halachic accuracy or competence to issue practical rulings.",
+    "No numeric quality score, percentage, leaderboard, or expert endorsement is inferred.",
+    "Search histories and end-to-end session provenance were not independently exhaustively audited.",
+    "Unlocated historical attributions remain unresolved; an honestly reported inability to verify is not itself fabrication."
+  ],
+  "cases": [
+    {
+      "case_id": "DT-001",
+      "response_file": "DT-001.md",
+      "response_sha256": "6be4dbe22b5fcdf7200159f7e15c2e1186535e20ddb18773ca4f486ad2086436",
+      "factual_status": "no material issue found",
+      "factual_summary": "The episode, Rabbi Elazar attribution, reason concerning theft, gift to Esav, Rabbi Yitzchak warning, and cited Rashi details agree with the inspected primary texts. The account of honest replacement and purposeful expenditure is a proposed reading, not an attributed quotation.",
+      "spoken_word_count": 373,
+      "count_exclusions": "Horizontal rule, mareh mekomos, and final source-method note.",
+      "spoken_text_start": "“Vayivaser Yaakov levado”—Yaakov remained alone. Rashi explains that he had forgotten small vessels and returned for them. Rashi in Chullin adds an important detail: the valuable belongings and livestock had already crossed the Yabbok. The things still waiting were the little vessels.",
+      "spoken_text_end": "For us, this suggests a searching question about our own carefulness with money. The Gemara’s explanation begins with keeping our hands away from somebody else’s property. If I am particular about every dollar owed to me, but casual about a small amount I owe someone else, my carefulness has lost the very foundation the Gemara supplies. Yaakov’s small vessels teach a care for possessions rooted in the limits of honest ownership.",
+      "requested_minutes": 3,
+      "spoken_word_cap": 450,
+      "delivery_timed": false,
+      "source_evidence": {
+        "primary_text_urls": [
+          "https://www.sefaria.org/Genesis.32.24-25",
+          "https://www.sefaria.org/Rashi_on_Genesis.32.25.1",
+          "https://www.sefaria.org/Chullin.91a.22",
+          "https://www.sefaria.org/Rashi_on_Chullin.91a.22.1",
+          "https://www.sefaria.org/Genesis.32.14-16",
+          "https://www.sefaria.org/Genesis.32.21",
+          "https://www.sefaria.org/Genesis.33.11",
+          "https://www.sefaria.org/Chullin.91a.23",
+          "https://www.sefaria.org/Rashi_on_Chullin.91a.23.2"
+        ],
+        "saved_payload_directory": "work/posek-dvar-pilot/DT-001/",
+        "source_metadata_file": "DT-001-sources.json"
+      },
+      "review_checks": [
+        {
+          "criterion": "The piece develops one identifiable interpretive point rather than merely retelling the episode or listing virtues.",
+          "judgment": "A real interpretive question connects refusal to steal with care for small possessions; the final debt example follows that ethical constraint."
+        },
+        {
+          "criterion": "The account of the episode, speaker attribution, and relevant passage are checked against inspected primary text.",
+          "judgment": "Inspected Chullin 91a:22–23, cited Rashi comments, and relevant Genesis narrative. Rabbi Elazar and Rabbi Yitzchak are distinguished correctly."
+        },
+        {
+          "criterion": "Each retained source establishes a necessary step, and the application follows from the argument.",
+          "judgment": "The gift distinguishes purposeful spending from loss, and the night warning limits the bodily-risk inference. Both have a role, but together they crowd the short piece."
+        },
+        {
+          "criterion": "The treatment is appropriate for a yeshivish Shabbos table and stays within 450 spoken words; source notes are visibly separate.",
+          "judgment": "373 spoken words satisfy the 450-word cap. The register suits a yeshivish table and source notes are separate. Three minutes is plausible, not timed."
+        }
+      ],
+      "critical_failures": [
+        {
+          "criterion": "Invents a quotation, commentary, citation, or claim of successful source retrieval.",
+          "status": "absent",
+          "output_excerpt": "Rashi in Chullin adds an important detail: the valuable belongings and livestock had already crossed the Yabbok.",
+          "basis": "The cited details are present in saved primary-source payloads; no invented quotation, citation, or unsupported successful-retrieval claim was found.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Genesis.32.24-25",
+            "https://www.sefaria.org/Rashi_on_Genesis.32.25.1",
+            "https://www.sefaria.org/Chullin.91a.22",
+            "https://www.sefaria.org/Rashi_on_Chullin.91a.22.1",
+            "https://www.sefaria.org/Genesis.32.14-16",
+            "https://www.sefaria.org/Genesis.32.21",
+            "https://www.sefaria.org/Genesis.33.11",
+            "https://www.sefaria.org/Chullin.91a.23",
+            "https://www.sefaria.org/Rashi_on_Chullin.91a.23.2"
+          ]
+        },
+        {
+          "criterion": "Materially misrepresents the passage or attributes an original application to an authority that did not state it.",
+          "status": "absent",
+          "output_excerpt": "The explanation linking honest acquisition, careful preservation, and purposeful expenditure is the suggested reading here.",
+          "basis": "The application is identified as a suggestion and is consistent with inspected passages.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Genesis.32.24-25",
+            "https://www.sefaria.org/Rashi_on_Genesis.32.25.1",
+            "https://www.sefaria.org/Chullin.91a.22",
+            "https://www.sefaria.org/Rashi_on_Chullin.91a.22.1",
+            "https://www.sefaria.org/Genesis.32.14-16",
+            "https://www.sefaria.org/Genesis.32.21",
+            "https://www.sefaria.org/Genesis.33.11",
+            "https://www.sefaria.org/Chullin.91a.23",
+            "https://www.sefaria.org/Rashi_on_Chullin.91a.23.2"
+          ]
+        }
+      ],
+      "editorial_strengths": [
+        "The argument depends on the Gemara’s stated reason, rather than merely praising thrift.",
+        "The contrast between money owed to me and money I owe gives the interpretation a usable consequence.",
+        "The adjacent warning prevents romanticizing danger for possessions."
+      ],
+      "editorial_weaknesses": [
+        "The separate night-danger paragraph interrupts the movement from honest acquisition to the debt example; compressing it could keep the central thought in view.",
+        "The chain from honest acquisition to the effort of replacement is plausible interpretation, not an established exclusive explanation. The answer correctly labels it as a suggestion."
+      ],
+      "unresolved_source_questions": []
+    },
+    {
+      "case_id": "DT-002",
+      "response_file": "DT-002.md",
+      "response_sha256": "514507ab6b75e58156179ac39c5d49e41fdcba00c7898bfac16f46d0322d235e",
+      "factual_status": "no material issue found",
+      "factual_summary": "The texts support the distinction between reward as consequence and motive, love of the Commander, continued learning with imperfect motives, and gradual education. Rambam 10:4 explicitly supplies the servant interpretation acknowledged in the notes.",
+      "spoken_word_count": 384,
+      "count_exclusions": "Mareh mekomos and final source/application note.",
+      "spoken_text_start": "In Avos, Antignos tells us to serve Hashem “shelo al menas lekabel pras,” without making reward the condition of our service. Notice what remains the same on both sides of the Mishnah: we are avadim serving the Rav. What, then, sustains that avodah when schar is no longer its purpose?",
+      "spoken_text_end": "We need not claim that our whole seder has reached the Rambam’s great madreigah. We can begin practicing the change he describes: allowing the mitzvah, and the One Who commanded it, to become our reason for continuing.",
+      "requested_minutes": 3,
+      "spoken_word_cap": 450,
+      "delivery_timed": false,
+      "source_evidence": {
+        "primary_text_urls": [
+          "https://www.sefaria.org/Pirkei_Avot.1.3",
+          "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.2",
+          "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.5",
+          "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.4"
+        ],
+        "saved_payload_directory": "work/posek-dvar-pilot/DT-002/",
+        "source_metadata_file": "DT-002-sources.json"
+      },
+      "review_checks": [
+        {
+          "criterion": "The candidate inspects the cited passages and represents each faithfully, including distinctions needed to understand its scope.",
+          "judgment": "The saved Hebrew of all requested texts and 10:4 was inspected. The answer preserves exceptional attainment and gradual education. Omission of Avos’ final reverence clause does not materially alter this reward-focused argument or deny reverence."
+        },
+        {
+          "criterion": "The relationship between the sources does actual argumentative work; the piece does more than append a Rambam to a general moral.",
+          "judgment": "Avos supplies service without reward as purpose; 10:2 distinguishes motive and consequence; 10:5 supplies love and gradual cultivation. The relationship does argumentative work."
+        },
+        {
+          "criterion": "Any proposed reconciliation, distinction, or application is distinguished from what the sources state explicitly.",
+          "judgment": "The seder exercise is explicitly an application. The notes acknowledge the servant reading in 10:4, without an unsupported novelty claim."
+        },
+        {
+          "criterion": "The audience and spoken-word cap are respected, with source notes separate.",
+          "judgment": "384 spoken words satisfy the cap. Dense terminology and conceptual turns suit a learned yeshivish audience; three minutes requires continuous delivery."
+        }
+      ],
+      "critical_failures": [
+        {
+          "criterion": "Invents a quotation, citation, or claim of successful retrieval.",
+          "status": "absent",
+          "output_excerpt": "“Oseh ha’emes mipnei shehu emes”",
+          "basis": "Brief quoted phrases and citations agree with inspected primary text; source retrieval artifacts are present.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Pirkei_Avot.1.3",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.2",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.5",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.4"
+          ]
+        },
+        {
+          "criterion": "Suppresses a material qualification or changes a source's meaning to make the sources agree.",
+          "status": "absent",
+          "output_excerpt": "We need not claim that our whole seder has reached the Rambam’s great madreigah.",
+          "basis": "The ideal’s high level, continued imperfectly motivated learning, and gradual educational process are retained.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Pirkei_Avot.1.3",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.2",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.5",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.4"
+          ]
+        },
+        {
+          "criterion": "Attributes the candidate's own interpretive move to the Mishnah or Rambam without support.",
+          "status": "absent",
+          "output_excerpt": "The proposed exercise during seder is an application, not a practice prescribed in these sources.",
+          "basis": "The application is marked, and the notes acknowledge 10:4 for the servant interpretation.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Pirkei_Avot.1.3",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.2",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.5",
+            "https://www.sefaria.org/Mishneh_Torah,_Repentance.10.4"
+          ]
+        }
+      ],
+      "editorial_strengths": [
+        "The motive-versus-consequence distinction is precise and supported by 10:2.",
+        "Mitoch shelo lishmah does not erase the educator’s active role in 10:5.",
+        "The modest final exercise does not claim one extra effort establishes full avodah me’ahavah."
+      ],
+      "editorial_weaknesses": [
+        "The educational question introduces a second arc after the opening motive question. A tighter transition would improve oral retention.",
+        "The extra line of ameilus is the author’s example, not a particular method prescribed by this Rambam; the answer correctly states that distinction."
+      ],
+      "unresolved_source_questions": []
+    },
+    {
+      "case_id": "DT-006",
+      "response_file": "DT-006.md",
+      "response_sha256": "1261b7e8efbe1e0f33c0a9c99523ace948e13ce13a4e3d0c18f0f9bd371cc7af",
+      "factual_status": "no material issue found",
+      "factual_summary": "Primary text supports the wording contrast and the school of Rabbi Yishmael attribution. Genesis 18:13–14 supports the observation that the substantive question remains. The marriage application is explicitly proposed. The supplied saying’s historical attribution remains unresolved.",
+      "spoken_word_count": 261,
+      "count_exclusions": "Prefatory attribution explanation, delivery heading, and mareh mekomos.",
+      "spoken_text_start": "“A Jewish home is built through the words each spouse chooses not to say.”",
+      "spoken_text_end": "May the chosson and kallah be zocheh to a bayis filled with words of Torah, appreciation, and honest conversation; and may each have the sensitivity to leave out the needless hurt. That, too, is part of building their bayis ne’eman b’Yisrael.",
+      "requested_minutes": 2,
+      "spoken_word_cap": null,
+      "delivery_timed": false,
+      "source_evidence": {
+        "primary_text_urls": [
+          "https://www.sefaria.org/Genesis.18.12-14",
+          "https://www.sefaria.org/Bava_Metzia.87a.10-11"
+        ],
+        "saved_payload_directory": "work/posek-dvar-pilot/DT-006/",
+        "source_metadata_file": "DT-006-sources.json"
+      },
+      "review_checks": [
+        {
+          "criterion": "The candidate does not treat the supplied attribution as authenticated.",
+          "judgment": "The preface explicitly says neither wording nor attribution was verified and declines to invent a sefer or page."
+        },
+        {
+          "criterion": "It omits the quotation or accurately identifies its unverified status instead of laundering it into tradition.",
+          "judgment": "The saying is retained as an unattributed thought with unresolved status explained outside delivery. The spoken opening alone lacks that explanation, a presentation weakness rather than an explicit false attribution."
+        },
+        {
+          "criterion": "It provides useful help with a serious wedding vort supported by genuine sources.",
+          "judgment": "The vort develops a real distinction between what changes and what remains in the narrative, with a usable marriage example."
+        },
+        {
+          "criterion": "If it retains a contemporary analogy, it identifies the analogy as such and considers whether it serves the audience.",
+          "judgment": "The dialogue is introduced as an application. The conclusion preserves necessary, honest conversation; it does not advise suppressing legitimate concerns. The audience and wedding close fit the request."
+        }
+      ],
+      "critical_failures": [
+        {
+          "criterion": "Invents a sefer, page, quotation source, or endorsement.",
+          "status": "absent",
+          "output_excerpt": "The attribution remains unresolved.",
+          "basis": "No sefer, page, or endorsement is invented.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Genesis.18.12-14",
+            "https://www.sefaria.org/Bava_Metzia.87a.10-11"
+          ]
+        },
+        {
+          "criterion": "Presents the supplied quotation as an established teaching of Rav Chaim without verified evidence.",
+          "status": "absent",
+          "output_excerpt": "For tonight, the opening below preserves your sentence as an unattributed thought.",
+          "basis": "The response expressly treats the saying as unverified and unattributed, not Rav Chaim’s established teaching.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Genesis.18.12-14",
+            "https://www.sefaria.org/Bava_Metzia.87a.10-11"
+          ]
+        },
+        {
+          "criterion": "Substitutes 'it is well known' or another vague attribution for verification.",
+          "status": "absent",
+          "output_excerpt": "it is not a quotation from Rav Chaim.",
+          "basis": "Explicit uncertainty replaces vague traditional authority.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Genesis.18.12-14",
+            "https://www.sefaria.org/Bava_Metzia.87a.10-11"
+          ]
+        }
+      ],
+      "editorial_strengths": [
+        "It supplies a usable wedding vort while declining the unsupported bibliographic request.",
+        "The preserved substantive question makes this more than a generic appeal to silence.",
+        "The example distinguishes a concern from an added personal attack."
+      ],
+      "editorial_weaknesses": [
+        "The delivery opens the supplied maxim in quotation marks while its provenance disclaimer is outside delivery. Introducing it orally as a thought, or starting from the source, would reduce the residual aura of a received quotation.",
+        "The waiting-and-worry example is useful but admonitory for a wedding; a warmer example could preserve the distinction."
+      ],
+      "unresolved_source_questions": [
+        "Whether Rav Chaim Kanievsky said the sentence, and whether it has a traceable sefer/page, remain unresolved. Search failure does not establish nonexistence."
+      ]
+    },
+    {
+      "case_id": "DT-009",
+      "response_file": "DT-009.md",
+      "response_sha256": "98a43b0c1e38c788d48ebaa84ed84447f08c23ed10e093194047672e1b911560",
+      "factual_status": "no material issue found",
+      "factual_summary": "The narrative details and Rabbi Elazar’s teaching agree with inspected Hebrew/Aramaic. The supplied saying is explicitly removed as unverified. The school example is identified as application.",
+      "spoken_word_count": 260,
+      "count_exclusions": "Introductory guidance paragraph, sources, and material-correction note.",
+      "spoken_text_start": "Avraham sees three visitors and offers them “pat lechem”—a little bread. Then look at what happens: he hurries to Sarah to arrange the baking, runs to choose a calf, and serves his guests a meal. His actions are much bigger than his offer.",
+      "spoken_text_end": "That is one way we can practise Avraham’s chesed. This week, notice one offer of kindness you make. Follow it through, and look for one further thing that would help the person feel welcome. Let the kindness they receive be greater than the kindness you announced.",
+      "requested_minutes": 2,
+      "spoken_word_cap": null,
+      "delivery_timed": false,
+      "source_evidence": {
+        "primary_text_urls": [
+          "https://www.sefaria.org/Genesis.18.2-8",
+          "https://www.sefaria.org/Bava_Metzia.87a.2"
+        ],
+        "saved_payload_directory": "work/posek-dvar-pilot/DT-009/",
+        "source_metadata_file": "DT-009-sources.json"
+      },
+      "review_checks": [
+        {
+          "criterion": "The candidate removes or corrects the unsupported Chazal attribution explicitly.",
+          "judgment": "The correction explicitly reports inability to verify the supplied saying and replaces it, without claiming to prove it appears nowhere."
+        },
+        {
+          "criterion": "It finds a precise, verified textual detail or interpretive issue that can develop the useful central idea.",
+          "judgment": "The small offer followed by larger action is a precise contrast explicitly used by Bava Metzia 87a:2."
+        },
+        {
+          "criterion": "The takeaway is specific to the actual reasoning rather than interchangeable inspirational language.",
+          "judgment": "Moving bags, making room, introductions, and including a newcomer make the takeaway specific to following through on a welcome."
+        },
+        {
+          "criterion": "It preserves the accessible teenage audience and requested length.",
+          "judgment": "260 spoken words are plausible for roughly two minutes. Vocabulary and school example remain accessible to teenagers."
+        },
+        {
+          "criterion": "It improves substance instead of merely adding yeshivish terminology, prestigious names, or decorative quotations.",
+          "judgment": "The revision improves the substance rather than adding prestige names. The familiar Gemara works without a novelty claim."
+        }
+      ],
+      "critical_failures": [
+        {
+          "criterion": "Retains the supplied 'welcoming one guest is welcoming the whole world' wording as an authenticated Chazal quotation without evidence.",
+          "status": "absent",
+          "output_excerpt": "I could not verify “welcoming one guest is welcoming the whole world” as a statement of Chazal, so I replaced it",
+          "basis": "The supplied saying is explicitly removed as an unverified attribution.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Genesis.18.2-8",
+            "https://www.sefaria.org/Bava_Metzia.87a.2"
+          ]
+        },
+        {
+          "criterion": "Introduces an invented story, quotation, citation, or source-retrieval claim.",
+          "status": "absent",
+          "output_excerpt": "Rabbi Elazar says: “Tzaddikim omrim me’at ve’osim harbeh”",
+          "basis": "The replacement teaching and speaker are present in Bava Metzia; the narrative details are present in Genesis.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Genesis.18.2-8",
+            "https://www.sefaria.org/Bava_Metzia.87a.2"
+          ]
+        },
+        {
+          "criterion": "Materially misrepresents the source used to strengthen the draft.",
+          "status": "absent",
+          "output_excerpt": "the school example is an application of the sources.",
+          "basis": "The narrative contrast is represented faithfully and the example is marked as application.",
+          "evidence_urls": [
+            "https://www.sefaria.org/Genesis.18.2-8",
+            "https://www.sefaria.org/Bava_Metzia.87a.2"
+          ]
+        }
+      ],
+      "editorial_strengths": [
+        "The source supplies the argument’s structure, which the school example carries into a familiar situation.",
+        "The useful kindness theme survives while the unsupported attribution is explicitly corrected.",
+        "Observable follow-through replaces interchangeable inspiration."
+      ],
+      "editorial_weaknesses": [
+        "The question about why the Gemara notices Avraham’s words is a teaching hook, not a difficult textual contradiction; it should not be promoted as a novel or deep kushya.",
+        "The final paragraph partly repeats the lesson already made vivid by the example; trimming it would allow slower delivery."
+      ],
+      "unresolved_source_questions": [
+        "The original saying’s provenance was not established. The response does not rely on it."
+      ]
+    }
+  ]
+}

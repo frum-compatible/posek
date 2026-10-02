@@ -1,0 +1,1 @@
+**No.** Saying *borei peri ha’etz* over ground produce does not fulfill the initial blessing. For the cucumber you described, recite **borei peri ha’adamah** before eating. [Shulchan Arukh, Orach Chayim 206:1](https://www.sefaria.org/Shulchan_Arukh%2C_Orach_Chayim.206.1)

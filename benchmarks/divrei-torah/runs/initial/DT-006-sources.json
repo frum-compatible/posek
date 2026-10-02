@@ -1,0 +1,155 @@
+{
+  "case_id": "DT-006",
+  "model_identifier": "unknown",
+  "attribution_status": "Unverified; no exact sefer or page established. Search failure does not demonstrate that Rav Chaim never said it.",
+  "verified_sources": [
+    {
+      "ref": "Genesis 18:12",
+      "url": "https://www.sefaria.org/api/v3/texts/Genesis%2018%3A12?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:42:33.562966Z",
+      "sha256": "fdfa5a3ab1b39627a1bfe4f60e0c4c69ff7bc520ba4110339b624487f32ba98f",
+      "claim_supported": "Sarah refers to her own condition and adds that her husband is old.",
+      "versions_inspected": [
+        {
+          "title": "Miqra according to the Masorah",
+          "language": "he",
+          "source": true,
+          "license": "CC-BY-SA"
+        },
+        {
+          "title": "THE JPS TANAKH: Gender-Sensitive Edition",
+          "language": "en",
+          "source": false,
+          "license": "CC-BY-NC"
+        }
+      ],
+      "raw_evidence": "work/posek-dvar-pilot/DT-006/genesis-18-12.json"
+    },
+    {
+      "ref": "Genesis 18:13",
+      "url": "https://www.sefaria.org/api/v3/texts/Genesis%2018%3A13?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:42:33.528584Z",
+      "sha256": "adc6784c98a93e03f105b4ae61093d2c35253a1fbb976deb5d31aaa64b2c7790",
+      "claim_supported": "Hashem reports Sarah’s reaction with the words va’ani zakanti, omitting the remark about Avraham; He still asks why she laughed.",
+      "versions_inspected": [
+        {
+          "title": "Miqra according to the Masorah",
+          "language": "he",
+          "source": true,
+          "license": "CC-BY-SA"
+        },
+        {
+          "title": "THE JPS TANAKH: Gender-Sensitive Edition",
+          "language": "en",
+          "source": false,
+          "license": "CC-BY-NC"
+        }
+      ],
+      "raw_evidence": "work/posek-dvar-pilot/DT-006/genesis-18-13.json"
+    },
+    {
+      "ref": "Genesis 18:14",
+      "url": "https://www.sefaria.org/api/v3/texts/Genesis%2018%3A14?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:42:33.563092Z",
+      "sha256": "e0e2c156ffe75ba4a667eb0c1fec578fd1b4861e29de52ed882a5e5dd5ac62dc",
+      "claim_supported": "The following verse addresses whether anything is beyond Hashem, supporting the observation that the substantive issue remains in the conversation.",
+      "versions_inspected": [
+        {
+          "title": "Miqra according to the Masorah",
+          "language": "he",
+          "source": true,
+          "license": "CC-BY-SA"
+        },
+        {
+          "title": "THE JPS TANAKH: Gender-Sensitive Edition",
+          "language": "en",
+          "source": false,
+          "license": "CC-BY-NC"
+        }
+      ],
+      "raw_evidence": "work/posek-dvar-pilot/DT-006/genesis-18-14.json"
+    },
+    {
+      "ref": "Bava Metzia 87a:10",
+      "url": "https://www.sefaria.org/api/v3/texts/Bava%20Metzia%2087a%3A10?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:43:29.926800Z",
+      "sha256": "08ebd7a5856194291a17b2edd2732d305d25ac612dc1f2ba9fce3753017e5b73",
+      "claim_supported": "The Gemara explicitly contrasts Sarah’s wording with Hashem’s report.",
+      "versions_inspected": [
+        {
+          "title": "William Davidson Edition - Vocalized Aramaic",
+          "language": "he",
+          "source": true,
+          "license": "CC-BY-NC"
+        },
+        {
+          "title": "William Davidson Edition - English",
+          "language": "en",
+          "source": false,
+          "license": "CC-BY-NC"
+        }
+      ],
+      "raw_evidence": "work/posek-dvar-pilot/DT-006/bava-metzia-87a-10.json"
+    },
+    {
+      "ref": "Bava Metzia 87a:11",
+      "url": "https://www.sefaria.org/api/v3/texts/Bava%20Metzia%2087a%3A11?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:43:29.941739Z",
+      "sha256": "43e991c241cb69cb6b1c338929da101800edb955958c7b9bcfcabf90ab714209",
+      "claim_supported": "The school of Rabbi Yishmael explains the change as demonstrating the greatness of peace.",
+      "versions_inspected": [
+        {
+          "title": "William Davidson Edition - Vocalized Aramaic",
+          "language": "he",
+          "source": true,
+          "license": "CC-BY-NC"
+        },
+        {
+          "title": "William Davidson Edition - English",
+          "language": "en",
+          "source": false,
+          "license": "CC-BY-NC"
+        }
+      ],
+      "raw_evidence": "work/posek-dvar-pilot/DT-006/bava-metzia-87a-11.json"
+    }
+  ],
+  "interpretation": "The marriage application distinguishes necessary discussion from an added insult. This is identified as a suggested application, not attributed to Rav Chaim or quoted as Chazal’s wording.",
+  "search_provenance": [
+    {
+      "tool": "web.search_query",
+      "queries": [
+        "\"Chaim Kanievsky\" \"words\" \"home\" \"say\"",
+        "\"Jewish home\" \"words\" \"not to say\"",
+        "\"חיים קניבסקי\" \"שלום בית\" \"שתיקה\""
+      ],
+      "outcome": "No verifiable attribution returned. Unrelated snippets were not treated as supporting evidence. First search response retained in session tool history, not copied to disk."
+    },
+    {
+      "tool": "web.search_query",
+      "queries": [
+        "\"A Jewish home is built through the words\"",
+        "\"קניבסקי\" \"שלום בית\" \"לשתוק\"",
+        "\"קניבסקי\" \"שלום בית\" \"מילים\"",
+        "site:sefaria.org/Bava_Metzia.87a \"גדול השלום\""
+      ],
+      "outcome": "No exact saying or usable Rav Chaim attribution found. Primary Torah texts then retrieved directly."
+    },
+    {
+      "tool": "web.search_query",
+      "queries": [
+        "\"קנייבסקי\" \"שלום בית\" \"שותקים\"",
+        "\"Kanievsky\" \"spouse\" \"silence\"",
+        "\"Kanievsky\" \"home is built\""
+      ],
+      "outcome": "No verifiable match for requested saying."
+    }
+  ],
+  "retrieval_notes": [
+    "Sefaria Bava Metzia 87a web page opened; direct v3 API used to inspect the source and discover segments 10 and 11. Frozen helper then retrieved those exact segments.",
+    "Web opening Rashi on Genesis 18:13 returned Internal Error. A direct v3 API retrieval succeeded and Hebrew comments were inspected; this supplementary source was not needed in the delivered vort.",
+    "Search rounds 2 and 3 are preserved under work/posek-dvar-pilot/DT-006/web-search-evidence.json.",
+    "Full Hebrew and English source payloads remain in the private work directory. Public response uses short Hebrew phrases, own English renderings and paraphrases, and links."
+  ],
+  "gate_execution": "No local gates, tests, typecheck, or servers run."
+}

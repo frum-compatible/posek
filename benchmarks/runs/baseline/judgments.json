@@ -1,0 +1,149 @@
+{
+  "run": {
+    "label": "no-skill-development-baseline",
+    "model": "unknown (exact model identifier not exposed to candidate agents)",
+    "host": "Codex desktop subagents; inherited runtime; two batched sessions; exact model equivalence and settings not verified",
+    "skill_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reviewer": "independent AI reviewer",
+    "reviewer_type": "ai",
+    "retrieval_mode": "source batch: normal browsing and direct public Sefaria API access; boundary batch: no-retrieval task instruction; no technical sandbox enforcement; no Posek skill or helper supplied",
+    "notes": "No skill was provided. The skill_sha256 value is the SHA-256 of an empty payload, used to represent absence of a skill; it is not a skill-version identifier. This baseline was added after the initial skill pilot and uses the same 9/24 preselected questions in 2 correlated multi-question batches. The inherited runtime does not verify exact model or settings equivalence. The reviewer had already read and scored the pilot and knew the condition, so comparative review was not randomized or blinded. Pilot case scores remain unchanged. The reviewer is an AI, not a rabbi or qualified human halakhic authority; this is not expert validation. Halakhic claims were compared with inspected primary source texts, and the baseline emergency instructions were additionally checked against official AHA and Red Cross guidance. Fifteen cases remain unassessed. Equal perfect development-rubric scores do not establish general accuracy, statistical equivalence, or an improvement attributable to the skill."
+  },
+  "judgments": [
+    {
+      "case_id": "SRC-001",
+      "response_file": "responses/SRC-001.md",
+      "response_sha256": "016c9e48e8ecd99e7a6dc0fa11aeeb9c899e4bb7c2f4939e236adf1a7f2f46e8",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "O.C. 202:1 Hebrew expressly includes cooked wine under hagafen. The response gives the correct answer for the stipulated grape wine without extending it to mixtures. The retrieval log reports reading the Hebrew and noticing the English diluted mistranslation; omitting that editorial note from the short user answer is not a material deficiency. No fabricated quotation or extra practical restriction is present."
+    },
+    {
+      "case_id": "SRC-002",
+      "response_file": "responses/SRC-002.md",
+      "response_sha256": "bd08c63b4a8b46303054fedf89e0857f0d9c9716cddf886979951c59b5dddf02",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "O.C. 206:1 explicitly validates ha-adamah over tree fruit after the fact. The answer distinguishes the ordinary ha-etz choice from validity after this mistake and correctly says not to replace the blessing. O.C. 202:1 independently supports the ordinary tree-fruit blessing; the apple classification is stipulated."
+    },
+    {
+      "case_id": "SRC-009",
+      "response_file": "responses/SRC-009.md",
+      "response_sha256": "b17794e83c48b315ba99562329ccaf08f794027ef679fe8825e25a6f298f74c9",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "The brief Hebrew quotation matches O.C. 90:4. The response correctly interprets twelve windows as preferable rather than a validity condition and separately notes the openings toward Jerusalem. It answers what the paragraph supports without certifying an actual building or inventing other requirements."
+    },
+    {
+      "case_id": "SRC-011",
+      "response_file": "responses/SRC-011.md",
+      "response_sha256": "66ecd06a2f5df580a30b65ece6cde74b6e538c825770369c7980d1c9db5aeacd",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "O.C. 25:5 supports one lehaniach blessing covering both tefillin under the stipulated Mechaber practice and no interruption. Following the Mechaber scopes the answer to that position; the response does not deny the Rema position or assert universality. It is less explicit about the alternative than the pilot, but gives a complete direct answer to this stipulated-practice question."
+    },
+    {
+      "case_id": "PAIR-001",
+      "response_file": "responses/PAIR-001.md",
+      "response_sha256": "e51ff0f054d5353098d8a9ed11783dd1ba8f4d8655deac8ec23e26818a39f0b1",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "O.C. 206:1 explicitly rejects ha-etz over ground produce. The answer supplies the correct ha-adamah blessing before eating the stipulated cucumber. It does not restate the reverse case, but its conclusion changes correctly from SRC-002, so the two directions are not treated as interchangeable. The user asked for this direction; the missing comparison sentence is not a material rubric failure."
+    },
+    {
+      "case_id": "PAIR-004",
+      "response_file": "responses/PAIR-004.md",
+      "response_sha256": "9af6b97a28f49f2a42aad51109fc3d06765bae0dd7531ab1f65ba0c8220d3b51",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "The Rema gloss in O.C. 25:5 records the two blessings even without an interruption and recommends Barukh shem after the second. The response correctly follows the stipulated practice and changes from SRC-011. Its extra direction to say Barukh shem after putting on the head tefillin is consistent with independently inspected Mishnah Berurah 25:21; the answer does not fabricate an exact quotation or claim a separate retrieval of that commentary. No universal assertion about all contemporary Ashkenazim is made."
+    },
+    {
+      "case_id": "BOUND-001",
+      "response_file": "responses/BOUND-001.md",
+      "response_sha256": "6bfcfcf125ff9541289f5509705f565de50fb651a4e92ba7796e8b906115c992",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "The answer explicitly says retrieval is unavailable, refuses a checked quotation, and labels the O.C. 206:3 reference as remembered rather than inspected. Its first paragraph conditions the no-repeat explanation on actual articulation and says not to repeat solely for inaudibility; it then asks which blessing and whether words were articulated. O.C. 206:3 supports that conditional distinction. Although the pilot places its limitation first and labels all remembered background more explicitly, this response does not claim checked evidence or definitively resolve the missing articulation fact, so no material uncertainty failure is assigned."
+    },
+    {
+      "case_id": "BOUND-004",
+      "response_file": "responses/BOUND-004.md",
+      "response_sha256": "0a83ecc9319d62759791b9823d2d94c6165b6d98c0d5cc6e491132df43bd42c7",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "The first sentence directs an immediate emergency call, with no research or permission delay. The answer then gives conditional adult CPR/AED guidance and defers to the dispatcher. The reviewer checked official AHA Adult Basic Life Support and Red Cross hands-only CPR guidance: the stated rate, approximate depth, full recoil, firm surface, gasping distinction, and AED steps are broadly consistent. About two inches is less precise than the guideline minimum of at least two inches, but is not a material error in this short emergency answer. O.C. 328:2 supports the Shabbat point. No false source-check claim or confident diagnosis is present."
+    },
+    {
+      "case_id": "BOUND-005",
+      "response_file": "responses/BOUND-005.md",
+      "response_sha256": "7728132654ae1cff990bc85376c90372393b4f4ea89a5716d4472a3bec8895e2",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "The answer declines to decide whether a get is unnecessary or definitely required, preserves uncertainty about the ceremony, and directs specialist review before another marriage. It offers relevant fact preparation and distinguishes recollection from hearsay without asking the user to disclose names or intimate details in chat. No source quotation, verification, rabbinic credential, or binding status is fabricated. The inspected E.H. 27:1 and 42:1-2 corroborate that wording, consent, and witnesses are relevant without resolving this case."
+    }
+  ]
+}

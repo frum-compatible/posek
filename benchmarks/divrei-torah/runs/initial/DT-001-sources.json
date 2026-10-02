@@ -1,0 +1,342 @@
+{
+  "request_id": "DT-001",
+  "model_id": "unknown",
+  "completed_at": "2026-10-02T03:41:06.397344+00:00",
+  "spoken_word_count_whitespace": 373,
+  "source_method": "Read Hebrew/Aramaic and adjacent context; own English renderings. Exact segment evidence from frozen helper, with fill_in_missing_segments=false. Broad primary API responses used to discover segment structure and read narrative context.",
+  "web_attempts": [
+    {
+      "tool": "web.run open",
+      "url": "https://www.sefaria.org/Chullin.91a?lang=bi",
+      "request_success": true,
+      "usable_source_text": false,
+      "result": "Page navigation and reader controls only; used Sefaria API for source text.",
+      "timestamp": null,
+      "response_sha256": null
+    }
+  ],
+  "editions": {
+    "edition-1": {
+      "title": "William Davidson Edition - Vocalized Aramaic",
+      "language": "he",
+      "is_source": true,
+      "license": "unknown",
+      "version_source": "https://korenpub.co.il/collections/the-noe-edition-koren-talmud-bavli-1"
+    },
+    "edition-2": {
+      "title": "William Davidson Edition - English",
+      "language": "en",
+      "is_source": false,
+      "license": "CC-BY-NC",
+      "version_source": "https://korenpub.com/collections/the-noe-edition-koren-talmud-bavli-1"
+    },
+    "edition-3": {
+      "title": "Miqra according to the Masorah",
+      "language": "he",
+      "is_source": true,
+      "license": "CC-BY-SA",
+      "version_source": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9:Dovi/%D7%9E%D7%A7%D7%A8%D7%90_%D7%A2%D7%9C_%D7%A4%D7%99_%D7%94%D7%9E%D7%A1%D7%95%D7%A8%D7%94"
+    },
+    "edition-4": {
+      "title": "THE JPS TANAKH: Gender-Sensitive Edition",
+      "language": "en",
+      "is_source": false,
+      "license": "CC-BY-NC",
+      "version_source": "https://jps.org/books/the-jps-tanakh-gender-sensitive-edition/"
+    },
+    "edition-5": {
+      "title": "Vilna Edition",
+      "language": "he",
+      "is_source": true,
+      "license": "Public Domain",
+      "version_source": "https://www.nli.org.il/he/books/NNL_ALEPH001300957"
+    },
+    "edition-6": {
+      "title": "Pentateuch with Rashi's commentary by M. Rosenbaum and A.M. Silbermann, 1929-1934",
+      "language": "he",
+      "is_source": true,
+      "license": "Public Domain",
+      "version_source": "https://www.nli.org.il/he/books/NNL_ALEPH001969084"
+    },
+    "edition-7": {
+      "title": "Pentateuch with Rashi's commentary by M. Rosenbaum and A.M. Silbermann, 1929-1934",
+      "language": "en",
+      "is_source": false,
+      "license": "Public Domain",
+      "version_source": "https://www.nli.org.il/he/books/NNL_ALEPH001969084"
+    }
+  },
+  "sources": [
+    {
+      "ref": "Chullin 91a:22",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Chullin%2091a%3A22?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:50.783391Z",
+      "response_sha256": "af9b8721efb02070cbbb796f62295cebf8ac0de2c0d19d7894dd54ca53f51041",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-1",
+        "edition-2"
+      ],
+      "warnings": [],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/chullin-91a-22.json"
+    },
+    {
+      "ref": "Chullin 91a:23",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Chullin%2091a%3A23?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:50.782685Z",
+      "response_sha256": "c77a6410b0ca7a910c6e23e75c7547692593f8240a858b3019b83006d8565da8",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-1",
+        "edition-2"
+      ],
+      "warnings": [],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/chullin-91a-23.json"
+    },
+    {
+      "ref": "Genesis 32:15",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Genesis%2032%3A15?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:51.490216Z",
+      "response_sha256": "dce2ec474adc4c14045a866b7b32904a8b219abaa119aa5edd53385f31d255d0",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-3",
+        "edition-4"
+      ],
+      "warnings": [],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/genesis-32-15.json"
+    },
+    {
+      "ref": "Genesis 32:21",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Genesis%2032%3A21?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:51.516581Z",
+      "response_sha256": "c6a3affbe3cc1cad7e5712e37d01fb5bccc955b24cd3abf68f074916dc17b471",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-3",
+        "edition-4"
+      ],
+      "warnings": [],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/genesis-32-21.json"
+    },
+    {
+      "ref": "Genesis 32:24",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Genesis%2032%3A24?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:52.221415Z",
+      "response_sha256": "2e0765c4219e3b66eced386c35bc2aa900b38d0223bcd0a6437df7e32dcdb6f4",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-3",
+        "edition-4"
+      ],
+      "warnings": [],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/genesis-32-24.json"
+    },
+    {
+      "ref": "Genesis 32:25",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Genesis%2032%3A25?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:52.220922Z",
+      "response_sha256": "976de9f769373cba3b7145cd84bf43ac9b40967f1f1c2dbf3a102b29ab254292",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-3",
+        "edition-4"
+      ],
+      "warnings": [],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/genesis-32-25.json"
+    },
+    {
+      "ref": "Genesis 33:11",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Genesis%2033%3A11?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:52.233162Z",
+      "response_sha256": "c9fd7001851cb2f65107ee6cb3ff395ad9972660f0c7af0d9f7dd4fb10db31e7",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-3",
+        "edition-4"
+      ],
+      "warnings": [],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/genesis-33-11.json"
+    },
+    {
+      "ref": "Rashi on Chullin 91a:22:1",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Rashi%20on%20Chullin%2091a%3A22%3A1?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:50.861675Z",
+      "response_sha256": "1af590bb99d251370d358a01f3fec9f6c03abfa4a51b5bee9ff231a75fcfc77b",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-5"
+      ],
+      "warnings": [
+        {
+          "english": {
+            "warning_code": 102,
+            "message": "We do not have the language you asked for Rashi on Chullin 91a:22:1. Available languages are ['hebrew']"
+          }
+        },
+        "English text is unavailable or incomplete; consult the source language."
+      ],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/rashi-chullin-91a-22-1.json"
+    },
+    {
+      "ref": "Rashi on Chullin 91a:23:2",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Rashi%20on%20Chullin%2091a%3A23%3A2?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:38:51.495054Z",
+      "response_sha256": "d37ae9c67b2d58077b3fff3c994717aafba82835831401a581f089093a251899",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-5"
+      ],
+      "warnings": [
+        {
+          "english": {
+            "warning_code": 102,
+            "message": "We do not have the language you asked for Rashi on Chullin 91a:23:2. Available languages are ['hebrew']"
+          }
+        },
+        "English text is unavailable or incomplete; consult the source language."
+      ],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/rashi-chullin-91a-23-2.json"
+    },
+    {
+      "ref": "Rashi on Genesis 32:25:1",
+      "api_url": "https://www.sefaria.org/api/v3/texts/Rashi%20on%20Genesis%2032%3A25%3A1?version=source&version=english&fill_in_missing_segments=0&return_format=default",
+      "retrieved_at": "2026-10-02T03:39:50.412565Z",
+      "response_sha256": "b744de44f629d0519b566d9688cc78a3404851f494b24161f01e1076de3a10c1",
+      "tool": "frozen fetch_source.py via exec_command",
+      "success": true,
+      "editions": [
+        "edition-6",
+        "edition-7"
+      ],
+      "warnings": [],
+      "evidence_file": "work/posek-dvar-pilot/DT-001/rashi-genesis-32-25-1.json"
+    }
+  ],
+  "context_retrievals": [
+    {
+      "ref": "Chullin 91a",
+      "url": "https://www.sefaria.org/api/v3/texts/Chullin%2091a?version=source&version=english&fill_in_missing_segments=0&return_format=text_only",
+      "retrieved_at": "2026-10-02T03:38:18.729662+00:00",
+      "sha256": "32f5fac2fec9bbf06232822b998a2c0eedb6647a1296a034c4ec02f96eeb2124",
+      "success": true,
+      "tool": "Python urllib, Sefaria v3 API",
+      "editions": [
+        {
+          "title": "William Davidson Edition - Vocalized Aramaic",
+          "language": "he",
+          "is_source": true,
+          "license": "unknown",
+          "version_source": "https://korenpub.co.il/collections/the-noe-edition-koren-talmud-bavli-1"
+        },
+        {
+          "title": "William Davidson Edition - English",
+          "language": "en",
+          "is_source": false,
+          "license": "CC-BY-NC",
+          "version_source": "https://korenpub.com/collections/the-noe-edition-koren-talmud-bavli-1"
+        }
+      ]
+    },
+    {
+      "ref": "Genesis 32",
+      "url": "https://www.sefaria.org/api/v3/texts/Genesis%2032?version=source&version=english&fill_in_missing_segments=0&return_format=text_only",
+      "retrieved_at": "2026-10-02T03:38:19.039851+00:00",
+      "sha256": "9bc57908c348fbab57da1beae6c43bb4d56cf90ffe0c353dd8887ff421f8db62",
+      "success": true,
+      "tool": "Python urllib, Sefaria v3 API",
+      "editions": [
+        {
+          "title": "Miqra according to the Masorah",
+          "language": "he",
+          "is_source": true,
+          "license": "CC-BY-SA",
+          "version_source": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9:Dovi/%D7%9E%D7%A7%D7%A8%D7%90_%D7%A2%D7%9C_%D7%A4%D7%99_%D7%94%D7%9E%D7%A1%D7%95%D7%A8%D7%94"
+        },
+        {
+          "title": "THE JPS TANAKH: Gender-Sensitive Edition",
+          "language": "en",
+          "is_source": false,
+          "license": "CC-BY-NC",
+          "version_source": "https://jps.org/books/the-jps-tanakh-gender-sensitive-edition/"
+        }
+      ]
+    },
+    {
+      "ref": "Genesis 33",
+      "url": "https://www.sefaria.org/api/v3/texts/Genesis%2033?version=source&version=english&fill_in_missing_segments=0&return_format=text_only",
+      "retrieved_at": "2026-10-02T03:38:19.482501+00:00",
+      "sha256": "8288eae2bb6689421176d771f19a20ca6d90de79bbc8e206de2838755b1dd04d",
+      "success": true,
+      "tool": "Python urllib, Sefaria v3 API",
+      "editions": [
+        {
+          "title": "Miqra according to the Masorah",
+          "language": "he",
+          "is_source": true,
+          "license": "CC-BY-SA",
+          "version_source": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9:Dovi/%D7%9E%D7%A7%D7%A8%D7%90_%D7%A2%D7%9C_%D7%A4%D7%99_%D7%94%D7%9E%D7%A1%D7%95%D7%A8%D7%94"
+        },
+        {
+          "title": "THE JPS TANAKH: Gender-Sensitive Edition",
+          "language": "en",
+          "is_source": false,
+          "license": "CC-BY-NC",
+          "version_source": "https://jps.org/books/the-jps-tanakh-gender-sensitive-edition/"
+        }
+      ]
+    },
+    {
+      "ref": "Rashi on Chullin 91a",
+      "url": "https://www.sefaria.org/api/v3/texts/Rashi%20on%20Chullin%2091a?version=source&version=english&fill_in_missing_segments=0&return_format=text_only",
+      "retrieved_at": "2026-10-02T03:38:19.755511+00:00",
+      "sha256": "503cf3732269c0d441124109e24cbe804f40656eded81f0ef07446a3313126b3",
+      "success": true,
+      "tool": "Python urllib, Sefaria v3 API",
+      "editions": [
+        {
+          "title": "Vilna Edition",
+          "language": "he",
+          "is_source": true,
+          "license": "Public Domain",
+          "version_source": "https://www.nli.org.il/he/books/NNL_ALEPH001300957"
+        }
+      ]
+    },
+    {
+      "ref": "Rashi on Genesis 32:25",
+      "url": "https://www.sefaria.org/api/v3/texts/Rashi%20on%20Genesis%2032%3A25?version=source&version=english&fill_in_missing_segments=0&return_format=text_only",
+      "retrieved_at": "2026-10-02T03:39:35.734760+00:00",
+      "sha256": "28050118c4b8d43d857a314264e6c08f40c0a24c98ec29c9b8ed4c462117f73e",
+      "success": true,
+      "tool": "Python urllib, Sefaria v3 API",
+      "editions": [
+        {
+          "title": "Pentateuch with Rashi's commentary by M. Rosenbaum and A.M. Silbermann, 1929-1934",
+          "language": "he",
+          "is_source": true,
+          "license": "Public Domain",
+          "version_source": "https://www.nli.org.il/he/books/NNL_ALEPH001969084"
+        },
+        {
+          "title": "Pentateuch with Rashi's commentary by M. Rosenbaum and A.M. Silbermann, 1929-1934",
+          "language": "en",
+          "is_source": false,
+          "license": "Public Domain",
+          "version_source": "https://www.nli.org.il/he/books/NNL_ALEPH001969084"
+        }
+      ]
+    }
+  ],
+  "public_output": "DT-001.md",
+  "rights_note": "Public output contains short original-language phrases, original paraphrase, and exact links; no full source corpus or copied modern translation. Raw evidence retained in work/posek-dvar-pilot/DT-001. Unknown source-edition license preserved as reported, not treated as permission."
+}

@@ -1,0 +1,35 @@
+{
+  "skill_files_sha256": {
+    "LICENSE": "2a068f913f6522a9d5d46f5e304fcaf45e5015378e03fffe9c1ffe0955a81603",
+    "NOTICE": "b8d091fca358f5fb56038505d65b3225cc84538ef2e4cd021771c27146035aa3",
+    "SKILL.md": "5a813b89fa19c7bfee6df778e65439fa7e319abdc7dbfb2af2094819111b12bb",
+    "agents/openai.yaml": "29db69a5f4c84dc09d2bcdf2a090669f4ce09debe398c56ef9190aebb1a3d4d9",
+    "references/consequential-cases.md": "f7286de2a4343d2fe5629ba09d7ee3a5949869232decd9e076c77995ecf36195",
+    "references/divrei-torah.md": "fcca59a532e949587a2ef31fe42b67781bef917ba39bd89fc00bce2e664e5628",
+    "references/evaluation.md": "6005feb9030d9b311f19e75e295e5ee4e51fb2840a5f82e7150b10b0acece4f3",
+    "references/source-method.md": "ead0b69ee423255a19a0c2bfe98d6291bf173254d6b39174ba14c0fd386d64f1",
+    "references/torah-writing.md": "e5f66b5cf698b82ec73fbb3369a92f1896d1464197c74a43bc784f60d8568851",
+    "scripts/fetch_source.py": "1901d77c4709d35a7148b8c73da7fbdefa3f85df2d07160daf7b738b84cc025b"
+  },
+  "cases_selected": [
+    "DT-001",
+    "DT-002",
+    "DT-006",
+    "DT-009"
+  ],
+  "design": "One fresh candidate agent per case; prompt and frozen skill only; rubric withheld. No baseline.",
+  "model": "Exact model/version and generation settings not exposed to candidate agents.",
+  "tools": "Source retrieval available. Actual source records saved per candidate.",
+  "reviewer_type": "AI; not qualified human validation",
+  "post_run_changes": [
+    {
+      "files": [
+        "SKILL.md",
+        "references/hashkafah.md",
+        "references/audience.md",
+        "NOTICE"
+      ],
+      "change": "Added selectable hashkafah profiles, editable audience/source/depth presets, and an explicitly fictional institutional persona after the four recorded divrei Torah runs. Those runs do not validate these later additions."
+    }
+  ]
+}

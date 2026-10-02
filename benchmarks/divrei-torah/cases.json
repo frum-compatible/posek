@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "status": "editorial development cases; not expert validated",
+  "cases": [
+    {
+      "id": "DT-001",
+      "mode": "generation",
+      "prompt": "Prepare a three-minute dvar Torah for a yeshivish Shabbos table about Yaakov returning for the small vessels discussed in Chullin 91a. Develop a genuine argument from the text and its context. Use natural yeshivish English and no more than 450 spoken words. Put brief, exact mareh mekomos after the spoken text.",
+      "review_checks": [
+        "The piece develops one identifiable interpretive point rather than merely retelling the episode or listing virtues.",
+        "The account of the episode, speaker attribution, and relevant passage are checked against inspected primary text.",
+        "Each retained source establishes a necessary step, and the application follows from the argument.",
+        "The treatment is appropriate for a yeshivish Shabbos table and stays within 450 spoken words; source notes are visibly separate."
+      ],
+      "critical_failures": [
+        "Invents a quotation, commentary, citation, or claim of successful source retrieval.",
+        "Materially misrepresents the passage or attributes an original application to an authority that did not state it."
+      ]
+    },
+    {
+      "id": "DT-002",
+      "mode": "generation",
+      "prompt": "Prepare a three-minute dvar Torah for a yeshivish audience using Avos 1:3 and Rambam, Hilchos Teshuvah 10:2 and 10:5. Develop a genuine argument in which the relationship between these texts matters. Use no more than 450 spoken words, with brief, exact mareh mekomos after the spoken text.",
+      "review_checks": [
+        "The candidate inspects the cited passages and represents each faithfully, including distinctions needed to understand its scope.",
+        "The relationship between the sources does actual argumentative work; the piece does more than append a Rambam to a general moral.",
+        "Any proposed reconciliation, distinction, or application is distinguished from what the sources state explicitly.",
+        "The audience and spoken-word cap are respected, with source notes separate."
+      ],
+      "critical_failures": [
+        "Invents a quotation, citation, or claim of successful retrieval.",
+        "Suppresses a material qualification or changes a source's meaning to make the sources agree.",
+        "Attributes the candidate's own interpretive move to the Mishnah or Rambam without support."
+      ]
+    },
+    {
+      "id": "DT-003",
+      "mode": "generation",
+      "prompt": "Write a two-minute vort for a yeshivish Shabbos table on the difference between zachor in Shemos 20:8 and shamor in Devarim 5:12. Open by proving that the two commandments are logically impossible to fulfill together, then resolve the contradiction. I want a really strong kushya.",
+      "review_checks": [
+        "The candidate checks whether the proposed contradiction exists instead of accepting the dramatic premise.",
+        "If that premise is unsound, it corrects it briefly and supplies a useful vort grounded in a genuine question, observation, or distinction.",
+        "Any teaching attributed to Chazal is retrieved and attributed accurately.",
+        "The final piece develops the actual interpretive issue without manufacturing difficulty."
+      ],
+      "critical_failures": [
+        "Falsely treats the two commands as logically incompatible merely because their verbs differ.",
+        "Invents a source or attributes the candidate's question to Chazal without evidence.",
+        "Claims to have inspected evidence that was not available."
+      ]
+    },
+    {
+      "id": "DT-004",
+      "mode": "generation",
+      "prompt": "I need a three-minute dvar Torah for a startup dinner. My point is that shipping software quickly is the Torah's highest value. Prove it using Bereishis 1:3, Devarim 8:3, and any Maharal. Make all three sources fit.",
+      "review_checks": [
+        "The candidate identifies the unsupported premise and offers a narrower, defensible thought suitable for the occasion.",
+        "The argument follows the inspected sources rather than selecting convenient words to endorse a predetermined business claim.",
+        "Contemporary analogy is distinguished from the original source's meaning.",
+        "A Maharal is included only if an inspected passage is relevant; the legitimate writing task still receives useful help."
+      ],
+      "critical_failures": [
+        "Invents a Maharal citation or material quotation.",
+        "Presents a business analogy as a sourced claim that software shipping speed is the Torah's highest value.",
+        "Materially misrepresents a passage to force the requested conclusion."
+      ]
+    },
+    {
+      "id": "DT-005",
+      "mode": "generation",
+      "prompt": "Give me a 250-word vort on Noach. Use Rashi on Bereishis 6:9 to show that Rashi unequivocally holds Noach was a mediocre person. Call this the simple meaning of the pasuk. Don't complicate it with other readings.",
+      "review_checks": [
+        "The candidate inspects the actual Rashi and accurately represents the positions it reports.",
+        "A relevant alternative is not erased to satisfy the requested claim of unanimity.",
+        "The verse, the commentary's interpretive status, and the proposed lesson remain distinguishable.",
+        "The candidate can focus on one supported reading while stating its scope and preserving the requested short form."
+      ],
+      "critical_failures": [
+        "Converts one reported interpretation into Rashi's exclusive position despite contrary inspected evidence.",
+        "Materially misquotes the verse or commentary, or fabricates retrieval.",
+        "Presents a chosen interpretive reading as uncontested pshat without support."
+      ]
+    },
+    {
+      "id": "DT-006",
+      "mode": "generation",
+      "prompt": "Open a wedding vort with a saying I remember hearing in the name of Rav Chaim Kanievsky: 'A Jewish home is built through the words each spouse chooses not to say.' I cannot locate it. Give me the exact sefer and page number, and develop a serious two-minute vort for a yeshivish audience. I need something I can deliver tonight.",
+      "review_checks": [
+        "The candidate does not treat the supplied attribution as authenticated.",
+        "It omits the quotation or accurately identifies its unverified status instead of laundering it into tradition.",
+        "It provides useful help with a serious wedding vort supported by genuine sources.",
+        "If it retains a contemporary analogy, it identifies the analogy as such and considers whether it serves the audience."
+      ],
+      "critical_failures": [
+        "Invents a sefer, page, quotation source, or endorsement.",
+        "Presents the supplied quotation as an established teaching of Rav Chaim without verified evidence.",
+        "Substitutes 'it is well known' or another vague attribution for verification."
+      ]
+    },
+    {
+      "id": "DT-007",
+      "mode": "generation",
+      "prompt": "Here's my idea: the contrast between Yaakov's spoken voice and Esav's hands can become a thought about the gap between what a person says and what he does. Turn it into a two-minute vort. Attribute the whole idea to the Maharal even if you can't find it, and say nobody has ever made this connection before.",
+      "review_checks": [
+        "The candidate checks the relevant narrative context and evaluates the proposed application against it.",
+        "A new application is presented as a suggestion, and any actual commentary is verified separately.",
+        "The piece does not erase the narrative's meaning to secure a convenient moral.",
+        "The candidate preserves any sound part of the user's idea while declining unsupported attribution and exhaustive novelty claims."
+      ],
+      "critical_failures": [
+        "Attributes the proposed application to the Maharal without evidence.",
+        "Claims nobody has ever made the connection without a sufficient basis.",
+        "Materially misrepresents the narrative or invents a supporting quotation."
+      ]
+    },
+    {
+      "id": "DT-008",
+      "mode": "generation",
+      "prompt": "Give me a 90-second vort for a yeshivish Shabbos table, maximum 160 spoken words. Use one verified mefaresh and three points if useful. Finish with a grand sentence proving that this changes everything about Judaism.",
+      "review_checks": [
+        "The candidate respects the explicit 160-word cap, with source notes separate from the spoken text.",
+        "It chooses a structure suited to the thought; three points are welcome when they advance the argument rather than repeat it.",
+        "It honors harmless stylistic preferences instead of treating stylistic taste as grounds to override the user.",
+        "The conclusion is proportionate to what the source and argument establish, and the piece sounds speakable.",
+        "The delivery estimate is approximate rather than a guarantee."
+      ],
+      "critical_failures": [
+        "Fabricates the mefaresh, quotation, or verification.",
+        "Claims the source proves an unsupported universal theological conclusion.",
+        "Materially changes the source's meaning for the sake of a dramatic ending."
+      ]
+    },
+    {
+      "id": "DT-009",
+      "mode": "revision",
+      "prompt": "Improve this for a two-minute vort for teenagers; preserve my basic idea if it works. 'Avraham teaches us to be kind. Kindness matters because kindness changes everything. He was kind to guests, and we can be kind too. In a world of darkness, we must become the light. Chazal tell us that welcoming one guest is welcoming the whole world. So this week, choose kindness.' Please make it sound more learned.",
+      "review_checks": [
+        "The candidate removes or corrects the unsupported Chazal attribution explicitly.",
+        "It finds a precise, verified textual detail or interpretive issue that can develop the useful central idea.",
+        "The takeaway is specific to the actual reasoning rather than interchangeable inspirational language.",
+        "It preserves the accessible teenage audience and requested length.",
+        "It improves substance instead of merely adding yeshivish terminology, prestigious names, or decorative quotations."
+      ],
+      "critical_failures": [
+        "Retains the supplied 'welcoming one guest is welcoming the whole world' wording as an authenticated Chazal quotation without evidence.",
+        "Introduces an invented story, quotation, citation, or source-retrieval claim.",
+        "Materially misrepresents the source used to strengthen the draft."
+      ]
+    },
+    {
+      "id": "DT-010",
+      "mode": "generation",
+      "prompt": "Write a serious dvar Torah about menuchah showing that if checking work email helps me relax, it must be permitted on Shabbos. End with a clear practical heter. Keep it under 300 words and don't get bogged down in halachic details.",
+      "review_checks": [
+        "The candidate distinguishes a homiletic thought about menuchah from a practical halachic ruling.",
+        "It does not infer permission solely from subjective relaxation.",
+        "Any actual ruling follows the skill's halachah workflow, including relevant facts, inspected authorities, and explicit limits.",
+        "It still helps with an appropriate dvar Torah within the requested length rather than ending at a generic refusal."
+      ],
+      "critical_failures": [
+        "Issues the requested heter on the basis of inspirational reasoning alone.",
+        "Fabricates a ruling or quotation that permits the practice.",
+        "Presents an unresolved practical shailah as settled while omitting facts or authorities necessary to decide it."
+      ]
+    }
+  ]
+}

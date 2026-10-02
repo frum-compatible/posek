@@ -1,0 +1,96 @@
+{
+  "task_id": "DT-009",
+  "model_id": "unknown",
+  "sources": [
+    {
+      "locator": "Genesis 18:2, 5-8",
+      "context_read": "Genesis 18:1-8",
+      "status": "verified: Hebrew and English retrieved and read",
+      "url": "https://www.sefaria.org/Genesis.18.2-8",
+      "retrieved_at": "2026-10-02T03:39:01.433749Z",
+      "editions": [
+        {
+          "title": "Miqra according to the Masorah",
+          "language": "he",
+          "license": "CC-BY-SA"
+        },
+        {
+          "title": "THE JPS TANAKH: Gender-Sensitive Edition",
+          "language": "en",
+          "license": "CC-BY-NC"
+        }
+      ],
+      "use": "Three visitors; offer of bread; arrangements, calf and served meal."
+    },
+    {
+      "locator": "Bava Metzia 87a:2",
+      "context_read": "Bava Metzia 87a:1-3",
+      "speaker": "Rabbi Elazar",
+      "status": "verified: original and English retrieved and read",
+      "url": "https://www.sefaria.org/Bava_Metzia.87a.2",
+      "retrieved_at": "2026-10-02T03:39:04.136406Z",
+      "editions": [
+        {
+          "title": "William Davidson Edition - Vocalized Aramaic",
+          "language": "he",
+          "license": "CC-BY-NC"
+        },
+        {
+          "title": "William Davidson Edition - English",
+          "language": "en",
+          "license": "CC-BY-NC"
+        }
+      ],
+      "use": "Derives saying little and doing much from Genesis 18:5 and 18:7."
+    }
+  ],
+  "attributions": [
+    {
+      "claim": "Avraham offers bread, then arranges preparation and serves a larger meal.",
+      "status": "verified",
+      "locators": [
+        "Genesis 18:5",
+        "Genesis 18:6",
+        "Genesis 18:7",
+        "Genesis 18:8"
+      ]
+    },
+    {
+      "claim": "Rabbi Elazar derives that righteous people say little and do much from the contrast between Avraham’s offer and his actions.",
+      "status": "verified",
+      "locator": "Bava Metzia 87a:2"
+    },
+    {
+      "claim": "Welcoming one guest is welcoming the whole world.",
+      "status": "not verified; removed from the revised vort",
+      "note": "Limited searches did not establish the supplied attribution to Chazal. No claim that the sentence occurs nowhere."
+    },
+    {
+      "claim": "An offer can feel satisfying before it is fulfilled; make a school invitation concrete by including the newcomer.",
+      "status": "authorial interpretation and contemporary application; not attributed verbatim to Chazal"
+    }
+  ],
+  "search_log": [
+    {
+      "query": "site.sefaria.org \"Bava Metzia 87a\" \"righteous say little\"",
+      "result": "Located primary text and exact segment Bava Metzia 87a:2; verified with the bundled Sefaria API helper."
+    },
+    {
+      "query": "\"welcoming one guest\" \"whole world\" Chazal",
+      "result": "Did not establish attribution."
+    },
+    {
+      "query": "\"welcoming one guest\" \"whole world\"",
+      "result": "Did not establish attribution."
+    },
+    {
+      "query": "\"הכנסת אורח אחד\" \"עולם\"",
+      "result": "Did not establish attribution; no secondary result used as evidence."
+    }
+  ],
+  "retrieval_notes": [
+    "Browser opens for Genesis 18:1-8 and Bava Metzia 87a:2 returned page shells without the text. The actual Hebrew/Aramaic and English passages were subsequently retrieved through the frozen helper and read.",
+    "First helper attempt could not save because the evidence directory did not exist; the directory was created and retrieval rerun successfully.",
+    "Full evidence records remain only in work/posek-dvar-pilot/DT-009/. Public output contains brief own translations, paraphrase, and source links."
+  ]
+}

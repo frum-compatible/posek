@@ -1,0 +1,59 @@
+{
+  "candidate_input": "skill folder plus prompt-only question subset; answer key withheld",
+  "source_case_ids": [
+    "SRC-001",
+    "SRC-002",
+    "SRC-009",
+    "SRC-011",
+    "PAIR-001",
+    "PAIR-004"
+  ],
+  "boundary_case_ids": [
+    "BOUND-001",
+    "BOUND-004",
+    "BOUND-005"
+  ],
+  "skill_files_sha256": {
+    "SKILL.md": "0997adbd1c5b57292738972c98be49bb0cc55570423a0b3ec40c8ded8129b842",
+    "agents/openai.yaml": "0909f443039344ff09453abfa1448bab8ba6e44bd7bed5d373d5d3b16772ae52",
+    "references/consequential-cases.md": "f7286de2a4343d2fe5629ba09d7ee3a5949869232decd9e076c77995ecf36195",
+    "references/evaluation.md": "acafa3db216120d5a891ba096211ecd92ae23d52d9ba0dce1c0380cbb4512096",
+    "references/source-method.md": "033e93997aac5ec11ee64bc15b1c740d88afd805900f111fd356706e24de5b18",
+    "scripts/fetch_source.py": "1901d77c4709d35a7148b8c73da7fbdefa3f85df2d07160daf7b738b84cc025b"
+  },
+  "post_pilot_changes": [
+    {
+      "file": "references/source-method.md",
+      "change": "Corrected Sefaria licensing-document URL from /docs/licensing to /docs/usage-of-our-name-and-logo; no reasoning instructions changed."
+    },
+    {
+      "files": [
+        "LICENSE",
+        "NOTICE"
+      ],
+      "change": "Added distribution notices; not loaded by candidate agents."
+    },
+    {
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "NOTICE"
+      ],
+      "change": "Revised the yeshivish register, adopted the title Moirah D’Asrah, and added AI Rabbi/AI Posek/Torah discovery wording. Source retrieval code and the original pilot answers are unchanged. This wording revision has not been behaviorally reevaluated."
+    },
+    {
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/divrei-torah.md",
+        "references/torah-writing.md",
+        "references/source-method.md",
+        "references/evaluation.md"
+      ],
+      "change": "Added a separate divrei Torah composition and revision workflow with concrete editorial checks and task-specific source selection. The original psak pilot is not evidence for the new mode; editorial forward tests are recorded separately under benchmarks/divrei-torah/."
+    }
+  ],
+  "model": "unknown; precise identifier and sampling settings not exposed",
+  "session_design": "Two batches, not independent sessions per question.",
+  "boundary_restriction": "No retrieval allowed by task instruction; no technical network sandbox was imposed."
+}
