@@ -1,0 +1,82 @@
+{
+  "case_id": "PR-02",
+  "response_sha256": "f5ccb27f81b05d9612f9f0272f0276076f00fd7606194b169970d66f78b4c6d1",
+  "reviewer_type": "ai",
+  "outcome": "supported",
+  "findings": [
+    {
+      "status": "supported",
+      "claim": "The genuine gift-and-borrow heter for the needed Shabbos utensil is retained.",
+      "evidence": "YD 120:16 expressly permits the gift and subsequent borrowing when immersion was forgotten before Shabbos or Yom Tov; OC 323:7 gives this route amid the immersion-on-Shabbos dispute. MB 323:34 expressly permits this gift for the Shabbos need.",
+      "sources": [
+        "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_קכ",
+        "https://he.wikisource.org/wiki/שולחן_ערוך_אורח_חיים_שכג",
+        "https://he.wikisource.org/wiki/משנה_ברורה_על_אורח_חיים_שכג"
+      ],
+      "locator": "YD 120:16; OC 323:7; MB 323:34"
+    },
+    {
+      "status": "supported",
+      "claim": "No-effective-transfer counterfactual correctly changes the result.",
+      "evidence": "YD 120:8 exempts borrowing from non-Jewish ownership but retains the obligation on a utensil acquired by a Jew, including when lent onward. Together with the gift requirement in 120:16, this supports the answer’s distinction between ownership and mere temporary possession. Peninei Halakhah likewise bases the exemption on continuing non-Jewish ownership.",
+      "sources": [
+        "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_קכ",
+        "https://ph.yhb.org.il/17-31-07/"
+      ],
+      "locator": "YD 120:8,16; Peninei Halakhah Kashrut 31:7, first and subsequent body paragraphs"
+    },
+    {
+      "status": "supported",
+      "claim": "Actual Jewish reacquisition and continuing borrowing are correctly separated.",
+      "evidence": "YD 120:11 requires immersion after sale and reacquisition; 120:3 supplies the blessing rule. Peninei Halakhah explicitly recommends a gift back after Shabbos and immersion with a blessing. Taz 120:18 and MB 323:35 require later immersion for permanent retention even without an express repurchase, with the stated blessing precaution.",
+      "sources": [
+        "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_קכ",
+        "https://www.sefaria.org/api/texts/Turei%20Zahav%20on%20Shulchan%20Arukh%2C%20Yoreh%20De%27ah%20120%3A18?context=0",
+        "https://he.wikisource.org/wiki/משנה_ברורה_על_אורח_חיים_שכג",
+        "https://ph.yhb.org.il/17-31-07/"
+      ],
+      "locator": "YD 120:3,11; Taz YD 120:18; MB 323:35; Peninei Halakhah Kashrut 31:7, body paragraph on gift-and-loan"
+    },
+    {
+      "status": "supported",
+      "claim": "Routine avoidance when immersion is available is not presented as the ordinary ruling.",
+      "evidence": "The Rema’s weekday extension in YD 120:16 names absence of a mikveh; Arukh HaShulchan 120:60 limits the arrangement until after Shabbos or access to a mikveh, then requires immersion without a blessing. This agrees with the scope of the target Hidabroot answer, although the candidate cites the underlying sources rather than that page.",
+      "sources": [
+        "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_קכ",
+        "https://www.sefaria.org/api/texts/Arukh%20HaShulchan%2C%20Yoreh%20De%27ah%20120%3A60?context=0",
+        "https://www.hidabroot.com/question/3190"
+      ],
+      "locator": "Rema YD 120:16; Arukh HaShulchan YD 120:60; Hidabroot answer paragraphs 1–2"
+    },
+    {
+      "status": "supported",
+      "claim": "The contemporary continuing-loan leniency is accurately represented as a distinct position.",
+      "evidence": "Rav Melamed explicitly rules that intention never to acquire prevents involuntary acquisition and permits continuing use under non-Jewish ownership. His note 10 discusses the Taz/MB position and contrasts the lenient authorities and reasoning. The answer reports this permission and its ownership condition while retaining his recommendation to reacquire and immerse.",
+      "source": "https://ph.yhb.org.il/17-31-07/",
+      "locator": "Peninei Halakhah Kashrut 31:7, body paragraphs 2–4 and note 10"
+    },
+    {
+      "status": "supported",
+      "claim": "The ha’aramah objection and its evidentiary limit are honestly attributed.",
+      "evidence": "Pitchei Teshuvah 120:15 reports Rashbash 468 as questioning the arrangement as ha’aramah. The answer says it verified that report but not the full responsum; it does not turn the reported objection into a unanimous rejection.",
+      "source": "https://www.sefaria.org/api/texts/Pitchei%20Teshuva%20on%20Shulchan%20Arukh%2C%20Yoreh%20De%27ah%20120%3A15?context=0",
+      "locator": "Pitchei Teshuvah YD 120:15, opening sentence"
+    },
+    {
+      "status": "no_issue_found",
+      "claim": "Quotation, locator, and categorical-claim audit.",
+      "evidence": "The quoted Hebrew in YD 120:16 and MB 323:34 matches. All substantive cited locators inspected resolve to supporting passages. No material unsupported categorical claim found within the stipulated case."
+    },
+    {
+      "status": "minor_clarity",
+      "claim": "The phrase “remains nominally on loan” could be clearer.",
+      "evidence": "Because the answer previously rejects an ineffective gift, “remains on loan but will be permanently retained” would describe the Taz/MB branch more cleanly. This is a wording issue, not a substantive loss of the ownership distinction."
+    }
+  ],
+  "limits": [
+    "AI source review, not an expert halachic determination or practical psak.",
+    "I independently inspected the target Hidabroot answer, the exact Shulchan Arukh and Mishnah Berurah passages, Taz, Pitchei Teshuvah, Arukh HaShulchan, and Peninei Halakhah 31:7 including note 10.",
+    "I did not independently inspect the full Rashbash responsum or all authorities cited inside Peninei Halakhah’s footnote. The candidate also expressly discloses its Rashbash gap.",
+    "No transaction was assessed: effective transfer and a definitely obligated metal food utensil are the stipulated facts. The review does not validate a particular kinyan or appliance."
+  ]
+}

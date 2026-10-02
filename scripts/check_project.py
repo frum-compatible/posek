@@ -78,6 +78,18 @@ def main():
             expected = score.score_judgments(score.read_json(judgments_path), run_cases, judgments_path.parent)
             saved = score.read_json(judgments_path.with_name("report.json"))
             require(saved == expected, f"Stale or altered report: {judgments_path.parent.name}")
+
+    development = ROOT / "benchmarks/semicha/development"
+    repair_review = score.read_json(development / "review.json")
+    require(len(repair_review["judgments"]) == 1, "Development rerun needs one recorded judgment")
+    require(repair_review["judgments"][0]["response_sha256"]
+            == score.response_digest("response.md", development), "Development response changed after review")
+    published_rulings = ROOT / "benchmarks/published-rulings"
+    for case in score.read_json(published_rulings / "cases.json")["cases"]:
+        review = score.read_json(published_rulings / "review" / f"{case['id']}.json")
+        require(review["response_sha256"]
+                == score.response_digest(f"responses/{case['id']}.md", published_rulings),
+                f"Published-ruling response changed after review: {case['id']}")
     print(f"Project structure and saved reports checked; {len(cases)} psak, {len(editorial_cases)} editorial, and {len(semicha_cases)} semicha-derived cases. No accuracy claim.")
 
 

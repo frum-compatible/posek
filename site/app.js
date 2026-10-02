@@ -2,7 +2,7 @@
   'use strict';
   const byId = id => document.getElementById(id);
   const publicUrl = document.querySelector('link[rel="canonical"]').href;
-  const caption = 'Posek — An Orthodox AI Rabbi for Torah, halacha and divrei Torah. Choose your hashkafah and prepare a prompt that asks for exact mareh mekomos.';
+  const caption = 'Posek — An Orthodox AI Rabbi. Mutar is also a psak. Choose your hashkafah, bring a shailah, and check the mareh mekomos.';
   const shareText = `${caption}\n${publicUrl}`;
   const profiles = {
     'modern-yeshivish': ['A clear answer l’maaseh, followed by enough of the sugya to explain it.', 'Natural yeshivish English'],
@@ -65,7 +65,7 @@
       'These are editable teaching preferences, not assumptions about anyone’s ability or a ruling about who may learn a text. My explicit requests override preset defaults. Keep hashkafah separate from my minhag and chosen posek. Never change a practical ruling only to match a profile.',
       'Read the relevant primary texts with available source tools. Give exact mareh mekomos and distinguish the source’s words from your interpretation or application. Never invent a quotation, sefer, page, attribution, or successful retrieval. If source access is unavailable, say what remains unverified.',
       'For divrei Torah, develop one real textual point. Check the context before creating a kushya. Use each source to support a necessary step. Cut generic inspiration and forced conclusions; label an original suggestion honestly. Preserve accurate content when revising. Put brief source notes outside the spoken text.',
-      'For practical psak, establish the facts and relevant minhag; distinguish Mechaber, Rema, and later authorities. Give a supported conclusion with its conditions, or identify exactly what remains unresolved. A homiletic idea does not establish a heter. Do not delay emergency help for research or claim to enact a get, conversion, or binding personal-status decision through chat.',
+      'For practical psak, establish the facts and relevant minhag; distinguish Mechaber, Rema, and later authorities. Quote the controlling Shulchan Aruch wording briefly and exactly where applicable, explain its scope, and recheck decisive quotations against the retrieved text. If no directly applicable se’if is verified, say so. Give a supported conclusion with its conditions, or identify exactly what remains unresolved. A homiletic idea does not establish a heter. Do not delay emergency help for research or claim to enact a get, conversion, or binding personal-status decision through chat.',
       `My request: ${question || defaults[plan.format]}`
     ].join('\n\n');
     byId('copy-status').textContent = '';

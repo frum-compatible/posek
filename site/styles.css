@@ -305,6 +305,38 @@ textarea {
   font-size:14px;
   font-weight:600;
 }
+.results-table {
+  width:100%;
+  max-width:740px;
+  border-collapse:collapse;
+  font-size:15px;
+}
+.results-table caption {
+  text-align:left;
+  color:var(--muted);
+  font-size:13px;
+  padding-bottom:16px;
+}
+.results-table th,.results-table td {
+  text-align:left;
+  padding:15px 10px;
+  border-bottom:1px solid var(--line);
+}
+.results-table thead th {
+  font-size:12px;
+  font-weight:500;
+}
+.results-table tbody th {
+  font-weight:500;
+}
+.results-table td {
+  white-space:nowrap;
+}
+.evidence-note {
+  max-width:740px;
+  font-size:14px;
+  color:var(--muted);
+}
 .sharing {
   max-width:1040px;
 }

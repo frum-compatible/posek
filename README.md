@@ -123,6 +123,10 @@ The practical halacha suite contains 24 development cases: bounded source readin
 
 See [the protocol](benchmarks/README.md) and [recorded results](benchmarks/RESULTS.md). These are development observations, not a percentage of “halakhic accuracy,” rabbinic certification, or evidence of superiority to human poskim. Public development cases also cannot establish performance on unseen questions.
 
+The [semicha-question pilot](benchmarks/semicha/RESULTS.md) adds four adapted public items from the Chief Rabbinate and a WebYeshiva semicha course. Eight fresh sessions produced 46/48 rubric points for Posek and 48/48 for the no-skill assistant under independent AI source review. The report documents the omission that prompted a skill revision. These are selected questions, not a full examination or a comparison with rabbonim.
+
+Two [published-ruling cases](benchmarks/published-rulings/RESULTS.md) check whether a heter survives together with its limits. Both answers received supported findings under AI source review. Their purpose is to catch an unnecessary issur as well as an overbroad heter.
+
 The repository includes offline tests and GitHub Actions workflows. These check software behavior separately from the halachic and editorial evaluations; see the [verification record](docs/VERIFICATION.md) for actual CI runs. The original psak pilot predates the current wording and divrei Torah mode; its answers and skill hashes are preserved. The newer divrei Torah runs have their own input records and review.
 
 ## Scope

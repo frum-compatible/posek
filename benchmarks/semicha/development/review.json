@@ -1,0 +1,80 @@
+{
+  "case_id": "CR-02",
+  "reviewer_type": "ai",
+  "judgments": [
+    {
+      "response_id": "REPAIR-CR02",
+      "response_sha256": "150ac6fd29a4b25690babe8112c044806c67c5d91a11d7a80e79361564ff026b",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 1,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "All requested subparts are answered, including Rema’s own Darkhei Moshe mixed-coagulant rationale and the reason sixty remains required. The governing conclusions, competing views, and distinctions are supported. One minor attribution/locator defect remains: Rabbeinu Tam’s Tosafot reconciliation belongs to s.v. הכי גרסינן ברוב ספרים, not כאן לאחר חזרה. Hence attribution 1 and all other dimensions 2, total 11/12. No critical failure; meets the supplied development threshold. This is an AI-reviewed development rerun, not a fresh held-out result.",
+      "missing_subparts": [],
+      "source_findings": [
+        {
+          "source": "Tur YD 87; Rambam Ma’akhalot Asurot 9:15",
+          "urls": [
+            "https://he.wikisource.org/wiki/טור_יורה_דעה_פז",
+            "https://he.wikisource.org/wiki/רמב%22ם_הלכות_מאכלות_אסורות_ט_טו"
+          ],
+          "finding": "The three-position table and Rif/Rambam conclusion are supported. Reporting Rif through Tur is appropriate and explicitly disclosed."
+        },
+        {
+          "source": "Rashi and Tosafot, Chullin 116b",
+          "urls": [
+            "https://he.wikisource.org/wiki/חולין_קטז_ב",
+            "https://www.sefaria.org/Tosafot_on_Chullin.116b.16.1"
+          ],
+          "finding": "The substantive Rashi and Rabbeinu Tam descriptions are correct. The Tosafot pinpoint is imprecise: the reconciliation is in s.v. הכי גרסינן ברוב ספרים, not the preceding כאן לאחר חזרה. Wikisource runs the adjacent passages together; the exact Sefaria segment distinguishes them. This is a minor citation-location defect, not a fabricated source or a wrong doctrine."
+        },
+        {
+          "source": "SA/Rema YD 87:9–10; Shach 25; Taz 7",
+          "urls": [
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_ט",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_י"
+          ],
+          "finding": "Supports the codified ruling and custom, substantive clear/curdled distinction, marit ayin concern, and later-curdling/loss qualification."
+        },
+        {
+          "source": "Beit Yosef YD 87, paragraphs 9–10; Shach 29, 31",
+          "urls": [
+            "https://he.wikisource.org/wiki/טור_יורה_דעה_פז",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_י"
+          ],
+          "finding": "Supports the difficulty and absorbed-meat-taste resolution, initial prohibition, after-the-fact leniency, and rejection of ordinary nat bar nat as the reason for this particular leniency."
+        },
+        {
+          "source": "Shach 87:30",
+          "urls": [
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_י"
+          ],
+          "finding": "Supports the maamid challenge, both levels of defense, the separate Tur alternative, residual difficulty, and the denominator being prohibited stomach milk rather than the wall or merely an estimated flavor trace."
+        },
+        {
+          "source": "Darkhei Moshe YD 87:8; Rema YD 87:11",
+          "urls": [
+            "https://he.wikisource.org/wiki/טור_יורה_דעה_פז",
+            "https://www.sefaria.org/Darkhei_Moshe%2C_Yoreh_De'ah.87.8.1",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_יא"
+          ],
+          "finding": "Both Rema rationales are actually present in the cited Tur page’s Darkhei Moshe section and corroborated by the exact Sefaria segment. The mixed clear/curdled zeh v’zeh gorem explanation and continuing sixtyfold requirement are accurately stated. The response correctly requires an actual permitted contribution."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "AI-reviewed development rerun of the same CR-02 question after a generic multipart-completeness instruction change. This is not a fresh held-out result, human examiner assessment, official exam score, or practical halakhic ruling.",
+    "The same reviewer previously assessed this question. The new response was substantively checked against primary texts; this single rerun does not establish broader reliability or causally isolate the instruction change.",
+    "No source log was read before or during this review. Claims about what the candidate previously read were not process-audited; no false-verification finding is inferred from missing logs.",
+    "Electronic Hebrew editions were inspected. Some Wikisource pages are marked unproofread/OCR-derived; no printed-page or manuscript collation was performed. Exact Sefaria segments corroborated Darkhei Moshe and the Tosafot locator.",
+    "Underlying Mordekhai, Rabbeinu Barukh, and earlier responsa were assessed as reported by the inspected authorities, not independently retrieved.",
+    "Shach 87:36 and Taz on 87:11 further discuss whether the forbidden component could set the cheese alone. The answer does not develop that adjacent dispute; the same question-scope treatment as the initial CR-02 review is retained, so this is not counted as a missing requested subpart.",
+    "The initial response files and initial comparison scores were not changed. No tests, gates, or external writes were performed."
+  ]
+}

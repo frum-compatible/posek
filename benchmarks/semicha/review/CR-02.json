@@ -1,0 +1,147 @@
+{
+  "case_id": "CR-02",
+  "reviewer_type": "ai",
+  "judgments": [
+    {
+      "response_id": "R05",
+      "response_sha256": "3699d6c64eebe520dad00d5ce8b517a13b08fd745c2a6e2c1a90fde856855f1a",
+      "scores": {
+        "conclusion": 1,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 1
+      },
+      "critical_failure": false,
+      "rationale": "Substantively correct on (a), (b), and Shach’s challenge and two defenses in (c), with sound source attribution and scope. Part (c) is incomplete: the denominator explanation and Shach’s defenses do not supply Rema’s distinct Darkhei Moshe explanation involving mixed clear and curdled contents. This is an omission, not a fabricated citation or a materially wrong controlling ruling. Total 10/12; meets the specified development threshold, with an explicit completeness limitation.",
+      "missing_subparts": [
+        "(c) Rema’s own Darkhei Moshe 87:8 explanation: ordinarily both forbidden clear and permitted curdled contents participate, creating zeh v’zeh gorem; this removes the special maamid obstacle, while sixty remains necessary against the clear portion."
+      ],
+      "source_findings": [
+        {
+          "source": "Tur YD 87; Rif Chullin 38b; Rambam Ma’akhalot Asurot 9:15",
+          "urls": [
+            "https://he.wikisource.org/wiki/טור_יורה_דעה_פז",
+            "https://he.wikisource.org/wiki/רי%22ף_על_הש%22ס/חולין/פרק_ח",
+            "https://he.wikisource.org/wiki/רמב%22ם_הלכות_מאכלות_אסורות_ט"
+          ],
+          "finding": "Support the Rif/Rambam classification of both clear and curdled stomach contents as pirsha. Rif explicitly treats the prohibiting baraita as the earlier ruling."
+        },
+        {
+          "source": "Rashi Chullin 116b s.v. harei zo asurah; Tosafot s.v. hachi garsinan",
+          "urls": [
+            "https://www.sefaria.org/Rashi_on_Chullin.116b.1.2",
+            "https://www.sefaria.org/Tosafot_on_Chullin.116b.16.1"
+          ],
+          "finding": "Rashi retracts his former permission and treats even curdled contents as milk. Tosafot records Rabbeinu Tam’s clear/curdled distinction, including permission for the curdled case after salting."
+        },
+        {
+          "source": "SA/Rema YD 87:9; Shach 25; Taz 7",
+          "urls": [
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_ט"
+          ],
+          "finding": "Support the anonymous permissive SA position and Rema’s custom following the clear/curdled distinction. Shach adds an initial marit ayin concern even for curdled contents."
+        },
+        {
+          "source": "Beit Yosef YD 87, paragraphs 9–10; Shach 29, 31",
+          "urls": [
+            "https://he.wikisource.org/wiki/טור_יורה_דעה_פז",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_י"
+          ],
+          "finding": "Support the distinction between contents’ own status and absorbed meat taste, initial prohibition, and after-the-fact leniency. Shach rejects ordinary nat bar nat as the basis; the relevant explanation depends on the degraded contents."
+        },
+        {
+          "source": "Shach YD 87:30; SA/Rema 87:10–11",
+          "urls": [
+            "https://www.sefaria.org/Siftei_Kohen_on_Shulchan_Arukh%2C_Yoreh_De'ah.87.30.1",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_י",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_יא"
+          ],
+          "finding": "Support the denominator, maamid challenge, combination-based defense, narrower rabbinic salting/soaking defense, and Shach’s residual difficulty. The Tur-only alternative is legitimately distinguished from a reconciliation of Rema."
+        },
+        {
+          "source": "Darkhei Moshe YD 87:8:1",
+          "urls": [
+            "https://www.sefaria.org/Darkhei_Moshe%2C_Yoreh_De'ah.87.8.1"
+          ],
+          "finding": "Explicitly gives the mixed clear/curdled zeh v’zeh gorem explanation and retains sixty against the clear portion. R05 does not present this requested rationale."
+        }
+      ]
+    },
+    {
+      "response_id": "R02",
+      "response_sha256": "68c7fc8014e924828eb2a9c97cb04f9d9c0fd27b6883a96c88b53322260ab927",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "Answers all requested subparts accurately and distinguishes the competing authorities. It supplies Rema’s own Darkhei Moshe explanation separately from Shach’s proposed defenses, including why sixty remains necessary. Its later-curdling and loss qualification is supported by the gloss, and its verification statement distinguishes sources read directly from reported attributions. Total 12/12; meets the specified development threshold. This does not certify every adjacent practical application.",
+      "missing_subparts": [],
+      "source_findings": [
+        {
+          "source": "Tur YD 87; Rif Chullin 38b; Rambam Ma’akhalot Asurot 9:15",
+          "urls": [
+            "https://he.wikisource.org/wiki/טור_יורה_דעה_פז",
+            "https://he.wikisource.org/wiki/רי%22ף_על_הש%22ס/חולין/פרק_ח",
+            "https://he.wikisource.org/wiki/רמב%22ם_הלכות_מאכלות_אסורות_ט"
+          ],
+          "finding": "Support the Rif/Rambam classification of both clear and curdled stomach contents as pirsha. Rif explicitly treats the prohibiting baraita as the earlier ruling."
+        },
+        {
+          "source": "Rashi Chullin 116b s.v. harei zo asurah; Tosafot s.v. hachi garsinan",
+          "urls": [
+            "https://www.sefaria.org/Rashi_on_Chullin.116b.1.2",
+            "https://www.sefaria.org/Tosafot_on_Chullin.116b.16.1"
+          ],
+          "finding": "Rashi retracts his former permission and treats even curdled contents as milk. Tosafot records Rabbeinu Tam’s clear/curdled distinction, including permission for the curdled case after salting."
+        },
+        {
+          "source": "SA/Rema YD 87:9; Shach 25; Taz 7",
+          "urls": [
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_ט"
+          ],
+          "finding": "Support the anonymous permissive SA position and Rema’s custom following the clear/curdled distinction. Shach adds an initial marit ayin concern even for curdled contents."
+        },
+        {
+          "source": "Beit Yosef YD 87, paragraphs 9–10; Shach 29, 31",
+          "urls": [
+            "https://he.wikisource.org/wiki/טור_יורה_דעה_פז",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_י"
+          ],
+          "finding": "Support the distinction between contents’ own status and absorbed meat taste, initial prohibition, and after-the-fact leniency. Shach rejects ordinary nat bar nat as the basis; the relevant explanation depends on the degraded contents."
+        },
+        {
+          "source": "Shach YD 87:30; SA/Rema 87:10–11",
+          "urls": [
+            "https://www.sefaria.org/Siftei_Kohen_on_Shulchan_Arukh%2C_Yoreh_De'ah.87.30.1",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_י",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_יא"
+          ],
+          "finding": "Support the denominator, maamid challenge, combination-based defense, narrower rabbinic salting/soaking defense, and Shach’s residual difficulty. The Tur-only alternative is legitimately distinguished from a reconciliation of Rema."
+        },
+        {
+          "source": "Darkhei Moshe YD 87:8:1; Rema YD 87:11",
+          "urls": [
+            "https://www.sefaria.org/Darkhei_Moshe%2C_Yoreh_De'ah.87.8.1",
+            "https://he.wikisource.org/wiki/שולחן_ערוך_יורה_דעה_פז_יא"
+          ],
+          "finding": "Directly confirms R02’s account of both Rema explanations and the continuing sixtyfold requirement. The abbreviation RB is present in Darkhei Moshe; the underlying Mordechai was not independently checked here."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Independent AI textual review, not a human examiner assessment, official exam score, or practical halakhic ruling. The development pass threshold is the supplied >=10/12, no zero, no critical rule.",
+    "Read only the two assigned candidate files among candidate/project materials; did not load condition mappings, source logs, other answers, Posek, or repository source. The optional standalone retrieval utility was invoked for primary texts.",
+    "Primary sources were inspected in electronic Hebrew editions. Wikisource marks some pages unproofread/OCR-derived; printed scans were not compared. Decisive Darkhei Moshe, Shach 30, Rashi, and Tosafot passages were also retrieved as exact Sefaria API segments.",
+    "Candidate claims about which sources they previously read cannot be independently audited without their logs. Their substantive citations were checked; no false verification finding is inferred from that unavailable process evidence.",
+    "Underlying Mordechai and earlier responsa quoted by the commentaries were not independently retrieved. The supplied question, rather than an official examiner key, defines completeness.",
+    "Shach 87:36 and Taz on 87:11 qualify joint-coagulant leniency where the forbidden component could set the cheese alone. R02 accurately reports Rema/Darkhei Moshe but does not develop this adjacent dispute. This was not treated as a missing requested subpart or erased controlling exception in this textual exam answer."
+  ]
+}

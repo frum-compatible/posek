@@ -1,0 +1,306 @@
+{
+  "case_id": "CR-01",
+  "reviewer_type": "ai",
+  "judgments": [
+    {
+      "response_id": "R04",
+      "response_sha256": "9b51e304abe11de21fd09a9f6913a48bd22c3b1214cc18bbd031d3b9cf922ecb",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "All requested subparts are materially covered. (a) It compares the permissive Rambam/Rif-as-read-by-Rosh approach with the stringent reading in Tosafot, supplies relevant Gemara, and qualifies the tentative Tosafot practice explanation. (b) It explains Agra in Tosafot and Rambam, their practical conclusions, and both Beit Yosef axes and the Tur-attribution explanation. (c) It accurately combines PT’s concluding caution with Ben Ish Chai’s explicit permission and visible-pot exception. No decisive fabrication, false source claim, wrong controlling conclusion, or erased controlling exception was established. Its verification limits are disclosed. The heading “Tosafot’s stringent position” could be made more exact by saying “Tosafot’s reading of the Rabbis,” but the body already supplies the controlling caveat, so this is not a material defect.",
+      "missing_subparts": [],
+      "source_findings": [
+        {
+          "subpart": "a",
+          "sources": [
+            {
+              "ref": "Chullin 115b:6",
+              "url": "https://www.sefaria.org/Chullin.115b.6"
+            },
+            {
+              "ref": "Chullin 113a:18–19",
+              "url": "https://www.sefaria.org/Chullin.113a.18-19"
+            },
+            {
+              "ref": "Chullin 116a:13–14",
+              "url": "https://www.sefaria.org/Chullin.116a.13-14"
+            }
+          ],
+          "finding": "The three prohibitions and the distinctions between Rabbi Akiva and Rabbi Yose HaGelili are correctly stated. The cited segments directly support them.",
+          "status": "supported"
+        },
+        {
+          "subpart": "a",
+          "sources": [
+            {
+              "ref": "Rambam, Forbidden Foods 9:4",
+              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Forbidden_Foods.9.4"
+            },
+            {
+              "ref": "Rosh, Chullin 8:51:1",
+              "url": "https://www.sefaria.org/Rosh_on_Chullin.8.51.1"
+            },
+            {
+              "ref": "Chullin 104a:7",
+              "url": "https://www.sefaria.org/Chullin.104a.7"
+            },
+            {
+              "ref": "Maggid Mishneh, Forbidden Foods 9:4:1",
+              "url": "https://www.sefaria.org/Maggid_Mishneh_on_Mishneh_Torah%2C_Forbidden_Foods.9.4.1"
+            }
+          ],
+          "finding": "Rambam explicitly permits cooking and benefit while prohibiting eating rabbinically. Rosh explicitly interprets Rif as following Rabbi Akiva and treats that statement as an explanation of the first tanna. Maggid Mishneh explains the apparent cooking-language objection as referring to eating; the answer correctly identifies whose interpretation this is.",
+          "status": "supported"
+        },
+        {
+          "subpart": "a",
+          "sources": [
+            {
+              "ref": "Tosafot, Chullin 113a:18:1",
+              "url": "https://www.sefaria.org/Tosafot_on_Chullin.113a.18.1"
+            },
+            {
+              "ref": "Tosafot, Chullin 104b, s.v. Of u-gevinah ein",
+              "url": "https://he.wikisource.org/wiki/חולין_קד_ב#תוספות"
+            },
+            {
+              "ref": "Shakh YD 87:4:1",
+              "url": "https://www.sefaria.org/Siftei_Kohen_on_Shulchan_Arukh%2C_Yoreh_De%27ah.87.4.1"
+            },
+            {
+              "ref": "Shulchan Arukh YD 87:3",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.87.3"
+            }
+          ],
+          "finding": "Tosafot 113a attributes the Torah prohibition to the Rabbis; 104b tentatively connects prevailing stringency to a Torah classification. Shakh explicitly says that inference is not compelled and offers Rambam’s interpretation of Agra. The answer preserves that qualification rather than treating the custom explanation as an unequivocal Tosafot ruling.",
+          "status": "supported"
+        },
+        {
+          "subpart": "b",
+          "sources": [
+            {
+              "ref": "Chullin 104b and Tosafot, s.v. Of u-gevinah ein",
+              "url": "https://he.wikisource.org/wiki/חולין_קד_ב"
+            },
+            {
+              "ref": "Rambam, Forbidden Foods 9:26–28",
+              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Forbidden_Foods.9.26-28"
+            }
+          ],
+          "finding": "The Gemara defines Agra’s leniency as no handwashing or mouth-cleansing. Tosafot’s initial reading includes poultry first, explains the cheese-first inference, and presents/refines Rabbeinu Tam–Behag’s alternative before recording stricter practice. Rambam distinguishes cheese-first poultry from poultry-first, requires approximately six hours after poultry, and keeps chayah with behemah for the cheese-first cleaning requirement.",
+          "status": "supported"
+        },
+        {
+          "subpart": "b",
+          "sources": [
+            {
+              "ref": "Beit Yosef YD 89:1:1",
+              "url": "https://www.sefaria.org/Beit_Yosef%2C_Yoreh_De%27ah.89.1.1"
+            },
+            {
+              "ref": "Shulchan Arukh/Rema YD 89:1–2",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.89.1-2"
+            }
+          ],
+          "finding": "Beit Yosef explicitly distinguishes order (Ramban versus Rambam) and species (Rashba/Ran versus Rambam), reports Rashba’s practical cheese-first permission for poultry/chayah, and explains Tur’s specific attribution to Rambam. The Mechaber and Rema hard-cheese qualification are reported accurately.",
+          "status": "supported"
+        },
+        {
+          "subpart": "c",
+          "sources": [
+            {
+              "ref": "Shulchan Arukh YD 103:5",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.103.5"
+            },
+            {
+              "ref": "Shulchan Arukh YD 122:2",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.122.2"
+            },
+            {
+              "ref": "Pitchei Teshuvah YD 87:8",
+              "url": "https://www.sefaria.org/Pitchei_Teshuva_on_Shulchan_Arukh%2C_Yoreh_De%27ah.87.8"
+            },
+            {
+              "ref": "Rema YD 87:6",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.87.6"
+            }
+          ],
+          "finding": "The clean-pot and elapsed-day assumptions fit the stale absorbed-taste rule. PT records the exact proposed permission, absence of visible dairy status, and then nevertheless recommends stringency, invoking Rema’s stoking case. The answer retains that concluding caution and does not mistake cooking for a non-Jew for general permission to cook actual meat and milk.",
+          "status": "supported"
+        },
+        {
+          "subpart": "c",
+          "sources": [
+            {
+              "ref": "Ben Ish Chai, year II, Beha’alotekha 11",
+              "url": "https://ashoova.co.il/ask/בן-איש-חי-הלכות-ב-בהעלותך-י״א/"
+            }
+          ],
+          "finding": "The full non-AMP transcription expressly permits this dairy-pot case for a non-Jew and prohibits the reverse case in an unusually large pot whose appearance identifies it as meat cookware. Both the permission and the visible-pot exception are preserved. The AMP URL did not expose the text to this reviewer, but the corresponding non-AMP page did.",
+          "status": "supported"
+        }
+      ]
+    },
+    {
+      "response_id": "R01",
+      "response_sha256": "56739225a4ea13816eaabcc3560b3b4fbe89d94d21540f064a3b1a8e48410a05",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "All requested subparts are materially covered. (a) It gives the relevant Gemara, Rambam/Rif/Rosh comparison, Maggid Mishneh explanation, and especially clear Shakh-supported caution about treating Tosafot as a categorical ruling. (b) It adequately explains Agra’s sequence, the Rav Yitzchak inference, Rabbeinu Tam/Behag, stricter practice, Rambam’s conclusion, and Beit Yosef’s order/species distinctions. (c) It preserves PT’s caution and gives an independently verified explicit permissive Yalkut Yosef ruling with the Jewish-consumption distinction. No decisive fabrication, false source claim, wrong controlling conclusion, or erased controlling exception was established. The answer’s declared mediated-source and survey limits are appropriate.",
+      "missing_subparts": [],
+      "source_findings": [
+        {
+          "subpart": "a",
+          "sources": [
+            {
+              "ref": "Chullin 115b:6",
+              "url": "https://www.sefaria.org/Chullin.115b.6"
+            },
+            {
+              "ref": "Chullin 113a:18–19",
+              "url": "https://www.sefaria.org/Chullin.113a.18-19"
+            },
+            {
+              "ref": "Chullin 116a:13–14",
+              "url": "https://www.sefaria.org/Chullin.116a.13-14"
+            }
+          ],
+          "finding": "The three prohibitions and the distinctions between Rabbi Akiva and Rabbi Yose HaGelili are correctly stated. The cited segments directly support them.",
+          "status": "supported"
+        },
+        {
+          "subpart": "a",
+          "sources": [
+            {
+              "ref": "Rambam, Forbidden Foods 9:4",
+              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Forbidden_Foods.9.4"
+            },
+            {
+              "ref": "Rosh, Chullin 8:51:1",
+              "url": "https://www.sefaria.org/Rosh_on_Chullin.8.51.1"
+            },
+            {
+              "ref": "Chullin 104a:7",
+              "url": "https://www.sefaria.org/Chullin.104a.7"
+            },
+            {
+              "ref": "Maggid Mishneh, Forbidden Foods 9:4:1",
+              "url": "https://www.sefaria.org/Maggid_Mishneh_on_Mishneh_Torah%2C_Forbidden_Foods.9.4.1"
+            }
+          ],
+          "finding": "Rambam explicitly permits cooking and benefit while prohibiting eating rabbinically. Rosh explicitly interprets Rif as following Rabbi Akiva and treats that statement as an explanation of the first tanna. Maggid Mishneh explains the apparent cooking-language objection as referring to eating; the answer correctly identifies whose interpretation this is.",
+          "status": "supported"
+        },
+        {
+          "subpart": "a",
+          "sources": [
+            {
+              "ref": "Tosafot, Chullin 113a:18:1",
+              "url": "https://www.sefaria.org/Tosafot_on_Chullin.113a.18.1"
+            },
+            {
+              "ref": "Tosafot, Chullin 104b, s.v. Of u-gevinah ein",
+              "url": "https://he.wikisource.org/wiki/חולין_קד_ב#תוספות"
+            },
+            {
+              "ref": "Shakh YD 87:4:1",
+              "url": "https://www.sefaria.org/Siftei_Kohen_on_Shulchan_Arukh%2C_Yoreh_De%27ah.87.4.1"
+            },
+            {
+              "ref": "Shulchan Arukh YD 87:3",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.87.3"
+            }
+          ],
+          "finding": "Tosafot 113a attributes the Torah prohibition to the Rabbis; 104b tentatively connects prevailing stringency to a Torah classification. Shakh explicitly says that inference is not compelled and offers Rambam’s interpretation of Agra. The answer preserves that qualification rather than treating the custom explanation as an unequivocal Tosafot ruling.",
+          "status": "supported"
+        },
+        {
+          "subpart": "b",
+          "sources": [
+            {
+              "ref": "Chullin 104b and Tosafot, s.v. Of u-gevinah ein",
+              "url": "https://he.wikisource.org/wiki/חולין_קד_ב"
+            },
+            {
+              "ref": "Rambam, Forbidden Foods 9:26–28",
+              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Forbidden_Foods.9.26-28"
+            }
+          ],
+          "finding": "The Gemara defines Agra’s leniency as no handwashing or mouth-cleansing. Tosafot’s initial reading includes poultry first, explains the cheese-first inference, and presents/refines Rabbeinu Tam–Behag’s alternative before recording stricter practice. Rambam distinguishes cheese-first poultry from poultry-first, requires approximately six hours after poultry, and keeps chayah with behemah for the cheese-first cleaning requirement.",
+          "status": "supported"
+        },
+        {
+          "subpart": "b",
+          "sources": [
+            {
+              "ref": "Beit Yosef YD 89:1:1",
+              "url": "https://www.sefaria.org/Beit_Yosef%2C_Yoreh_De%27ah.89.1.1"
+            },
+            {
+              "ref": "Shulchan Arukh/Rema YD 89:1–2",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.89.1-2"
+            }
+          ],
+          "finding": "Beit Yosef explicitly distinguishes order (Ramban versus Rambam) and species (Rashba/Ran versus Rambam), reports Rashba’s practical cheese-first permission for poultry/chayah, and explains Tur’s specific attribution to Rambam. The Mechaber and Rema hard-cheese qualification are reported accurately.",
+          "status": "supported"
+        },
+        {
+          "subpart": "c",
+          "sources": [
+            {
+              "ref": "Shulchan Arukh YD 103:5",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.103.5"
+            },
+            {
+              "ref": "Shulchan Arukh YD 122:2",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.122.2"
+            },
+            {
+              "ref": "Pitchei Teshuvah YD 87:8",
+              "url": "https://www.sefaria.org/Pitchei_Teshuva_on_Shulchan_Arukh%2C_Yoreh_De%27ah.87.8"
+            },
+            {
+              "ref": "Rema YD 87:6",
+              "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Yoreh_De%27ah.87.6"
+            }
+          ],
+          "finding": "The clean-pot and elapsed-day assumptions fit the stale absorbed-taste rule. PT records the exact proposed permission, absence of visible dairy status, and then nevertheless recommends stringency, invoking Rema’s stoking case. The answer retains that concluding caution and does not mistake cooking for a non-Jew for general permission to cook actual meat and milk.",
+          "status": "supported"
+        },
+        {
+          "subpart": "c",
+          "sources": [
+            {
+              "ref": "Kitzur Shulchan Arukh Yalkut Yosef, YD 87, paragraph 30",
+              "url": "https://www.toratemetfreeware.com/online/f_01355_part_41.html"
+            }
+          ],
+          "finding": "Paragraph 30 expressly allows cooking for a non-Jew in the non-ben-yomo pot and distinguishes cooking for Jewish consumption. It says this cooking prohibition was not included in the decree. The candidate’s attribution and conditional practical conclusion match the source.",
+          "status": "supported"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "This is an independent AI review, not a human rabbinic examiner judgment, official exam score, semicha certification, or practical individualized ruling.",
+    "The review had only the supplied three-part question and two opaque response files, not an official marking scheme. Conditions, mappings, source logs, other responses, and repository files were not inspected. The explicitly permitted standalone source-fetch utility was read and used.",
+    "Primary Hebrew transcriptions were inspected online. Sefaria v3 exact-segment retrieval supplied most Hebrew texts; Tosafot 104b was read in a Wikisource transcription; Yalkut Yosef was read on Torat Emet; Ben Ish Chai was read on Ashoova’s non-AMP transcription. Printed-page images and critical editions were not compared.",
+    "Rif was verified as reported by Rosh, and Ramban/Ran/Rashba as reported by Beit Yosef, matching the candidates’ qualifications. Chamudei Daniel was not independently read; PT’s wording and concluding caution were directly inspected. No claim is made about the exact original authorship boundary of PT’s unquoted final sentences.",
+    "The candidates’ retrospective claims about what they previously inspected cannot be audited without their logs, which this review did not access. Independent source agreement supports their substantive claims; it does not certify their prior workflow.",
+    "The review is bounded to decisive claims and requested scope, not a comprehensive survey of later authorities. No material unresolved source question remained for the assigned scores."
+  ]
+}

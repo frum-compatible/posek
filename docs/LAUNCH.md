@@ -38,6 +38,6 @@ npx skills add frum-compatible/posek --skill posek --agent claude-code --agent c
 
 Use the deployed phone-page URL after checking its live preview. The page supplies this caption automatically:
 
-> Posek — An Orthodox AI Rabbi for Torah, halacha and divrei Torah. Choose your hashkafah and prepare a prompt that asks for exact mareh mekomos.
+> Posek — An Orthodox AI Rabbi. Mutar is also a psak. Choose your hashkafah, bring a shailah, and check the mareh mekomos.
 
 The [phone and WhatsApp guide](PHONE-SHARING.md) covers publication. A recipient can read a sample vort and prepare a starter prompt on their phone before deciding whether to install the complete skill.

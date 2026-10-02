@@ -1,0 +1,52 @@
+{
+  "case_id": "PR-01",
+  "response_sha256": "61502d3c804f0c0a72fdcb4569c3557a88de54e76d4d073c2fdefa20d3440001",
+  "reviewer_type": "ai",
+  "outcome": "supported",
+  "findings": [
+    {
+      "status": "supported",
+      "claim": "Ordinary hand movement prohibited under Neustadt’s stringent practice; necessary elbow movement allowed under the stated no-electrical-effects assumptions.",
+      "evidence": "Neustadt’s first Discussion paragraph reports the stringent practice; his final body paragraph permits necessary movement using an elbow or foot. The response preserves this permission despite the lamp’s muktzeh classification.",
+      "source": "https://outorah.org/p/49935/",
+      "locator": "Discussion paragraph 1 and final body paragraph; web retrieval lines 62–65"
+    },
+    {
+      "status": "supported",
+      "claim": "The body-movement permission does not extend to unplugging the lamp; detached cover rotation is distinct.",
+      "evidence": "The final body paragraph explicitly conditions permission on not pulling the plug from its socket. The preceding paragraph permits rotating the Kosher Lamp cylinder because it is wholly separate, detached, and not muktzeh.",
+      "source": "https://outorah.org/p/49935/",
+      "locator": "Discussion paragraphs 2–3; web retrieval lines 64–65"
+    },
+    {
+      "status": "supported",
+      "claim": "Classical lamp prohibition and body-movement distinction are correctly attributed.",
+      "evidence": "OC 279:1 prohibits moving a lamp lit for that Shabbos even after extinction; 279:2 explicitly includes use of the object or its place. OC 311:8 contains the quoted Hebrew clause, outside the Rema gloss, and MB 311:30 explains non-hand movement and its greater leniency than other indirect movement.",
+      "sources": [
+        "https://www.sefaria.org/Shulchan_Arukh,_Orach_Chayim.279.1",
+        "https://www.sefaria.org/Shulchan_Arukh,_Orach_Chayim.279.2",
+        "https://www.sefaria.org/Shulchan_Arukh,_Orach_Chayim.311.8",
+        "https://www.sefaria.org/Mishnah_Berurah.311.30"
+      ],
+      "locator": "Exact numbered sections; source Hebrew independently retrieved via Sefaria text API"
+    },
+    {
+      "status": "supported",
+      "claim": "Disagreement and verification limits are represented honestly.",
+      "evidence": "Neustadt cites Igros Moshe OC IV 91:5 and V 23 for the less stringent classification, while reporting stringent practice and citing an additional stringent responsum. The answer does not claim to have inspected those responsa.",
+      "source": "https://outorah.org/p/49935/",
+      "locator": "Footnotes ii–iii; web retrieval lines 68–70"
+    },
+    {
+      "status": "no_issue_found",
+      "claim": "Quotation, locator, and categorical-claim audit.",
+      "evidence": "No wrong quotation, substantively wrong locator, or unsupported categorical claim found within the stated case. The Hebrew quotation matches OC 311:8. The modern electrical application is expressly distinguished from the classical text."
+    }
+  ],
+  "limits": [
+    "AI source review, not an expert halachic determination or practical psak.",
+    "I inspected the cited Neustadt article and the exact classical sections independently; I did not inspect every responsum in Neustadt’s footnotes.",
+    "The electrical-effects facts are stipulated. This review does not determine the behavior of a particular lamp.",
+    "Sefaria reader HTML did not expose the passages; the exact Hebrew was retrieved from its public text API."
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "case_id": "WY-01",
+  "reviewer_type": "ai",
+  "judgments": [
+    {
+      "response_id": "R08",
+      "response_sha256": "63ac5a13e38b093bcf2409c9b40c9858cac6ee3c810c1d45c3147f6a44755af8",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "12/12; development pass. Correctly rejects a blanket river-only purchasing rule, provides a substantial initial-use basis for ordinarily irrigated kosher aravos, and keeps validity separate from the disputed preference. It verifies the irrigation issue through Arukh HaShulchan and identifies application to modern cultivation as an application. No requested subpart is missing; no critical failure found.",
+      "missing_subparts": [],
+      "source_findings": [
+        {
+          "subpart": "basic validity",
+          "source": "Shulchan Arukh OC 647:1 and Rambam, Shofar/Sukkah/Lulav 7:3–4",
+          "url": "https://he.wikisource.org/wiki/שולחן_ערוך_אורח_חיים_תרמז",
+          "status": "supported",
+          "finding": "The sources define a species usually growing by streams and validate that species even in mountains or desert. River location cannot validate an otherwise invalid species. This supports rejecting the seller’s universal location requirement."
+        },
+        {
+          "subpart": "validity versus preference",
+          "source": "Mishnah/Gemara and Rashi, Sukkah 33b",
+          "url": "https://he.wikisource.org/wiki/סוכה_לג_ב",
+          "status": "supported",
+          "finding": "The Mishnah validates shel baal; the baraita includes baal and mountains. Rashi defines baal by adequate rainfall and separately states a river-growth preference. Both responses correctly avoid equating baal with artificial irrigation."
+        },
+        {
+          "subpart": "strict view",
+          "source": "Tosafot, Sukkah 34a, s.v. ורבנן למקדש",
+          "url": "https://he.wikisource.org/wiki/סוכה_לד_א",
+          "status": "supported",
+          "finding": "Tosafot’s two-derivations objection and instruction to use river-grown branches are accurately reported. Precision note: Arukh HaShulchan 647:5 explicitly understands this strand to affect validity even after the fact. Both responses label it stronger/stricter than Rashi’s preference; neither claims Tosafot agrees with the permissive conclusion."
+        },
+        {
+          "subpart": "permissive view and custom",
+          "source": "Rosh Sukkah 3:13; Tur OC 647",
+          "url": "https://he.wikisource.org/wiki/רבינו_אשר_על_הש%22ס/סוכה/פרק_ג#סימן_יג",
+          "status": "supported",
+          "finding": "Rosh records ordinary practice and his teachers’ lack of insistence, answers Tosafot through the species definition, and invokes Rambam. Tur expressly reports the initial/after-the-fact dispute and the Rosh’s initial permission. Both answers faithfully preserve it."
+        },
+        {
+          "subpart": "preferred practice",
+          "source": "Taz OC 647:2; Mishnah Berurah 647:3",
+          "url": "https://he.wikisource.org/wiki/ט%22ז_על_אורח_חיים_תרמז",
+          "status": "supported",
+          "finding": "Taz gives a positive reason to use non-river growth to demonstrate the law. Mishnah Berurah reports the preference and Taz’s lack of insistence. The candidates do not erase the preference or turn it into a universal rule."
+        },
+        {
+          "subpart": "artificial irrigation",
+          "source": "Arukh HaShulchan OC 647:5–7",
+          "url": "https://he.wikisource.org/wiki/ערוך_השולחן_אורח_חיים_תרמז",
+          "status": "supported",
+          "finding": "The discussion explicitly recognizes human-watered land and says no source establishes its exclusion. The valley/level-ground explanation is the author’s proposed reconciliation; the answers correctly avoid presenting it as a new prerequisite to the accepted species-based permission."
+        },
+        {
+          "subpart": "purchasing application",
+          "source": "Shulchan Arukh OC 647:1–2; Mishnah Berurah 647:7–12",
+          "url": "https://he.wikisource.org/wiki/משנה_ברורה_על_אורח_חיים_תרמז",
+          "status": "supported",
+          "finding": "Species identification and branch condition are relevant purchase checks. The advice is consistent with the codified defects and the preference for sound foliage. These checks do not depend on river provenance."
+        }
+      ]
+    },
+    {
+      "response_id": "R07",
+      "response_sha256": "847e3f70321bf05c7500a3edd83329cacb4be8dc865e99025fc55430ed287e6f",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "critical_failure": false,
+      "rationale": "12/12; development pass. Correct purchasing conclusion with primary-source reasoning, attribution of the Mechaber’s wording, genuine stricter views, and preservation of established personal practice. The added contemporary irrigation discussion exists and is represented as a tentative hiddur argument rather than universal agreement. No required subpart omitted; no critical failure found.",
+      "missing_subparts": [],
+      "source_findings": [
+        {
+          "subpart": "basic validity",
+          "source": "Shulchan Arukh OC 647:1 and Rambam, Shofar/Sukkah/Lulav 7:3–4",
+          "url": "https://he.wikisource.org/wiki/שולחן_ערוך_אורח_חיים_תרמז",
+          "status": "supported",
+          "finding": "The sources define a species usually growing by streams and validate that species even in mountains or desert. River location cannot validate an otherwise invalid species. This supports rejecting the seller’s universal location requirement."
+        },
+        {
+          "subpart": "validity versus preference",
+          "source": "Mishnah/Gemara and Rashi, Sukkah 33b",
+          "url": "https://he.wikisource.org/wiki/סוכה_לג_ב",
+          "status": "supported",
+          "finding": "The Mishnah validates shel baal; the baraita includes baal and mountains. Rashi defines baal by adequate rainfall and separately states a river-growth preference. Both responses correctly avoid equating baal with artificial irrigation."
+        },
+        {
+          "subpart": "strict view",
+          "source": "Tosafot, Sukkah 34a, s.v. ורבנן למקדש",
+          "url": "https://he.wikisource.org/wiki/סוכה_לד_א",
+          "status": "supported",
+          "finding": "Tosafot’s two-derivations objection and instruction to use river-grown branches are accurately reported. Precision note: Arukh HaShulchan 647:5 explicitly understands this strand to affect validity even after the fact. Both responses label it stronger/stricter than Rashi’s preference; neither claims Tosafot agrees with the permissive conclusion."
+        },
+        {
+          "subpart": "permissive view and custom",
+          "source": "Rosh Sukkah 3:13; Tur OC 647",
+          "url": "https://he.wikisource.org/wiki/רבינו_אשר_על_הש%22ס/סוכה/פרק_ג#סימן_יג",
+          "status": "supported",
+          "finding": "Rosh records ordinary practice and his teachers’ lack of insistence, answers Tosafot through the species definition, and invokes Rambam. Tur expressly reports the initial/after-the-fact dispute and the Rosh’s initial permission. Both answers faithfully preserve it."
+        },
+        {
+          "subpart": "preferred practice",
+          "source": "Taz OC 647:2; Mishnah Berurah 647:3",
+          "url": "https://he.wikisource.org/wiki/ט%22ז_על_אורח_חיים_תרמז",
+          "status": "supported",
+          "finding": "Taz gives a positive reason to use non-river growth to demonstrate the law. Mishnah Berurah reports the preference and Taz’s lack of insistence. The candidates do not erase the preference or turn it into a universal rule."
+        },
+        {
+          "subpart": "artificial irrigation",
+          "source": "Arukh HaShulchan OC 647:5–7",
+          "url": "https://he.wikisource.org/wiki/ערוך_השולחן_אורח_חיים_תרמז",
+          "status": "supported",
+          "finding": "The discussion explicitly recognizes human-watered land and says no source establishes its exclusion. The valley/level-ground explanation is the author’s proposed reconciliation; the answers correctly avoid presenting it as a new prerequisite to the accepted species-based permission."
+        },
+        {
+          "subpart": "purchasing application",
+          "source": "Shulchan Arukh OC 647:1–2; Mishnah Berurah 647:7–12",
+          "url": "https://he.wikisource.org/wiki/משנה_ברורה_על_אורח_חיים_תרמז",
+          "status": "supported",
+          "finding": "Species identification and branch condition are relevant purchase checks. The advice is consistent with the codified defects and the preference for sound foliage. These checks do not depend on river provenance."
+        },
+        {
+          "subpart": "irrigation and additional hiddur",
+          "source": "R. Yosef Yona, HaOtzar issue 57, Tishrei 5782, section ה, artificial-irrigation subsection",
+          "url": "https://www.ha-otzar.net/article/812",
+          "status": "supported",
+          "finding": "The author, issue/date, section, and argument were directly checked. The passage proposes that ample artificial watering could supply the river-growth advantage while retaining uncertainty for Tosafot’s stricter view. The response accurately marks the tentative status."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Independent AI development review, not a human examiner mark or a declaration of consensus among all contemporary authorities. The pass rule is >=10/12, no zero, and no critical failure.",
+    "Only R08.md and R07.md were read for this case. Condition identity, source logs, other candidate answers, Posek instructions and repository files were not consulted.",
+    "The reviewer read the decisive primary-text transcriptions, including Rosh, Rambam, Tosafot, Taz, Mishnah Berurah, Arukh HaShulchan, and the author’s published irrigation discussion. No printed scans were collated; some transcriptions carry OCR/unproofread warnings.",
+    "The JewishBooks Rosh page returned an error on reopening; the same chapter and siman were independently read in Wikisource. This is not evidence of a defective Rosh attribution.",
+    "Candidate claims of historical source verification cannot be audited without excluded source logs. Their substantive citations were independently corroborated; false verification was not established.",
+    "No required omissions found. Optional sharpening for both: explicitly say that the Tosafot strand is understood by Arukh HaShulchan as potentially invalidating even after the fact, rather than leaving the stronger status implicit. Their acknowledgment of a distinct stringent strand prevents this from being an erased controlling exception.",
+    "No particular seller’s species, irrigation regime, branch condition, personal minhag or price was investigated. Neither answer requires those facts to reject a universal river-only claim."
+  ]
+}

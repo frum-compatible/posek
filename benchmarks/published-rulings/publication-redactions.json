@@ -1,0 +1,8 @@
+[
+  {
+    "file": "benchmarks/published-rulings/responses/PR-02-sources.md",
+    "original_sha256": "629e4f509bd5ccd89363a9f3896cdd6de6357c0e2a9bdf06f0d04d741852eb1e",
+    "published_sha256": "6daa48e84309c63e9e59b34cbbb6940a1363d676a86e63dc70d5eda829cfbe08",
+    "change": "Absolute local workspace prefix removed; original source log retained privately."
+  }
+]

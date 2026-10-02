@@ -50,5 +50,40 @@
     "completeness": "Assess every requested subpart; list missing subparts separately. No extra credit for length.",
     "reviewer": "Independent AI reviewer reconstructs source support; official examiner criteria unavailable. Preserve disagreements and corrections."
   },
-  "git_skill_revision": "a8f605a"
+  "git_skill_revision": "a8f605a",
+  "response_mapping": {
+    "R01": {
+      "case": "CR-01",
+      "condition": "posek"
+    },
+    "R02": {
+      "case": "CR-02",
+      "condition": "baseline"
+    },
+    "R03": {
+      "case": "CR-03",
+      "condition": "posek"
+    },
+    "R04": {
+      "case": "CR-01",
+      "condition": "baseline"
+    },
+    "R05": {
+      "case": "CR-02",
+      "condition": "posek"
+    },
+    "R06": {
+      "case": "CR-03",
+      "condition": "baseline"
+    },
+    "R07": {
+      "case": "WY-01",
+      "condition": "posek"
+    },
+    "R08": {
+      "case": "WY-01",
+      "condition": "baseline"
+    }
+  },
+  "review_sessions": "Three independent reviewer sessions: CR-01 pair; CR-02 pair; CR-03 and WY-01 pairs. Conditions withheld; source logs not given to initial reviewers."
 }

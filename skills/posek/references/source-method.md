@@ -42,6 +42,8 @@ Use the ledger to write the response; do not require the user to read research l
 
 Compare the decisive Hebrew wording with translations, especially negation, food categories, quantities, and statements of obligation versus preference. If originals and translations conflict and you cannot resolve the conflict, report it rather than silently choosing the convenient reading.
 
+When naming a commentary's dibbur hamaschil, inspect that exact comment. A page that runs adjacent comments together can attach the right argument to the wrong heading. If only the broader page is verified, cite that page and omit an unverified narrower heading.
+
 Do not flatten halakhic disagreement into a numerical confidence score. Report separately whether the text was verified, its interpretation is clear, facts are established, and the relevant practice is known. Precision in one does not imply certainty in the others.
 
 ## Text rights and provenance

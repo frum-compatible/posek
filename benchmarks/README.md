@@ -1,5 +1,7 @@
 # Development evaluation protocol
 
+For the later public-exam subset, see the [semicha-question protocol](semicha/PROTOCOL.md) and [results](semicha/RESULTS.md). Its judgments use the same six-dimensional development rubric and are reported separately from this original suite.
+
 The purpose is to find wrong rulings, wrong citations, and misplaced confidence.
 This is a development evaluation, not a validated measure of competence across
 halakhah. The public 24-case suite is deliberately narrow and its labels are

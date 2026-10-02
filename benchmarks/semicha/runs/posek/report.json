@@ -1,0 +1,113 @@
+{
+  "result_label": "development rubric agreement, not validated halakhic accuracy",
+  "run": {
+    "label": "Semicha-derived pilot: posek",
+    "model": "Exact model identifier/settings not exposed; inherited runtime without overrides.",
+    "host": "Fresh agent session per case; source browsing and same standalone helper available.",
+    "skill_sha256": "469e48ac6d0d25413491e7f51058306dcbe47e3287a73a81a5e88a789a306819",
+    "reviewer": "Independent AI reviewers; opaque response IDs, partial blinding",
+    "reviewer_type": "ai",
+    "retrieval_mode": "Source access enabled; actual retrieval notes saved per candidate.",
+    "notes": "Four adapted public items; one run per case; no human or official examiner. Baseline skill hash is empty-byte SHA256, meaning no skill loaded. Exact generation settings unknown; no candidate population or percentile. Do not replace initial results with later development reruns."
+  },
+  "reviewer_note": "Reviewer type, including expert, is self-attested and is not certification.",
+  "assessment_method": "Explicit reviewer judgments; this script validates saved response hashes and aggregates scores, without evaluating answer meaning or independently verifying run metadata.",
+  "assessed_count": 4,
+  "total_suite": 4,
+  "rubric_points": 46,
+  "possible_points": 48,
+  "dimension_points": {
+    "conclusion": 7,
+    "source_fidelity": 8,
+    "attribution": 8,
+    "minhag_and_scope": 8,
+    "uncertainty": 8,
+    "usefulness": 7
+  },
+  "dimension_possible_points": 8,
+  "critical_failures": [],
+  "passing_cases": [
+    "CR-01",
+    "CR-03",
+    "CR-02",
+    "WY-01"
+  ],
+  "passing_count": 4,
+  "pass_rule": "Every dimension >=1, total >=10/12, and no critical failure.",
+  "unassessed": [],
+  "coverage_note": "Rubric totals describe assessed cases only. Unassessed cases are neither passes nor failures.",
+  "assessments": [
+    {
+      "case_id": "CR-01",
+      "response_file": "responses/CR-01.md",
+      "response_sha256": "56739225a4ea13816eaabcc3560b3b4fbe89d94d21540f064a3b1a8e48410a05",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "points": 12,
+      "possible_points": 12,
+      "critical_failure": false,
+      "passes": true,
+      "rationale": "All requested subparts are materially covered. (a) It gives the relevant Gemara, Rambam/Rif/Rosh comparison, Maggid Mishneh explanation, and especially clear Shakh-supported caution about treating Tosafot as a categorical ruling. (b) It adequately explains Agra’s sequence, the Rav Yitzchak inference, Rabbeinu Tam/Behag, stricter practice, Rambam’s conclusion, and Beit Yosef’s order/species distinctions. (c) It preserves PT’s caution and gives an independently verified explicit permissive Yalkut Yosef ruling with the Jewish-consumption distinction. No decisive fabrication, false source claim, wrong controlling conclusion, or erased controlling exception was established. The answer’s declared mediated-source and survey limits are appropriate."
+    },
+    {
+      "case_id": "CR-03",
+      "response_file": "responses/CR-03.md",
+      "response_sha256": "8cd74cab9e5a78c9c67315de55641d9d915110a2cf51654695cfc2e72f6618fb",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "points": 12,
+      "possible_points": 12,
+      "critical_failure": false,
+      "passes": true,
+      "rationale": "12/12; development pass. Covers parts (a), (b) and (c), accurately distinguishing the no-absorption explanation from the two absorption/expulsion explanations and supplying the removal-timing difference. The Rashi heading is acceptable in context because the paragraph distinguishes Rashi’s original synchronization account from its developed juice-expulsion form. Attributions and ordinary practical measures check out; no required subpart omitted and no critical failure found."
+    },
+    {
+      "case_id": "CR-02",
+      "response_file": "responses/CR-02.md",
+      "response_sha256": "3699d6c64eebe520dad00d5ce8b517a13b08fd745c2a6e2c1a90fde856855f1a",
+      "scores": {
+        "conclusion": 1,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 1
+      },
+      "points": 10,
+      "possible_points": 12,
+      "critical_failure": false,
+      "passes": true,
+      "rationale": "Substantively correct on (a), (b), and Shach’s challenge and two defenses in (c), with sound source attribution and scope. Part (c) is incomplete: the denominator explanation and Shach’s defenses do not supply Rema’s distinct Darkhei Moshe explanation involving mixed clear and curdled contents. This is an omission, not a fabricated citation or a materially wrong controlling ruling. Total 10/12; meets the specified development threshold, with an explicit completeness limitation."
+    },
+    {
+      "case_id": "WY-01",
+      "response_file": "responses/WY-01.md",
+      "response_sha256": "847e3f70321bf05c7500a3edd83329cacb4be8dc865e99025fc55430ed287e6f",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "points": 12,
+      "possible_points": 12,
+      "critical_failure": false,
+      "passes": true,
+      "rationale": "12/12; development pass. Correct purchasing conclusion with primary-source reasoning, attribution of the Mechaber’s wording, genuine stricter views, and preservation of established personal practice. The added contemporary irrigation discussion exists and is represented as a tentative hiddur argument rather than universal agreement. No required subpart omitted; no critical failure found."
+    }
+  ]
+}

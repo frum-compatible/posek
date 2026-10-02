@@ -1,0 +1,113 @@
+{
+  "result_label": "development rubric agreement, not validated halakhic accuracy",
+  "run": {
+    "label": "Semicha-derived pilot: baseline",
+    "model": "Exact model identifier/settings not exposed; inherited runtime without overrides.",
+    "host": "Fresh agent session per case; source browsing and same standalone helper available.",
+    "skill_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reviewer": "Independent AI reviewers; opaque response IDs, partial blinding",
+    "reviewer_type": "ai",
+    "retrieval_mode": "Source access enabled; actual retrieval notes saved per candidate.",
+    "notes": "Four adapted public items; one run per case; no human or official examiner. Baseline skill hash is empty-byte SHA256, meaning no skill loaded. Exact generation settings unknown; no candidate population or percentile. Do not replace initial results with later development reruns."
+  },
+  "reviewer_note": "Reviewer type, including expert, is self-attested and is not certification.",
+  "assessment_method": "Explicit reviewer judgments; this script validates saved response hashes and aggregates scores, without evaluating answer meaning or independently verifying run metadata.",
+  "assessed_count": 4,
+  "total_suite": 4,
+  "rubric_points": 48,
+  "possible_points": 48,
+  "dimension_points": {
+    "conclusion": 8,
+    "source_fidelity": 8,
+    "attribution": 8,
+    "minhag_and_scope": 8,
+    "uncertainty": 8,
+    "usefulness": 8
+  },
+  "dimension_possible_points": 8,
+  "critical_failures": [],
+  "passing_cases": [
+    "CR-02",
+    "CR-01",
+    "CR-03",
+    "WY-01"
+  ],
+  "passing_count": 4,
+  "pass_rule": "Every dimension >=1, total >=10/12, and no critical failure.",
+  "unassessed": [],
+  "coverage_note": "Rubric totals describe assessed cases only. Unassessed cases are neither passes nor failures.",
+  "assessments": [
+    {
+      "case_id": "CR-02",
+      "response_file": "responses/CR-02.md",
+      "response_sha256": "68c7fc8014e924828eb2a9c97cb04f9d9c0fd27b6883a96c88b53322260ab927",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "points": 12,
+      "possible_points": 12,
+      "critical_failure": false,
+      "passes": true,
+      "rationale": "Answers all requested subparts accurately and distinguishes the competing authorities. It supplies Rema’s own Darkhei Moshe explanation separately from Shach’s proposed defenses, including why sixty remains necessary. Its later-curdling and loss qualification is supported by the gloss, and its verification statement distinguishes sources read directly from reported attributions. Total 12/12; meets the specified development threshold. This does not certify every adjacent practical application."
+    },
+    {
+      "case_id": "CR-01",
+      "response_file": "responses/CR-01.md",
+      "response_sha256": "9b51e304abe11de21fd09a9f6913a48bd22c3b1214cc18bbd031d3b9cf922ecb",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "points": 12,
+      "possible_points": 12,
+      "critical_failure": false,
+      "passes": true,
+      "rationale": "All requested subparts are materially covered. (a) It compares the permissive Rambam/Rif-as-read-by-Rosh approach with the stringent reading in Tosafot, supplies relevant Gemara, and qualifies the tentative Tosafot practice explanation. (b) It explains Agra in Tosafot and Rambam, their practical conclusions, and both Beit Yosef axes and the Tur-attribution explanation. (c) It accurately combines PT’s concluding caution with Ben Ish Chai’s explicit permission and visible-pot exception. No decisive fabrication, false source claim, wrong controlling conclusion, or erased controlling exception was established. Its verification limits are disclosed. The heading “Tosafot’s stringent position” could be made more exact by saying “Tosafot’s reading of the Rabbis,” but the body already supplies the controlling caveat, so this is not a material defect."
+    },
+    {
+      "case_id": "CR-03",
+      "response_file": "responses/CR-03.md",
+      "response_sha256": "a88a2c7232c4bdaa90186bf5e0e056ed9df33b365da7f49e6075e1292c5277a6",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "points": 12,
+      "possible_points": 12,
+      "critical_failure": false,
+      "passes": true,
+      "rationale": "12/12; development pass. Covers all three requested parts with distinct Rishonim explanations and useful practical differences, then separates the Mechaber and Rema regimes for external blood in salting and roasting. Named-source claims examined are supported. It carefully labels the Mechaber salting measure as synthesis and its Rishonim attributions as reports through later primary texts. No required subpart omitted; no critical failure found."
+    },
+    {
+      "case_id": "WY-01",
+      "response_file": "responses/WY-01.md",
+      "response_sha256": "63ac5a13e38b093bcf2409c9b40c9858cac6ee3c810c1d45c3147f6a44755af8",
+      "scores": {
+        "conclusion": 2,
+        "source_fidelity": 2,
+        "attribution": 2,
+        "minhag_and_scope": 2,
+        "uncertainty": 2,
+        "usefulness": 2
+      },
+      "points": 12,
+      "possible_points": 12,
+      "critical_failure": false,
+      "passes": true,
+      "rationale": "12/12; development pass. Correctly rejects a blanket river-only purchasing rule, provides a substantial initial-use basis for ordinarily irrigated kosher aravos, and keeps validity separate from the disputed preference. It verifies the irrigation issue through Arukh HaShulchan and identifies application to modern cultivation as an application. No requested subpart is missing; no critical failure found."
+    }
+  ]
+}

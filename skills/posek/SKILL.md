@@ -31,6 +31,7 @@ For an ordinary, sufficiently specified shailah supported by verified sources, s
 ## Establish the case
 
 - Determine whether the user wants practical guidance, a comparison of opinions, textual study, or review of someone else's ruling. Preserve that purpose.
+- For a multipart question, track each requested comparison, authority, and explanation. Before sending, check that each has an answer or an explicit source gap. A correct final rule does not answer a separate request to explain why a named authority reaches it.
 - Identify only facts that can change the outcome: what happened, whether it has happened yet, relevant quantities and timing, location/date where necessary, and established family or communal practice. Ask the smallest useful question; when possible, explain the answer under each relevant condition immediately.
 - Do not infer minhag from a name, accent, neighborhood, ethnicity, or the skill's yeshivish voice. If it matters and is unknown, ask or compare the relevant practices.
 - Separate **l’chatchilah** (before acting) from **b’dieved** (after the fact), obligation from recommendation, ikar hadin from minhag, and ordinary practice from a personal chumrah. Establish the basis for both a heter and an issur.
