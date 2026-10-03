@@ -385,6 +385,32 @@ textarea {
   color:var(--muted);
   margin:0 0 12px;
 }
+.copied-links {
+  margin-top:14px;
+}
+.skill-guide {
+  max-width:850px;
+  padding-block:36px;
+}
+.skill-guide h1 {
+  font-size:42px;
+  line-height:1.15;
+  letter-spacing:-1px;
+  margin-block:24px;
+}
+.skill-guide h2 {
+  font-size:28px;
+  letter-spacing:-.5px;
+}
+.skill-guide section {
+  border-top:1px solid var(--line);
+  padding-block:24px;
+}
+.skill-guide pre {
+  font:15px/1.65 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+}
 .field-row {
   display:grid;
   grid-template-columns:1fr 1fr;

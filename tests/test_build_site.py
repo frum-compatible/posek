@@ -1,6 +1,7 @@
 """Offline publication checks using synthetic files only."""
 
 import importlib.util
+from html.parser import HTMLParser
 from pathlib import Path
 import tempfile
 import unittest
@@ -11,6 +12,26 @@ SCRIPT = Path(__file__).parents[1] / "scripts" / "build_site.py"
 SPEC = importlib.util.spec_from_file_location("build_site", SCRIPT)
 build_site = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(build_site)
+
+
+class GuideCodeBlocks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.blocks = []
+        self.in_code = False
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "code":
+            self.blocks.append("")
+            self.in_code = True
+
+    def handle_endtag(self, tag):
+        if tag == "code":
+            self.in_code = False
+
+    def handle_data(self, data):
+        if self.in_code:
+            self.blocks[-1] += data
 
 
 class SiteBuildTests(unittest.TestCase):
@@ -60,6 +81,83 @@ class SiteBuildTests(unittest.TestCase):
         self.assertNotIn("frum-compatible.github.io", html)
         self.assertNotIn("frum-compatible/posek", html)
 
+    def test_guide_contains_complete_current_markdown_with_main_skill_first(self):
+        main = '---\nname: posek\n---\n\n# Full instructions\n\nאמת & truth\n'
+        reference = '# Audience\n\nFirst paragraph.\n\n' + ('Complete guidance.\n' * 150)
+        self.write("skills/posek/SKILL.md", main)
+        self.write("skills/posek/references/audience.md", reference)
+        self.write("site/skill.html", "Stale checked-in guide must not survive")
+        self.package()
+        html = (self.output / "skill.html").read_text(encoding="utf-8")
+        parsed = GuideCodeBlocks()
+        parsed.feed(html)
+        self.assertEqual(parsed.blocks, [main, reference, "Synthetic source method"])
+        self.assertNotIn("Stale checked-in guide", html)
+        for section, path in (
+            ("skill-main", "SKILL.md"),
+            ("references-audience", "references/audience.md"),
+            ("references-source-method", "references/source-method.md"),
+        ):
+            with self.subTest(section=section):
+                self.assertIn(f'<section id="{section}"', html)
+                self.assertIn(f'href="#{section}">{path}</a>', html)
+                self.assertIn(f'href="https://github.com/ExampleOrg/ai-torah/blob/main/skills/posek/{path}"', html)
+
+    def test_guide_escapes_embedded_html_without_changing_instruction_text(self):
+        instructions = (
+            '# Literal markup\n\n</code></pre><script>alert("example")</script>\n'
+            '<img src="missing" onerror="example()">\n'
+            'Keep &lt;this&gt;, <that>, apostrophes, "quotes", and עברית.\n'
+        )
+        self.write("skills/posek/SKILL.md", instructions)
+        self.write("skills/posek/references/source-method.md", instructions)
+        self.package()
+        html = (self.output / "skill.html").read_text(encoding="utf-8")
+        parsed = GuideCodeBlocks()
+        parsed.feed(html)
+        self.assertEqual(parsed.blocks, [instructions, instructions])
+        self.assertNotIn("<script", html)
+        self.assertNotIn("<img", html)
+
+    def test_guide_metadata_resources_and_navigation_follow_deployment(self):
+        self.package()
+        html = (self.output / "skill.html").read_text(encoding="utf-8")
+        self.assertIn('<link rel="canonical" href="https://example.org/torah/skill.html">', html)
+        self.assertIn('<meta property="og:url" content="https://example.org/torah/skill.html">', html)
+        self.assertIn('<meta property="og:image" content="https://example.org/torah/social-card.png">', html)
+        for path in ("scripts/fetch_source.py", "LICENSE", "NOTICE"):
+            with self.subTest(resource=path):
+                self.assertIn(f'href="https://github.com/ExampleOrg/ai-torah/blob/main/skills/posek/{path}"', html)
+        self.assertIn('href="./">Back to Posek</a>', html)
+        self.assertIn('href="posek-skill.zip"', html)
+        self.assertIn('rel="stylesheet" href="styles.css"', html)
+        self.assertIn('class="skill-guide wrap"', html)
+        self.assertNotIn("frum-compatible.github.io", html)
+        self.assertNotIn("frum-compatible/posek", html)
+        self.assertNotIn("<script", html)
+
+    def test_guide_includes_only_public_direct_markdown_references(self):
+        excluded = (
+            "references/.private.md", "references/.hidden/notes.md",
+            "references/private/notes.md", "references/work/transcript.md",
+            "references/source-cache/source.md", "references/__pycache__/notes.md",
+            "references/nested/appendix.md", "references/data.txt", "other.md",
+        )
+        for relative in excluded:
+            self.write("skills/posek/" + relative, f"Do not render {relative}")
+        self.package()
+        html = (self.output / "skill.html").read_text(encoding="utf-8")
+        parsed = GuideCodeBlocks()
+        parsed.feed(html)
+        self.assertEqual(parsed.blocks, ["Synthetic skill instructions", "Synthetic source method"])
+        for relative in excluded:
+            with self.subTest(relative=relative):
+                self.assertNotIn(relative, html)
+        with ZipFile(self.output / "posek-skill.zip") as archive:
+            self.assertNotIn("posek/references/.private.md", archive.namelist())
+            self.assertNotIn("posek/references/private/notes.md", archive.namelist())
+            self.assertIn("posek/references/nested/appendix.md", archive.namelist())
+
     def test_skill_download_keeps_resources_and_attribution_together(self):
         self.write("private/account-notes.txt", "Private project notes")
         self.package()
@@ -76,7 +174,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertTrue((self.output / ".nojekyll").is_file())
         self.assertEqual(
             {path.name for path in self.output.iterdir()},
-            {"index.html", "social-card.png", "posek-skill.zip", ".nojekyll"},
+            {"index.html", "skill.html", "social-card.png", "posek-skill.zip", ".nojekyll"},
         )
 
     def test_private_hidden_and_cache_files_are_omitted_from_both_downloads(self):
@@ -115,6 +213,7 @@ class SiteBuildTests(unittest.TestCase):
         outside.write_text("Private external file", encoding="utf-8")
         for relative, target in (
             ("site/linked.txt", outside),
+            ("skills/posek/references/linked.md", outside),
             ("skills/posek/references/linked", outside.parent),
         ):
             with self.subTest(relative=relative):

@@ -2,6 +2,7 @@
 """Prepare the public Pages files and a complete, portable skill download."""
 
 import argparse
+from html import escape
 from pathlib import Path
 import re
 import shutil
@@ -28,6 +29,65 @@ def public_url(value):
             or re.search(r'''[\s<>"'`\\]''', value)):
         raise ValueError("Use a plain HTTPS site URL without credentials, query, or fragment.")
     return value.rstrip("/") + "/"
+
+
+def skill_guide(skill, skill_files, site_url, repository_url):
+    sources = [skill / "SKILL.md"] + [
+        source for source in skill_files
+        if source.parent == skill / "references" and source.suffix.lower() == ".md"
+        and publishable(source.relative_to(skill))
+    ]
+    navigation, sections = [], []
+    source_url = repository_url + "/blob/main/skills/posek/"
+    for source in sources:
+        relative = source.relative_to(skill)
+        section_id = "skill-main" if relative == Path("SKILL.md") else "references-" + source.stem
+        label = relative.as_posix()
+        navigation.append(f'<li><a href="#{quote(section_id, safe="")}">{escape(label)}</a></li>')
+        sections.append(
+            f'<section id="{escape(section_id)}" aria-labelledby="{escape(section_id)}-title">\n'
+            f'  <h2 id="{escape(section_id)}-title">{escape(label)}</h2>\n'
+            f'  <p><a href="{escape(source_url + quote(label, safe="/"))}">View source on GitHub</a></p>\n'
+            f'  <pre><code>{escape(source.read_text(encoding="utf-8"))}</code></pre>\n'
+            '</section>'
+        )
+    guide_url = escape(site_url + "skill.html")
+    section_html = "\n    ".join(sections)
+    return f'''<!doctype html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posek AI | Complete Skill Guide</title>
+  <meta name="description" content="The complete Posek skill instructions and reference guides for Torah learning, divrei Torah, and halacha.">
+  <link rel="canonical" href="{guide_url}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Posek AI — Complete Skill Guide">
+  <meta property="og:description" content="Read the complete skill instructions and every reference guide in one page.">
+  <meta property="og:url" content="{guide_url}">
+  <meta property="og:image" content="{escape(site_url + "social-card.png")}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar wrap">
+    <a class="wordmark" href="./" aria-label="Posek home">פוסק <span>POSEK</span></a>
+    <a class="quiet-link" href="./">Back to Posek</a>
+  </header>
+  <main id="main" class="skill-guide wrap">
+    <h1>Complete skill guide</h1>
+    <p>The full Posek instructions and reference files, published from the skill source. Read the main skill first, then the references it calls for.</p>
+    <p><a href="posek-skill.zip">Download the complete skill</a> · <a href="{escape(source_url + "scripts/fetch_source.py")}">Source retrieval helper</a> · <a href="{escape(source_url + "LICENSE")}">License</a> · <a href="{escape(source_url + "NOTICE")}">Attribution notice</a></p>
+    <nav aria-label="Skill guide contents">
+      <ul>{"".join(navigation)}</ul>
+    </nav>
+    {section_html}
+  </main>
+</body>
+</html>
+'''
 
 
 def package_site(root, output, site_url, repository):
@@ -67,6 +127,9 @@ def package_site(root, output, site_url, repository):
             target.write_text(text, encoding="utf-8")
         else:
             shutil.copy2(source, target)
+    (output / "skill.html").write_text(
+        skill_guide(skill, skill_files, site_url, repository_url), encoding="utf-8",
+    )
     with ZipFile(output / "posek-skill.zip", "w", ZIP_DEFLATED) as archive:
         for source in skill_files:
             relative = source.relative_to(skill)

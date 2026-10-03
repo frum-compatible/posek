@@ -2,6 +2,8 @@
   'use strict';
   const byId = id => document.getElementById(id);
   const publicUrl = document.querySelector('link[rel="canonical"]').href;
+  const skillGuideUrl = new URL('skill.html', publicUrl).href;
+  const skillSourceUrl = 'https://github.com/frum-compatible/posek/blob/main/skills/posek/SKILL.md';
   const caption = 'Posek AI — An Orthodox AI Rabbi. Hashkafah: configurable. Mareh mekomos: required. Mutar is also a psak.';
   const shareText = `${caption}\n${publicUrl}`;
   const profiles = {
@@ -101,7 +103,8 @@
     byId('sources').disabled = plan.format === 'psak';
     byId('resolved-plan').textContent = `${plan.register}. ${plan.depth} treatment. ${plan.sourcePlan}`;
     byId('prompt').value = [
-      'For this conversation, act as an Orthodox Torah and halacha assistant named Posek. Follow the instructions below and answer the request at the end. This message contains the phone instructions; it does not refer to an installed skill, plugin, custom GPT, or external service. You can follow these instructions without recognizing the name Posek. Speak in the serious register of a Moirah D’Asrah; claim no real rabbinic appointment or endorsement.',
+      'For this conversation, act as an Orthodox Torah and halacha assistant named Posek. Follow the linked skill and the instructions below, then answer my request at the end. This requires reading instructions, not installing a plugin or recognizing an existing service. Speak in the serious register of a Moirah D’Asrah; claim no real rabbinic appointment or endorsement.',
+      `Before answering, use your browsing tools to read the full Posek instructions: ${skillGuideUrl} . This page includes SKILL.md and its reference guides. Original GitHub source: ${skillSourceUrl} . Read the main instructions, source-method, and hashkafah sections, then ${plan.format === 'psak' ? 'the consequential-cases section when relevant' : 'the divrei-torah, torah-writing, and audience sections'}. Apply them to this chat. If you cannot open the page, try the GitHub source and its linked references. If neither is accessible, use the inline instructions below and briefly state which material you could not read; never claim to have loaded the skill without reading it. Do not delay emergency help to fetch a guide.`,
       `Task: ${taskNames[plan.format]}.`,
       `Hashkafah: ${selectedText('profile')}. ${profiles[plan.profile][0]}`,
       `Audience: ${plan.format === 'psak' ? 'General' : selectedText('audience')}. Register: ${plan.register}. Depth: ${plan.depth}.`,
@@ -115,6 +118,7 @@
     ].join('\n\n');
     byId('copy-status').textContent = '';
     byId('manual-copy').hidden = true;
+    byId('copied-app-links').hidden = true;
   }
 
   const profilePicker = byId('profile-picker');
@@ -173,11 +177,13 @@
     if (copying) return false;
     copying = true;
     copyControls.forEach(control => { control.disabled = true; });
+    byId('copied-app-links').hidden = true;
     try {
       if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(text);
       byId(statusId).textContent = success;
       byId('manual-copy').hidden = true;
+      byId('copied-app-links').hidden = statusId !== 'copy-status' || text !== byId('prompt').value;
       return true;
     } catch {
       byId('manual-text').value = text;
@@ -219,7 +225,7 @@
     const copied = await copyText(byId('prompt').value, 'copy-status', `Copied. Opening ${button.dataset.appName}…`);
     if (copied) window.location.assign(button.dataset.openApp);
   }));
-  byId('copy-prompt').addEventListener('click', () => copyText(byId('prompt').value, 'copy-status', 'Copied. Paste it into your AI app.'));
+  byId('copy-prompt').addEventListener('click', () => copyText(byId('prompt').value, 'copy-status', 'Copied.'));
   byId('copy-link').addEventListener('click', () => copyText(publicUrl, 'share-status', 'Public link copied.'));
   document.querySelectorAll('.whatsapp-share').forEach(link => {
     link.href = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
