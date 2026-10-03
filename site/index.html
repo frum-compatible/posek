@@ -33,14 +33,14 @@
       <p class="eyebrow">Moirah D’Asrah</p>
       <h1 id="hero-title">Posek <span class="ai-label">AI</span></h1>
       <p class="hero-subtitle">An Orthodox AI Rabbi.</p>
-      <p class="hero-copy">A heter requires a source. So does an issur.</p>
+      <p class="hero-copy">Bring your hardest shailah. Expect mareh mekomos.</p>
       <p id="preview-note" class="preview-note" hidden>Local preview. The public link will work after publication.</p>
     </section>
 
     <section id="prepare" class="prepare" aria-labelledby="prepare-title">
       <div class="section-intro">
         <h2 id="prepare-title">Ask a shailah.</h2>
-        <p>Copy your prompt into ChatGPT or Claude to get an answer.</p>
+        <p>Choose a profile and ask. Copy the instructions into your AI chat.</p>
       </div>
       <div class="builder">
         <fieldset class="mode-switch">
@@ -49,17 +49,24 @@
           <label><input class="sr-only" type="radio" name="mode" value="torah"><span>Dvar Torah</span></label>
         </fieldset>
         <div class="field">
-          <label for="profile">Hashkafah</label>
+          <label id="profile-label" for="profile">Hashkafah</label>
           <select id="profile">
-            <option value="modern-yeshivish">Modern Yeshivish · The Working Ben Torah</option>
+            <option value="chassidish">Chassidish · Derech HaChassidus</option>
             <option value="lakewood-yeshivish">Lakewood Yeshivish · Yeshivah and Kollel</option>
+            <option value="modern-yeshivish" selected>Modern Yeshivish · The Working Ben Torah</option>
             <option value="out-of-town-yeshivish">Out-of-Town Yeshivish · The Community Beis Medrash</option>
-            <option value="modern-orthodox">Modern Orthodox · Torah U'Madda</option>
-            <option value="open-orthodox">Open Orthodox · Halachah and Kehillah</option>
             <option value="torah-im-derech-eretz">Torah im Derech Eretz · Kehillah and Mesorah</option>
             <option value="dati-leumi">Dati Leumi · Toras Eretz Yisrael</option>
-            <option value="chassidish">Chassidish · Derech HaChassidus</option>
+            <option value="modern-orthodox">Modern Orthodox · Torah U'Madda</option>
+            <option value="open-orthodox">Open Orthodox · Halachah and Kehillah</option>
           </select>
+          <details id="profile-picker" class="profile-picker" hidden>
+            <summary id="profile-trigger" aria-labelledby="profile-label profile-name profile-subtitle"><span id="profile-name" class="profile-name"></span><span id="profile-subtitle" class="profile-subtitle"></span></summary>
+            <div class="profile-panel">
+              <p class="profile-order">Roughly traditional → modern / open</p>
+              <fieldset id="profile-options" class="profile-options"><legend class="sr-only">Choose your hashkafah</legend></fieldset>
+            </div>
+          </details>
         </div>
         <div class="field">
           <label id="question-label" for="question">Your halacha question</label>
@@ -70,15 +77,15 @@
             <div id="sample-list" class="sample-list"></div>
           </details>
         </div>
+        <p class="handoff-note">Copies all instructions and your question. When the app opens, <strong>paste and send</strong>. No Posek installation needed.</p>
         <div class="copy-row">
           <div class="app-actions">
             <button class="button primary" type="button" data-open-app="https://chatgpt.com/" data-app-name="ChatGPT">Copy &amp; open ChatGPT</button>
             <button class="button outline" type="button" data-open-app="https://claude.ai/new" data-app-name="Claude">Copy &amp; open Claude</button>
           </div>
-          <button id="copy-prompt" class="text-button" type="button">Copy only</button>
+          <button id="copy-prompt" class="text-button" type="button">Copy full prompt</button>
           <span id="copy-status" role="status" aria-live="polite"></span>
         </div>
-        <p class="next-step">Paste the copied prompt into the new chat. Sign in if asked.</p>
         <details class="advanced">
           <summary>Advanced settings</summary>
           <div class="field-row">
@@ -102,7 +109,7 @@
         </details>
         <p class="field-note">The phone starter is shorter than the full installed skill. Source verification depends on the AI app and tools you use.</p>
         </details>
-        <details class="prompt-details"><summary>Read the prompt before copying</summary><textarea id="prompt" readonly rows="13" aria-label="Generated starter prompt"></textarea></details>
+        <details class="prompt-details"><summary>See the instructions being copied</summary><textarea id="prompt" readonly rows="13" aria-label="Generated starter prompt"></textarea></details>
         <div id="manual-copy" hidden><label for="manual-text">Copy this text manually</label><textarea id="manual-text" readonly rows="5"></textarea><p id="manual-app-links" class="next-step">After copying, open <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> or <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer">Claude</a> and paste it into a new chat.</p></div>
         <p class="field-note">Your text stays in this page. Sharing the site does not share your question.</p>
         <p id="rav-note" class="rav-note">For a practical shailah, confirmation with your local rav is recommended. Bring the mareh mekomos.</p>
@@ -126,14 +133,20 @@
     </section>
 
     <section id="bechinah" class="reading wrap" aria-labelledby="bechinah-title">
-      <div class="section-intro"><p class="eyebrow">Bechinah records</p><h2 id="bechinah-title">Rabbinic questions. Public answers.</h2><p>All four selected semicha questions met our published development threshold. A stricter answer does not receive extra credit. Mutar is also a psak.</p></div>
+      <div class="section-intro"><p class="eyebrow">Bechinah records</p><h2 id="bechinah-title">The answers are on record.</h2><p>Posek earned 46 of 48 review points on four selected semicha questions. Three answers received full marks. The fourth omitted one requested explanation.</p></div>
       <table class="results-table">
-        <caption>Four selected semicha-related questions · AI review · threshold: ≥10/12, no zero dimension or critical failure</caption>
-        <thead><tr><th scope="col">Condition</th><th scope="col">Rubric points</th><th scope="col">Met development threshold</th></tr></thead>
-        <tbody><tr><th scope="row">Posek</th><td>46 / 48</td><td>4 / 4</td></tr><tr><th scope="row">Assistant without the skill</th><td>48 / 48</td><td>4 / 4</td></tr></tbody>
+        <caption>Posek's answers, checked against sources by AI reviewers. Each question was worth 12 points.</caption>
+        <thead><tr><th scope="col">Question</th><th scope="col">Points</th><th scope="col">Answer</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Poultry, milk, and dairy pots</th><td>12 / 12</td><td><a href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/runs/posek/responses/CR-01.md" aria-label="Read the poultry, milk, and dairy pots answer">Read ↗</a></td></tr>
+          <tr><th scope="row">Milk used to set cheese</th><td>10 / 12</td><td><a href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/runs/posek/responses/CR-02.md" aria-label="Read the milk used to set cheese answer">Read ↗</a></td></tr>
+          <tr><th scope="row">Salting meat</th><td>12 / 12</td><td><a href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/runs/posek/responses/CR-03.md" aria-label="Read the salting meat answer">Read ↗</a></td></tr>
+          <tr><th scope="row">Riverbank aravos</th><td>12 / 12</td><td><a href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/runs/posek/responses/WY-01.md" aria-label="Read the riverbank aravos answer">Read ↗</a></td></tr>
+        </tbody>
       </table>
-      <p class="evidence-note">Three questions came from a Chief Rabbinate paper; one was announced for a WebYeshiva semicha-course midterm. Posek omitted a requested explanation on one item. The baseline included it. These scores do not establish an advantage from the skill, an official exam pass, or superiority to a rabbi. No human candidates or examiners participated.</p>
-      <div class="actions"><a class="text-link" href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/QUESTIONS.md">Read the questions and answers <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/RESULTS.md">Method, scores, and source reviews <span aria-hidden="true">↗</span></a></div>
+      <p class="evidence-note">All four met our practice-test pass rule: at least 10 points, no zero-scored category, and no critical failure. On the cheese question, Posek left out a requested explanation of the Rema's position and lost two points.</p>
+      <p class="evidence-note">Three questions came from a Chief Rabbinate paper; one was announced for a WebYeshiva course midterm. This was a small, source-assisted practice run reviewed by AI, not an official exam or a measurement of overall halachic accuracy. The full report includes the scoring rules, source checks, and comparison with an assistant that received no Posek instructions.</p>
+      <div class="actions"><a class="text-link" href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/QUESTIONS.md">Read the questions and answers <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/frum-compatible/posek/blob/main/benchmarks/semicha/RESULTS.md">Full results and comparison <span aria-hidden="true">↗</span></a></div>
       <p class="evidence-note"><a href="https://github.com/frum-compatible/posek/issues">Objections with mareh mekomos are welcome.</a></p>
     </section>
 

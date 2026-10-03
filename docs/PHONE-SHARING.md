@@ -4,7 +4,9 @@ The landing page in `site/` explains Posek, shows a dvar Torah, and prepares a p
 
 ## Open an AI app
 
-Copy & open ChatGPT and Copy & open Claude copy the complete generated prompt, then navigate to the chosen service in the same tab. The visitor pastes into a new chat and sends it. The destination URL contains no question text. If clipboard access fails, the page stays open with selectable text and ordinary links to both services. Copy only is also available.
+Copy & open ChatGPT and Copy & open Claude copy the complete generated prompt, then navigate to the chosen service in the same tab. The visitor pastes into a new chat and sends it. The destination URL contains no question text. If clipboard access fails, the page stays open with selectable text and ordinary links to both services. Copy full prompt is also available without opening another app.
+
+The copied message defines Posek's role and supplies the phone instructions directly. It does not ask ChatGPT or Claude to recognize a skill name or load an installed package. The page says to paste and send next to the app buttons; opening an app alone does not transfer the instructions into its chat.
 
 The app buttons use HTTPS links. They do not promise a native-app launch or automatic prompt submission. Sign-in and the phone's link handling remain outside this page's control.
 

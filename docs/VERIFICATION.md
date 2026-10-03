@@ -19,6 +19,7 @@ Manual browser inspection covered the built page at 320, 390, and 1440 pixels wi
 The following interactions were exercised:
 
 - The simplified entry flow starts on Halacha with Advanced settings closed. Only the hashkafah selector and question box precede the copy action. The mode switch works with both clicks and arrow keys.
+- The hashkafah picker displays separate names and subtitles, keeps Modern Yeshivish as the default, and follows a rough traditional-to-modern ordering. Pointer selection, native radio arrow navigation, Enter, Escape, Tab, and outside dismissal were exercised. Deferring the focus-leave check avoids dismissing the options before a label click finishes.
 - Halacha and Dvar Torah retain separate question text, register, and depth during mode switches. Hashkafah remains shared. Hidden Torah format, audience, and source choices do not enter the Halacha prompt; returning to Dvar Torah restores them.
 - Ladies' Parsha Shiur uses the traditional source plan under Modern Yeshivish and permits Gemara under Open Orthodox. Women's Beis Medrash permits Gemara under Lakewood Yeshivish.
 - An explicit source preference takes precedence for a dvar Torah. Practical psak disables that presentation preference and requests all controlling sources.
@@ -29,6 +30,8 @@ The following interactions were exercised:
 - The built page, social image, and complete skill ZIP were served successfully. The 1200 × 630 social card was rendered and inspected.
 
 These checks verify page behavior, not the quality of an AI answer generated from every setting. The page was inspected through browser viewport emulation; an actual phone and the live WhatsApp preview remain to be checked after publication. No WhatsApp message was sent. Temporary preview servers were stopped.
+
+The revised phone prompt was also pasted and sent in a fresh, signed-out ChatGPT web session. With no installed Posek skill, it answered the completed-bentching/Rosh Chodesh example and supplied source citations. A separate fresh-context assistant check also answered from the supplied instructions without loading the skill. These are narrow prompt-usability checks, not additions to the accuracy benchmark. Neither reproduces clipboard transfer through a native iPhone app switch.
 
 ## Software gates
 

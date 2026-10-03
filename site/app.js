@@ -73,6 +73,10 @@
 
   function updatePrompt() {
     const plan = resolvePlan();
+    const [profileName, profileSubtitle] = selectedText('profile').split(' · ');
+    byId('profile-name').textContent = profileName;
+    byId('profile-subtitle').textContent = profileSubtitle;
+    document.querySelectorAll('input[name="profile-choice"]').forEach(input => { input.checked = input.value === plan.profile; });
     const question = byId('question').value.trim();
     const taskNames = { dvar: 'Prepare a dvar Torah', psak: 'Address a practical halachic shailah', shiur: 'Prepare a shiur outline', revision: 'Revise my Torah draft' };
     const defaults = {
@@ -97,7 +101,7 @@
     byId('sources').disabled = plan.format === 'psak';
     byId('resolved-plan').textContent = `${plan.register}. ${plan.depth} treatment. ${plan.sourcePlan}`;
     byId('prompt').value = [
-      'Use Posek, an AI Rabbi for Torah and halacha. Speak in the serious register of a Moirah D’Asrah. The Rosh Yeshiva of Yeshivas Birur HaDavar, Lakewood, is a fictional persona; claim no real appointment or endorsement.',
+      'For this conversation, act as an Orthodox Torah and halacha assistant named Posek. Follow the instructions below and answer the request at the end. This message contains the phone instructions; it does not refer to an installed skill, plugin, custom GPT, or external service. You can follow these instructions without recognizing the name Posek. Speak in the serious register of a Moirah D’Asrah; claim no real rabbinic appointment or endorsement.',
       `Task: ${taskNames[plan.format]}.`,
       `Hashkafah: ${selectedText('profile')}. ${profiles[plan.profile][0]}`,
       `Audience: ${plan.format === 'psak' ? 'General' : selectedText('audience')}. Register: ${plan.register}. Depth: ${plan.depth}.`,
@@ -112,6 +116,56 @@
     byId('copy-status').textContent = '';
     byId('manual-copy').hidden = true;
   }
+
+  const profilePicker = byId('profile-picker');
+  function closeProfilePicker() {
+    profilePicker.open = false;
+    byId('profile-trigger').focus();
+  }
+  [...byId('profile').options].forEach(option => {
+    const [name, subtitle] = option.text.split(' · ');
+    const label = document.createElement('label');
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'profile-choice';
+    input.value = option.value;
+    input.className = 'sr-only';
+    const text = document.createElement('span');
+    text.className = 'profile-text';
+    const title = document.createElement('span');
+    title.className = 'profile-name';
+    title.textContent = name;
+    const detail = document.createElement('span');
+    detail.className = 'profile-subtitle';
+    detail.textContent = subtitle;
+    text.append(title, detail);
+    label.append(input, text);
+    input.addEventListener('change', () => {
+      byId('profile').value = input.value;
+      byId('profile').dispatchEvent(new Event('change', { bubbles: true }));
+    });
+    input.addEventListener('click', event => { if (event.detail > 0) closeProfilePicker(); });
+    byId('profile-options').append(label);
+  });
+  profilePicker.addEventListener('toggle', () => {
+    if (profilePicker.open) profilePicker.querySelector('input:checked').focus();
+  });
+  profilePicker.addEventListener('keydown', event => {
+    if (event.key === 'Escape' || (event.key === 'Enter' && event.target.matches('input'))) {
+      event.preventDefault();
+      closeProfilePicker();
+    }
+  });
+  profilePicker.addEventListener('focusout', () => {
+    setTimeout(() => {
+      if (!profilePicker.contains(document.activeElement)) profilePicker.open = false;
+    }, 0);
+  });
+  document.addEventListener('pointerdown', event => {
+    if (!profilePicker.contains(event.target)) profilePicker.open = false;
+  });
+  byId('profile').hidden = true;
+  profilePicker.hidden = false;
 
   let copying = false;
   const copyControls = document.querySelectorAll('[data-open-app], #copy-prompt, #copy-link');

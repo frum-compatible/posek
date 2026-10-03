@@ -1,6 +1,8 @@
 # Semicha-question pilot: results
 
-**Posek: 46/48 rubric points. No-skill assistant: 48/48. Both met the development pass threshold on all four items.** This run does not demonstrate an advantage from Posek, and no rabbi was evaluated.
+**With Posek instructions: 46/48 review points. Without Posek instructions: 48/48.** Both met this project's pass rule on all four questions. Posek earned full points on three questions and lost two points for omitting one requested explanation on the fourth.
+
+“Without Posek instructions” means the general AI assistant received the same questions and source access, but did not load the Posek skill. It included the explanation Posek missed. This run does not show an accuracy improvement from adding Posek, and no rabbi was evaluated.
 
 Eight fresh candidate sessions answered four adapted public items on 2026-10-02. The [protocol](PROTOCOL.md) and [input manifest](input-manifest.json) record the selection, frozen skill, tools, and review method. These are AI-reviewed development scores, not an official semicha grade or a percentage of halachic accuracy.
 
@@ -8,7 +10,7 @@ Eight fresh candidate sessions answered four adapted public items on 2026-10-02.
 
 ## What was tested
 
-| Item | Posek | No-skill assistant | Independent source-review finding |
+| Question | With Posek instructions | Without Posek instructions | What the source review found |
 | --- | ---: | ---: | --- |
 | CR-01 | 12/12 | 12/12 | Both cover the requested positions, interpretations, and practical qualifications. [Review](review/CR-01.md). |
 | CR-02 | 10/12 | 12/12 | Posek omits a specifically requested Rema rationale; the baseline includes it. [Review](review/CR-02.md). |
