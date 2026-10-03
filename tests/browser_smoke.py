@@ -91,7 +91,7 @@ def check_page(page, url, artifacts, expect):
         page.wait_for_url(destination)
         assert page.evaluate("navigator.clipboard.readText()") == copied
         page.goto(url)
-        page.evaluate("navigator.clipboard.writeText = async () => { throw new Error('Denied for test'); }")
+        page.evaluate("() => { navigator.clipboard.writeText = async () => { throw new Error('Denied for test'); }; }")
         button.click()
         expect(page.locator("#manual-copy")).to_be_visible()
         assert page.url == url
