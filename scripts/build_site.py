@@ -2,6 +2,7 @@
 """Prepare the public Pages files and a complete, portable skill download."""
 
 import argparse
+from hashlib import sha256
 from html import escape
 from pathlib import Path
 import re
@@ -130,6 +131,21 @@ def package_site(root, output, site_url, repository):
     (output / "skill.html").write_text(
         skill_guide(skill, skill_files, site_url, repository_url), encoding="utf-8",
     )
+    # Hash the published bytes, after deployment URL substitutions are complete.
+    asset_references = {}
+    for filename, reference in (
+        ("app.js", '<script src="app.js"'),
+        ("styles.css", '<link rel="stylesheet" href="styles.css"'),
+    ):
+        asset = output / filename
+        if asset.is_file():
+            version = sha256(asset.read_bytes()).hexdigest()[:12]
+            asset_references[reference] = reference.replace(filename, f"{filename}?v={version}")
+    for target in output.rglob("*.html"):
+        text = target.read_text(encoding="utf-8")
+        for reference, versioned in asset_references.items():
+            text = text.replace(reference, versioned)
+        target.write_text(text, encoding="utf-8")
     with ZipFile(output / "posek-skill.zip", "w", ZIP_DEFLATED) as archive:
         for source in skill_files:
             relative = source.relative_to(skill)

@@ -31,11 +31,19 @@ The following interactions were exercised:
 
 These checks verify page behavior, not the quality of an AI answer generated from every setting. The page was inspected through browser viewport emulation; an actual phone and the live WhatsApp preview remain to be checked after publication. No WhatsApp message was sent. Temporary preview servers were stopped.
 
-The revised phone prompt was also pasted and sent in a fresh, signed-out ChatGPT web session. With no installed Posek skill, it answered the completed-bentching/Rosh Chodesh example and supplied source citations. A separate fresh-context assistant check also answered from the supplied instructions without loading the skill. These are narrow prompt-usability checks, not additions to the accuracy benchmark. Neither reproduces clipboard transfer through a native iPhone app switch.
+Before the link-first revision, the longer inline phone prompt was also pasted and sent in a fresh, signed-out ChatGPT web session. With no installed Posek skill, it answered the completed-bentching/Rosh Chodesh example and supplied source citations. A separate fresh-context assistant check also answered from the supplied instructions without loading the skill. These are narrow prompt-usability checks, not additions to the accuracy benchmark. Neither reproduces clipboard transfer through a native iPhone app switch.
+
+## Link-first phone update
+
+A user supplied the full prompt copied on an iPhone. It matched the earlier inline version and contained no links. At the same time, HTTP reads of the published JavaScript matched the newer repository source and included both skill URLs. The page still referenced unversioned assets; GitHub Pages returned `Cache-Control: max-age=600`. This identifies an older page or cached script in use, without distinguishing between those two causes.
+
+The replacement prompt starts with the GitHub skill and full-guide URLs, then supplies settings and the question. Browsing is the expected path; the inline duplicate has been removed. The preview stays collapsed. Published JS and CSS references now carry hashes of their final contents. The public URL and shared links remain unchanged. Already-open pages must still reload.
+
+Gemini and Muse use the existing copy-and-open handler. Browser smoke checks on CI cover all four destinations, the copied text, manual-copy fallback, settings, privacy of shared links, and narrow layouts. External navigation is intercepted in these checks; they do not establish native-app routing, account availability, or answer quality in any receiving service. No local browser or server was opened for this revision. The earlier ChatGPT answer check above does not validate this new link-reading flow.
 
 ## Software gates
 
-The repository contains 34 offline unit tests covering source retrieval, evaluation scoring, and site packaging, plus a project consistency check. All passed on [GitHub CI at revision a8f605a](https://github.com/frum-compatible/posek/actions/runs/37059777121). They were not run locally, in accordance with the author's CI-only machine policy. Both GitHub workflows run the checks before their respective jobs complete; the Pages workflow deploys only after they pass.
+At revision a8f605a, all 34 offline unit tests covering source retrieval, evaluation scoring, and site packaging passed alongside the project consistency check on [GitHub CI at revision a8f605a](https://github.com/frum-compatible/posek/actions/runs/37059777121). They were not run locally, in accordance with the author's CI-only machine policy. Both GitHub workflows run the checks before their respective jobs complete; the Pages workflow deploys only after they pass.
 
 The [Pages deployment](https://github.com/frum-compatible/posek/actions/runs/37059836316) published that revision. The public HTML, social-card image, and skill ZIP returned HTTP 200. A browser inspection of the live page at 390 pixels confirmed the public canonical URL, generated starter, correct WhatsApp URL, hidden local-preview notice, and no horizontal overflow. The live WhatsApp card inside WhatsApp remains unverified; no message was sent.
 

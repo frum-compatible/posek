@@ -40,7 +40,7 @@
     <section id="prepare" class="prepare" aria-labelledby="prepare-title">
       <div class="section-intro">
         <h2 id="prepare-title">Ask a shailah.</h2>
-        <p>Choose a profile and ask. Copy the instructions into your AI chat.</p>
+        <p>Choose a profile, ask your question, and open your AI chat.</p>
       </div>
       <div class="builder">
         <fieldset class="mode-switch">
@@ -77,16 +77,18 @@
             <div id="sample-list" class="sample-list"></div>
           </details>
         </div>
-        <p class="handoff-note">Copies your question, instructions, and a link to the <a href="skill.html">full skill</a>. When the app opens, <strong>paste and send</strong>. No installation needed.</p>
+        <p class="handoff-note">Copies the <a href="skill.html">skill links</a>, your settings, and your question. Your AI reads the skill online. When it opens, <strong>paste and send</strong>.</p>
         <div class="copy-row">
           <div class="app-actions">
             <button class="button primary" type="button" data-open-app="https://chatgpt.com/#native" data-app-name="ChatGPT">Copy &amp; open ChatGPT</button>
             <button class="button outline" type="button" data-open-app="https://claude.ai/new" data-app-name="Claude">Copy &amp; open Claude</button>
+            <button class="button outline" type="button" data-open-app="https://gemini.google.com/app" data-app-name="Gemini">Copy &amp; open Gemini</button>
+            <button class="button outline" type="button" data-open-app="https://muse.ai/" data-app-name="Muse">Copy &amp; open Muse</button>
           </div>
           <button id="copy-prompt" class="button outline" type="button">Copy prompt only</button>
           <span id="copy-status" role="status" aria-live="polite"></span>
         </div>
-        <p id="copied-app-links" class="handoff-note copied-links" hidden>Paste into a new chat: <a href="https://chatgpt.com/#native">Open ChatGPT app</a> · <a href="https://chatgpt.com/?no_universal_links=1">Use ChatGPT in browser</a> · <a href="https://claude.ai/new">Claude</a>.</p>
+        <p id="copied-app-links" class="handoff-note copied-links" hidden>Paste into a new chat: <a href="https://chatgpt.com/#native">Open ChatGPT app</a> · <a href="https://chatgpt.com/?no_universal_links=1">Use ChatGPT in browser</a> · <a href="https://claude.ai/new">Claude</a> · <a href="https://gemini.google.com/app">Gemini</a> · <a href="https://muse.ai/">Muse</a>.</p>
         <details class="advanced">
           <summary>Advanced settings</summary>
           <div class="field-row">
@@ -108,10 +110,10 @@
           <p>Ask the model to open the primary sources. Enable web search where your app offers a switch; some versions search automatically. If a sefer cannot be opened, supply the passage and keep the gap explicit.</p>
           <p class="small">Checked 2 October 2026. Suggested setups, not Posek model rankings or required subscriptions. Availability varies. <a href="https://github.com/frum-compatible/posek/blob/main/docs/MODEL-SETUP.md">Setup and evidence limits ↗</a></p>
         </details>
-        <p class="field-note">The phone starter is shorter than the full installed skill. Source verification depends on the AI app and tools you use.</p>
+        <p class="field-note">Use an AI chat with web access so it can read the skill and check its sources.</p>
         </details>
-        <details class="prompt-details"><summary>See the instructions being copied</summary><textarea id="prompt" readonly rows="13" aria-label="Generated starter prompt"></textarea></details>
-        <div id="manual-copy" hidden><label for="manual-text">Copy this text manually</label><textarea id="manual-text" readonly rows="5"></textarea><p id="manual-app-links" class="next-step">After copying, open <a href="https://chatgpt.com/#native">ChatGPT app</a>, <a href="https://chatgpt.com/?no_universal_links=1">ChatGPT in browser</a>, or <a href="https://claude.ai/new">Claude</a> and paste into a new chat.</p></div>
+        <details class="prompt-details"><summary>Preview the copied prompt</summary><textarea id="prompt" readonly rows="13" aria-label="Generated starter prompt"></textarea></details>
+        <div id="manual-copy" hidden><label for="manual-text">Copy this text manually</label><textarea id="manual-text" readonly rows="5"></textarea><p id="manual-app-links" class="next-step">After copying, open <a href="https://chatgpt.com/#native">ChatGPT app</a>, <a href="https://chatgpt.com/?no_universal_links=1">ChatGPT in browser</a>, <a href="https://claude.ai/new">Claude</a>, <a href="https://gemini.google.com/app">Gemini</a>, or <a href="https://muse.ai/">Muse</a> and paste into a new chat.</p></div>
         <p class="field-note">Your text stays in this page. Sharing the site does not share your question.</p>
         <p id="rav-note" class="rav-note">For a practical shailah, confirmation with your local rav is recommended. Bring the mareh mekomos.</p>
         <noscript><p>Enable JavaScript to prepare a prompt. You can still read the dvar Torah below or download the full skill.</p></noscript>

@@ -1,6 +1,7 @@
 """Offline publication checks using synthetic files only."""
 
 import importlib.util
+from hashlib import sha256
 from html.parser import HTMLParser
 from pathlib import Path
 import tempfile
@@ -48,7 +49,11 @@ class SiteBuildTests(unittest.TestCase):
             '<a href="https://wa.me/?text=https%3A%2F%2Ffrum-compatible.github.io%2Fposek%2F">Share</a>\n'
             '<code>npx skills add frum-compatible/posek --skill posek</code>\n'
             '<a href="posek-skill.zip">Download</a>\n'
+            '<link rel="stylesheet" href="styles.css">\n'
+            '<script src="app.js" defer></script>\n'
         ))
+        self.write("site/app.js", 'const site = "https://frum-compatible.github.io/posek/";\n')
+        self.write("site/styles.css", '/* https://github.com/frum-compatible/posek */\nbody { color: black; }\n')
         self.write("site/social-card.png", "Synthetic image bytes")
         self.write("skills/posek/SKILL.md", "Synthetic skill instructions")
         self.write("skills/posek/LICENSE", "Synthetic license")
@@ -81,6 +86,55 @@ class SiteBuildTests(unittest.TestCase):
         self.assertNotIn("frum-compatible.github.io", html)
         self.assertNotIn("frum-compatible/posek", html)
 
+    def test_asset_versions_use_final_published_bytes_and_leave_external_urls_alone(self):
+        external = (
+            '<script src="https://cdn.example.org/app.js" defer></script>\n'
+            '<link rel="stylesheet" href="//cdn.example.org/styles.css">\n'
+        )
+        index = self.root / "site/index.html"
+        index.write_text(index.read_text(encoding="utf-8") + external, encoding="utf-8")
+        self.package()
+        html = (self.output / "index.html").read_text(encoding="utf-8")
+        self.assertIn(external, html)
+        for filename, attribute in (("app.js", "src"), ("styles.css", "href")):
+            with self.subTest(asset=filename):
+                published = (self.output / filename).read_bytes()
+                self.assertNotEqual(published, (self.root / "site" / filename).read_bytes())
+                self.assertNotIn(b"frum-compatible", published)
+                version = sha256(published).hexdigest()[:12]
+                self.assertIn(f'{attribute}="{filename}?v={version}"', html)
+                self.assertNotIn(f'{attribute}="{filename}"', html)
+                self.assertIn(f'{attribute}="{filename}"', index.read_text(encoding="utf-8"))
+        stylesheet_version = sha256((self.output / "styles.css").read_bytes()).hexdigest()[:12]
+        guide = (self.output / "skill.html").read_text(encoding="utf-8")
+        self.assertIn(f'href="styles.css?v={stylesheet_version}"', guide)
+
+    def test_asset_versions_are_stable_until_the_corresponding_content_changes(self):
+        self.package()
+        repeated = self.scratch / "repeated"
+        self.package(repeated)
+        for filename in ("index.html", "skill.html"):
+            self.assertEqual((self.output / filename).read_bytes(), (repeated / filename).read_bytes())
+        for filename, attribute in (("app.js", "src"), ("styles.css", "href")):
+            with self.subTest(asset=filename):
+                original = (self.root / "site" / filename).read_text(encoding="utf-8")
+                self.write("site/" + filename, original + "/* Updated content */\n")
+                changed = self.scratch / ("changed-" + filename)
+                self.package(changed)
+                self.write("site/" + filename, original)
+                previous = sha256((self.output / filename).read_bytes()).hexdigest()[:12]
+                current = sha256((changed / filename).read_bytes()).hexdigest()[:12]
+                self.assertNotEqual(previous, current)
+                html = (changed / "index.html").read_text(encoding="utf-8")
+                self.assertIn(f'{attribute}="{filename}?v={current}"', html)
+                self.assertNotIn(f'{filename}?v={previous}', html)
+                other = "styles.css" if filename == "app.js" else "app.js"
+                unchanged = sha256((self.output / other).read_bytes()).hexdigest()[:12]
+                self.assertIn(f'{other}?v={unchanged}', html)
+                guide = (changed / "skill.html").read_text(encoding="utf-8")
+                stylesheet_version = current if filename == "styles.css" else unchanged
+                self.assertIn(f'href="styles.css?v={stylesheet_version}"', guide)
+
     def test_guide_contains_complete_current_markdown_with_main_skill_first(self):
         main = '---\nname: posek\n---\n\n# Full instructions\n\nאמת & truth\n'
         reference = '# Audience\n\nFirst paragraph.\n\n' + ('Complete guidance.\n' * 150)
@@ -107,6 +161,8 @@ class SiteBuildTests(unittest.TestCase):
         instructions = (
             '# Literal markup\n\n</code></pre><script>alert("example")</script>\n'
             '<img src="missing" onerror="example()">\n'
+            '<script src="app.js" defer></script>\n'
+            '<link rel="stylesheet" href="styles.css">\n'
             'Keep &lt;this&gt;, <that>, apostrophes, "quotes", and עברית.\n'
         )
         self.write("skills/posek/SKILL.md", instructions)
@@ -130,7 +186,8 @@ class SiteBuildTests(unittest.TestCase):
                 self.assertIn(f'href="https://github.com/ExampleOrg/ai-torah/blob/main/skills/posek/{path}"', html)
         self.assertIn('href="./">Back to Posek</a>', html)
         self.assertIn('href="posek-skill.zip"', html)
-        self.assertIn('rel="stylesheet" href="styles.css"', html)
+        stylesheet_version = sha256((self.output / "styles.css").read_bytes()).hexdigest()[:12]
+        self.assertIn(f'rel="stylesheet" href="styles.css?v={stylesheet_version}"', html)
         self.assertIn('class="skill-guide wrap"', html)
         self.assertNotIn("frum-compatible.github.io", html)
         self.assertNotIn("frum-compatible/posek", html)
@@ -174,7 +231,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertTrue((self.output / ".nojekyll").is_file())
         self.assertEqual(
             {path.name for path in self.output.iterdir()},
-            {"index.html", "skill.html", "social-card.png", "posek-skill.zip", ".nojekyll"},
+            {"index.html", "skill.html", "app.js", "styles.css", "social-card.png", "posek-skill.zip", ".nojekyll"},
         )
 
     def test_private_hidden_and_cache_files_are_omitted_from_both_downloads(self):
